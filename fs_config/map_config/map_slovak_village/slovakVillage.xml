@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map width="2048" height="2048" imageFilename="maps/pda_map_H.png">
+    <filename>maps/slovakVillage.i3d</filename>
+    <shop filename="$data/store/ui/shop.xml" />
+    <colorGrading filename="$data/maps/mapDE_colorGrading.xml" />
+    <sounds filename="maps/slovakVillage_sound.xml" />
+    <environment filename="$data/maps/mapDE_environment.xml" />
+    <wildlife filename="$dataS/character/wildlifeSpawner.xml" />
+    <helpline filename="$dataS/helpLine.xml" />
+    <gameplayHints filename="$dataS/gameplayHints.xml" />
+    <husbandryAnimals filename="$dataS/character/husbandryAnimals.xml" />
+    <animalNames filename="$dataS/character/animalNames.xml" />
+    <husbandryFood filename="$dataS/character/husbandryFoodDefinition.xml" />
+    <transportMissions filename="maps/slovakVillage_transportMissions.xml" />
+    <missionVehicles filename="$dataS/missionVehicles.xml" />
+    <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+    <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+    <textureMemoryUsage>0</textureMemoryUsage>
+    <culling xzOffset="100" />
+    <densityMap revision="1" />
+    <terrainLodTexture revision="1" />
+    <splitShapes revision="1" />
+    <tipCollision revision="1" />
+
+    <hotspots>
+        <hotspot name="Shop" fullName="$l10n_map_shop" imageUVs="264 8 240 240" xMapPos="-807" zMapPos="785" blinking="false" persistent="false" showName="true"  hidable="true" renderLast="false" category="CATEGORY_TRIGGERS"/>
+
+        <hotspot name="iRailroadSiloGrain"     fullName="$l10n_hotspot_loadingYardGrain"     baseColor="1 0.1 0.5 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 532 205 205" xMapPos="-675"   zMapPos="806.5" blinking="false" persistent="false" showName="false"  hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iRailroadSiloRootCrops" fullName="$l10n_hotspot_loadingYardRootCrops" baseColor="1 0.1 0.5 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 532 205 205" xMapPos="-541.5" zMapPos="855"   blinking="false" persistent="false" showName="false"  hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iRailroadSiloEast"      fullName="$l10n_hotspot_railroadSiloEast"     baseColor="1 0.1 0.5 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 532 205 205" xMapPos="977"    zMapPos="-527"  blinking="false" persistent="false" showName="false"  hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iRailroadSiloForest"    fullName="$l10n_hotspot_railroadSiloForest"   baseColor="1 0.1 0.5 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 532 205 205" xMapPos="-827"   zMapPos="104"   blinking="false" persistent="false" showName="false"  hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+
+        <hotspot name="iSawmillPlayer"     fullName="$l10n_hotspot_sawmillPlayer"     baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="284 23 205 205" xMapPos="-959" zMapPos="193.5" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iPalletFabrication" fullName="$l10n_hotspot_palletFabrication" baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="532 23 205 205" xMapPos="-908" zMapPos="188.5" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iSoyMilkProduction" fullName="$l10n_hotspot_soyMilkProduction" baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 23 205 205" xMapPos="-175.6" zMapPos="707" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iDairy"             fullName="$l10n_hotspot_dairy"             baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="23 284 205 205" xMapPos="-101.8" zMapPos="824.5" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iMeatFactory"       fullName="$l10n_hotspot_meatFactory"       baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="284 284 205 205" xMapPos="-676" zMapPos="927" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iBlastingOffice"    fullName="$l10n_hotspot_blastingOffice"    baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="532 284 205 205" xMapPos="-728.1" zMapPos="-372.4" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iQuarry"            fullName="$l10n_hotspot_quarry"            baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="792 284 205 205" xMapPos="-721.5" zMapPos="-281.7" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+        <hotspot name="iOrchard"           fullName="$l10n_hotspot_orchard"           baseColor="0.1 0.5 1 1" imageFilename="hud/mapHotspots_1024.dds" imageUVs="23 532 205 205" xMapPos="827.3" zMapPos="908.6" blinking="false" persistent="false" showName="false" hidable="true" renderLast="false" category="CATEGORY_DEFAULT"/>
+    </hotspots>
+
+    <additionalFiles>
+        <additionalFile filename="$data/shared/materialHolders/tensionBeltMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/materialHolders/tireTrackMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/materialHolders/glowEffectMaterialHolder.i3d" />
+        <additionalFile filename="$data/shared/mapTargetMarker.i3d" />
+        <additionalFile filename="$data/particleSystems/particle_materialHolder.i3d" />
+        <additionalFile filename="$data/particleSystems/effect_materialHolder.i3d" />
+        <additionalFile filename="$data/particleSystems/cutterEffect_materialHolder.i3d" />
+        <additionalFile filename="$data/fillPlanes/fillPlane_materialHolder.i3d" />
+        <additionalFile filename="particleSystems/particle_materialHolder.i3d" />
+        <additionalFile filename="particleSystems/effect_materialHolder.i3d" />
+        <additionalFile filename="fillPlanes/fillPlane_materialHolder.i3d" />
+    </additionalFiles>
+
+    <groundTypeMappings>
+        <!-- Base -->
+        <groundTypeMapping type="dirt"           layer="ROUGHDIRT" />
+        <!-- Standard -->
+        <groundTypeMapping type="asphalt"        layer="ASPHALT" />
+        <groundTypeMapping type="gravel"         layer="GRAVEL" />
+        <groundTypeMapping type="grass"          layer="GRASS" paintableFoliageId="1" />
+        <groundTypeMapping type="sand"           layer="SANDWET" />
+        <groundTypeMapping type="animalMud"      layer="ANIMALMUD" />        
+        <groundTypeMapping type="concrete"       layer="CONCRETE" />
+        <groundTypeMapping type="plate"          layer="PLATE" />        
+        <!-- Special -->
+        <groundTypeMapping  type="grass_town"    layer="GRASSTOWN" paintableFoliageId="1" />
+        <groundTypeMapping  type="grass_rough"   layer="GRASSROUGH" paintableFoliageId="1" />
+        <groundTypeMapping  type="grass_gravel"  layer="GRASSGRAVEL" paintableFoliageId="1" />
+        <groundTypeMapping  type="forestGround"  layer="FORESTLEAVES" />
+        <groundTypeMapping  type="rock"          layer="MOUNTAINROCK" />
+        <groundTypeMapping  type="rock_dark"     layer="MOUNTAINROCKDARK" />
+        <groundTypeMapping  type="platedamaged"  layer="PLATEDAMAGED" />     
+        <groundTypeMapping  type="riverbank"     layer="RIVERBANK" />     
+    </groundTypeMappings>
+
+    <paintableFoliages>
+        <paintableFoliage id="1" layerName="grass" firstDensityMapChannel="0" numDensityMapChannels="4" value="2"  />
+    </paintableFoliages>
+
+    <fillTypes filename="maps/slovakVillage_fillTypes.xml" />
+    <!-- <sprayTypes filename="$data/maps/maps_sprayTypes.xml" /> -->
+    <!-- <fruitTypes filename="$data/maps/maps_fruitTypes.xml" /> -->
+    <!-- <baleTypes filename="$data/maps/maps_baleTypes.xml" /> -->
+    <!-- <treeTypes filename="$data/maps/maps_treeTypes.xml" /> -->
+    <densityMapHeightTypes filename="maps/slovakVillage_densityMapHeightTypes.xml" />
+    <npcs filename="maps/slovakVillage_npcs.xml" />
+    <!-- <helpers filename="$data/maps/maps_helpers.xml" /> -->
+    <farmlands filename="maps/slovakVillage_farmlands.xml" />
+
+    <seasons>
+        <mask filename="maps/slovakVillage/seasonsMask.grle" />
+
+        <missions>
+            <mission name="snowContract01" type="snow" rewardScale="6" npcName="NPC_SK_01" location="$l10n_mission_trainStation" text="$l10n_snowContract01_text" />
+            <mission name="snowContract02" type="snow" rewardScale="6" npcName="NPC_SK_15" location="$l10n_station_spinnery" text="$l10n_snowContract02_text" />
+            <mission name="snowContract03" type="snow" rewardScale="5" npcName="NPC_SK_17" location="$l10n_animals_dealer" text="$l10n_snowContract03_text" />
+            <mission name="snowContract04" type="snow" rewardScale="7" npcName="NPC_SK_03" location="$l10n_station_transportCompany" text="$l10n_snowContract04_text" />
+            <mission name="snowContract05" type="snow" rewardScale="1" npcName="NPC_SK_04" location="$l10n_snowContract05_name" text="$l10n_snowContract05_text" />
+            <mission name="snowContract06" type="snow" rewardScale="1" npcName="NPC_SK_18" location="$l10n_snowContract06_name" text="$l10n_snowContract06_text" />
+            <mission name="snowContract07" type="snow" rewardScale="1" npcName="NPC_SK_12" location="$l10n_snowContract07_name" text="$l10n_snowContract07_text" />
+            <mission name="snowContract08" type="snow" rewardScale="1.5" npcName="NPC_SK_05" location="$l10n_snowContract08_name" text="$l10n_snowContract08_text" />
+            <mission name="snowContract09" type="snow" rewardScale="6" npcName="NPC_SK_07" location="$l10n_station_gasStation" text="$l10n_snowContract09_text" />
+        </missions>
+    </seasons>
+
+</map>

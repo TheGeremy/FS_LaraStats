@@ -1,0 +1,118 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ignore Editor files #
+#######################
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+_ide_helper.php
+/.idea
+/.vscode
+# Eclipse project files
+.buildpath
+.project
+.settings/
+*.pdn
+*.xcf
+*.bak
+*.orig
+
+# Temporary files #
+###################
+.cache/
+
+# Laravel specific files #
+##########################
+/vendor
+.env
+/public/.htaccess
+/storage
+storage/*.key
+/node_modules
+/public/hot
+/public/storage
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Synology files #
+##################
+.SynologyWorkingDirectory
+
+# Linux system files #
+######################
+.bash_history
+LICENSE_AFL.txt
+LICENSE.html
+LICENSE.txt
+LICENSE_EE*
+RELEASE_NOTES.txt
+.ssh/
+error_log
+.htpasswds
+/.htaccess
+php.ini.sample
+.modgit/
+_vti_bin/
+_vti_cnf/
+_vti_inf.html
+_vti_log/
+_vti_pvt/
+_vti_txt/
+tmp/
+php.ini
+_old/
+.htpasswds/
+.htpasswd
+.viminfo
+.profile
+.bashrc
+.bash_logout
+.bash_history
+.modgit/
+.modman/
+pkginfo
+nohup.out
+/.vagrant
+.phpunit.result.cache
