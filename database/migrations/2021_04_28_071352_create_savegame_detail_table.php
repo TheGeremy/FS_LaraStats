@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSavegameSetupTable extends Migration
+class CreateSavegameDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateSavegameSetupTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_savegame_setup', function (Blueprint $table) {
+        Schema::create('fs_savegame_datail', function (Blueprint $table) {
             $table->id();        
             $table->unsignedBigInteger('save_id');
             // end of indexes section
@@ -52,6 +52,6 @@ class CreateSavegameSetupTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_savegame_setup');
+        Schema::dropIfExists('fs_savegame_detail');
     }
 }

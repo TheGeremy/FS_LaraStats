@@ -15,7 +15,8 @@ class CreateSavegameTable extends Migration
     {
         Schema::create('fs_savegame', function (Blueprint $table) {
             $table->id('id');
-            $table->smallInteger('current_day');                        
+            $table->smallInteger('current_day');
+            $table->unsignedBigInteger('map_id'); // id from fs_map_dim
             // end of indexes section
             $table->unsignedInteger('source_id');
             $table->string('savegame_name', 100);
@@ -30,6 +31,7 @@ class CreateSavegameTable extends Migration
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
             $table->index('current_day');
+            $table->index('map_id');
         });
     }
 

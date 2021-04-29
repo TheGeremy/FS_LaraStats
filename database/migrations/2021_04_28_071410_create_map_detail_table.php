@@ -16,7 +16,7 @@ class CreateMapDetailTable extends Migration
         Schema::create('fs_map_detail', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');
-            $table->unsignedBigInteger('map_id');
+            $table->unsignedBigInteger('map_id'); // id from fs_map_dim
             // end of indexes section
             $table->unsignedTinyInteger('density_map_revision');
             $table->unsignedTinyInteger('terrain_lod_texture_revision');
