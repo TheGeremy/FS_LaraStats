@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <texts>
+        <!-- Selling Stations -->
+        <text name="station_farmer01" text="Wright Agribusiness" />                  <!-- (Wright Agribusiness - name of company, no translation) -->
+        <text name="station_farmer02" text="Mary's Farm" />
+        <text name="station_foodstuffsDL" text="Lebensmittel Lopašov" />             <!-- (Dolný Lopašov - name of village, no translation) -->
+        <text name="station_foodstuffsCH" text="Lebensmittel Chtelnica" />           <!-- (Chtelnica - name of village, no translation) -->
+        <text name="station_furnitureFabrication" text="Möbelproduktion" />
+        <text name="station_trainStationAgriLB" text="Bahnhof - AgriLB" />           <!-- (AgriLB - name of company, no translation) -->
+        <text name="station_bank" text="Bank" />
+
+        <!-- Buying Stations -->
+        <text name="buyStation_animalFoodTrader" text="Tierfutter-Händler" />
+        <text name="buyStation_manureTrader" text="Dünger-Händler" />
+        <text name="buyStation_liquidManureTrader" text="Flüssigdünger-Händler" />
+
+        <!-- Shop Items -->
+        <text name="shopItem_smallUniversalSilo" text="Kleines Universal Silo" />
+        <text name="shopItem_refillTankSeed" text="Nachfülltank Saatgut" />
+        <text name="shopItem_refillTankChemicals" text="Nachfülltank Chemikalien" />
+        <text name="shopItem_waterTower01" text="Wasserturm" />
+        <text name="shopItem_waterTower02" text="Wasserturm" />
+        <text name="shopItem_bigStorageBarn" text="große Lagerscheune" />
+        <text name="shopItem_smallStorageBarn" text="kleine Lagerscheune" />
+        <text name="shopItem_poleBarn" text="große Fahrzeughalle" />
+        <text name="shopItem_oldVehicleShelter" text="alte Fahrzeughalle" />
+        <text name="shopItem_lizardGarage3Door" text="Garage dreitürig" />
+        <text name="shopItem_lizardGarage4Door" text="Garage viertürig" />
+        <text name="shopItem_farmGatehouse" text="Pförtnerhaus" />
+        <text name="shopItem_sosnovkaBunkerSilo" text="Fahrsilo" />
+        <text name="shopItem_metalSlidingGate" text="Metallisches Schiebetor" />
+        <text name="shopItem_metalSwingGate" text="Metallschwingtor" />
+        <text name="shopItem_cfWallA_4m" text="Betonmauer - A,4m" />
+        <text name="shopItem_cfWallA_2.5m" text="Betonmauer - A,2.5m" />
+        <text name="shopItem_cfWallB_4m" text="Betonmauer - B,4m" />
+        <text name="shopItem_cfWallB_2.5m" text="Betonmauer - B,2.5m" />
+        <text name="shopItem_cfWall_28m" text="Betonmauer - 28m" />
+        <text name="shopItem_cfWall_44m" text="Betonmauer - 44m" />
+        <!-- Global Company Shop Items -->
+        <text name="shopItem_seedMaker" text="Seed Maker" />                           <!-- (Seed Maker - name of machine, no translation) -->
+        <text name="shopItem_manureMaker" text="Manure Maker" />                       <!-- (Manure Maker - name of machine, no translation) -->
+        <text name="shopItem_fertilizerMaker" text="Fertilizer Maker" />               <!-- (Fertilizer Maker - name of machine, no translation) -->
+        <text name="shopItem_pigFoodMixer" text="Pig Food Mixer" />                    <!-- (Pig Food Mixer - name of machine, no translation) -->
+        <text name="shopItem_grainMill" text="Grain Mill" />                           <!-- (Grain Mill - name of machine, no translation) -->
+        <text name="shopItem_grainMillBigBrother" text="Grain Mill the Big Brother" /> <!-- (Grain Mill the Big Brother - name of machine, no translation) -->
+        <text name="shopItem_cartonProduction" text="Karton Produktion" />
+        <text name="shopItem_fuelCanister" text="Reservekanister" />
+        <text name="shopItem_fuelBarrel" text="Treibstoff-Faß" />
+        <text name="shopItem_productTrailer" text="Kühlanhänger" />
+        <text name="configurationProductTrailerChrome" text="Chrom" />
+        <text name="configurationProductTrailerMetallic" text="Metallic" />
+        <text name="configurationProductTrailerGalvanizedMetal" text="Galvanisiertes Metall" />
+        <text name="configurationProductTrailerSilver" text="Silber" />
+
+        <!-- Function Texts -->
+        <text name="function_smallUniversalSilo" text="Hier kannst du alle Getreidearten, Tierfutter sowie Saatgut und Dünger lagern. Platziere es in die Nähe eines Stalles um das füttern einfacher zu gestalten" />
+        <text name="function_refillTankSeed" text="Dieser Tank ist zur Nachfüllung deiner Sähmaschine Hinweis: Die Befüllung kostet dich mehr als der Einkauf von Bigbags beim Händler." />
+        <text name="function_refillTankChemicals" text="Dieser Tank ist zur Nachfüllung deiner Düngerstreuer oder -Spritzen. Hinweis: Die Befüllung kostet dich mehr als der Einkauf von Bigbags oder Paletten beim Händler." />
+        <text name="function_gasStation" text="Dieser Treibstofftank ist zum Betanken deiner Fahrzeuge. Hinweis: Das Betanken ist teuerer, da du eine Geühr für die Lieferung zu deinem Hof bezahlen musst." />
+        <text name="function_machineshed" text="In dieser Scheune kannst du Maschinen und Fahrzeuge lagern" />
+        <text name="function_multished" text="In dieser Scheune kannst du Maschinen, Fahrzeuge, Materialien und deine Ernte lagern." />
+        <text name="function_fenceANDgate" text="TIPP: Wenn du zusätzlich ein Tor setzen möchtest, platziere zuerst den Zaun und dann das Tor!" />
+        <text name="function_fencePlacement" text="TIPP: Passe das Terrain an, bevor du einen Zaun platzierst, damit dieser nicht zu steil wird und du den Zaun besser platzieren kannst." />
+        <text name="function_productTrailer" text="Dieser Anhänger kann zum Transport von Produkten aus deinen Fabrikationen anstelle von Palletten genutzt werden. Für den Fall, dass du bereits Paletten ausgegeben hast, kann dieser Anhänger auch mit Paletten befüllt werden." />
+        <text name="function_fuelTank" text="Mit diesem Anhänger kannst du deine Fahrzeuge und die Produktionen welche Treibstoff benötigen betanken." />
+        <!-- Global Company Function Texts -->
+        <text name="function_seedMaker" text="Die Saatgut-Prduktion erstellt aus Getreide deiner Wahl und Flüssigdünger Saatgut." />
+        <text name="function_manureMaker" text="Der Komposter produziert Kompost aus Wasser und wahlweise Stroh, Gras oder Heu." />
+        <text name="function_fertilizerMaker" text="Die Düngerproduktion erstellt Dünger aus Kompost und Wasser." />
+        <text name="function_pigFoodMixer" text="Der Schweinefutter-Mischer produziert Schweinefutter aus den Komponenten Kartoffeln/Zuckerrüber, Wasser und Getreide." />
+        <text name="function_grainMill" text="Die Getreidemühle produziert Getreideschrot aus Weizen, Gerste oder Körnermais." />
+        <text name="function_cartonProduction" text="In der Kartonfabrik kannst du deine eigenen Kartons aus Wasser und Hackschnitzel herstellen um etwas Geld zu sparen." />
+        <!-- Pallet Function Texts -->
+        <text name="function_emptyPallets" text="Leere Paletten werden in deinen Produktionen benötigt, umd deine Güter transportieren zu können." />
+        <text name="function_cartonPallet" text="Kartonage wird zur Verpackung und Transport von bestimmten Gütern verwendet." />
+        <text name="function_cementPallet" text="Zement wird in der Betonfabrikation zur Herstellung von Steinen benötigt." />
+        <text name="function_dynamitePallet" text="Dynamit wird im Steinbruach zum Abbau von Gestein verwendet." />
+        <text name="function_fuelCanister" text="Dieser Treibstoffkanister kann zur Befüllung der Fabrikationen, welche Treibstoff benötigen und zum Betanken deiner Fahrzeuge benutzt werden." />
+        <text name="function_fuelBarrel" text="Dieser Treibstofftank kann zur Befüllung der Fabrikationen, welche Treibstoff benötigen und zum Betanken deiner Fahrzeuge benutzt werden." />
+
+        <!-- Animation Texts -->
+        <text name="action_openSidedoor" text="Seitentür öffnen" />
+        <text name="action_closeSidedoor" text="Seitentür schließen" />
+        <text name="action_lightOn" text="Licht einschalten" />
+        <text name="action_lightOut" text="Licht ausschalten" />
+        <text name="action_openCoverLeft" text="Öffne linke Abdeckung" />
+        <text name="action_closeCoverLeft" text="Schließe linke Abdeckung" />
+        <text name="action_openCoverRight" text="Öffne rechte Abdeckung" />
+        <text name="action_closeCoverRight" text="Schließe rechte Abdeckung" />
+
+        <!-- Map Hotspots -->
+        <text name="hotspot_loadingYardGrain" text="Zugverladung - Getreide" />
+        <text name="hotspot_loadingYardRootCrops" text="Zugverladung - Hackfrüchte" />
+        <text name="hotspot_railroadSiloEast" text="Eisenbahn Silo - West" />
+        <text name="hotspot_railroadSiloForest" text="Eisenbahn Silo - Hackschnitzel" />
+        <text name="hotspot_sawmillPlayer" text="Sägemühle" />
+        <text name="hotspot_palletFabrication" text="Paletten-Produktion" />
+        <text name="hotspot_soyMilkProduction" text="Sojamilch-Produktion" />
+        <text name="hotspot_dairy" text="Molkerei" />
+        <text name="hotspot_meatFactory" text="Schlachterei" />
+        <text name="hotspot_blastingOffice" text="Spengstoff-Lager" />
+        <text name="hotspot_quarry" text="Steinbruch" />
+        <text name="hotspot_orchard" text="Obstgarten" />
+
+        <!-- Transport Misions -->
+        <text name="mission_inn" text="Inn" />
+        <text name="mission_trainStation" text="Zugverladung" />
+        <text name="mission_forestPond" text="Waldteich" />
+
+        <!-- Seasons Snow Contracts -->
+        <text name="snowContract01_text" text="Die gesamte Ladestelle ist mit Schnee bedeckt. LKWs können nicht durchfahren, es können keine Züge beladen und Güter transportiert werden. Bitte räume den Hof und beide Eingänge so gut wie möglich frei. Stelle sicher, dass du den Schnee während der Öffnungszeiten geräumt hast. (6:00 - 22:00)" />
+        <text name="snowContract02_text" text="Unser Hof ist mit Schnee bedeckt. Transporte von Gütern sind bei diesen Bedingungen sehr schwierig. Bitte räume das gesamte Gelände. Stelle sicher, dass du den Schnee während der Öffnungszeiten geräumt hast. (7:00 - 16:00)" />
+        <text name="snowContract03_text" text="Der schnee erschwert die Arbeit mit den Tieren doch sehr. Räume das ganze Gelände und den Weg von der Hauptstraße bis zu unserem Hof. Stelle sicher, dass du den Schnee während der Öffnungszeiten geräumt hast. (7:00 - 19:00)" />
+        <text name="snowContract04_text" text="Einige LKWs sind im Schnee stecken geblieben, andere kommen nicht mehr durch. Bitte räume so schnell wie möglich unseren Ladeplatz." />
+        <text name="snowContract05_name" text="Straße zum Hof" />
+        <text name="snowContract05_text" text="Please take the snow plow or snow thrower and remove the snow off the Farm Road, or use the road salt if possible. Clear the snow starting from town and all the way back to rail tracks. This road is very important for transport, for us farmers." />
+        <text name="snowContract06_name" text="Straße am Fluß" />
+        <text name="snowContract06_text" text="Schnee sorgt dafür, dass das Befahren der Straße am Fluß sehr gefährlich ist. Nimm den Schneepflug und räume die Straße frei, beginnend von der Hauptstraße den gesamten Weg bis zu meiner Farm (Wright Agribusiness).  Meine Pferde, die Besitzer der Gewächshäuser und ich werden dafür SEHR dankbar sein." />
+        <text name="snowContract07_name" text="Industriestraße" />
+        <text name="snowContract07_text" text="Benutze geeignete Geräte zum Schneeräumen und säubere die Industriestrasse, beginnend von der Hauptstraße, rund um die Spedition bis hin zur Möbel-Produktion." />
+        <text name="snowContract08_name" text="Die Straßen von Dolný Lopašov" />
+        <text name="snowContract08_text" text="Die Firma, die mit dem Winterdienst in unserem Ort beauftragt war, hat schlechte Arbeit geleistet. Sie haben die kleineren Straße leider nicht geräumt und den Schnee dort liegen lassen. Verwende einen Schneepflug und räume die verbliebenen Straßen. Bitte achte darauf, die Eingänge unserer Häuser nicht zu blockieren. (Es wird empfohlen, den Verkehr während dieser Mission zu deaktivieren)" />
+        <text name="snowContract09_text" text="Die Tankstelle ist eingeschneit. Unsere Kunden können ihre Fahrzeuge nicht sicher auftanken. Bitte räume das ganze Gelände und die Aussfahrt." />
+
+        <!-- Fill Types -->
+        <text name="fillType_wholeGrain" text="Getreideschrot" />
+        <text name="fillType_board" text="Bretter" />
+        <text name="fillType_emptyPallet" text="Leere Paletten" />
+        <text name="fillType_carton" text="Karton" />
+        <text name="fillType_soyMilk" text="Sojamilch" />
+        <text name="fillType_dairyProducts" text="Molkerei-Erzeugnisse" />
+        <text name="fillType_meatProducts" text="Fleischprodukte" />
+        <text name="fillType_dynamite" text="Dynamit" />
+        <text name="fillType_stone" text="Gestein" />
+        <text name="fillType_gravel" text="Schotter" />
+        <text name="fillType_soil" text="Erde" />
+        <text name="fillType_gold" text="Gold" />
+        <text name="fillType_cement" text="Zement" />
+        <text name="fillType_brick" text="Stein" />
+        <text name="fillType_apple" text="Apfel" />
+        <text name="fillType_pear" text="Birne" />
+        <text name="fillType_plum" text="Pflaume" />
+        <text name="fillType_apricot" text="Aprikose" />
+        <text name="fillType_tomato" text="Tomaten" />
+        <text name="fillType_greenPepper" text="Grüner Pfeffer" />
+        <text name="fillType_lettuce" text="Salat" />
+
+        <!-- Misc -->
+        <text name="openingHours_closedDefault" text="Geschlossen." />
+    </texts>
+    <elements>
+        <!-- Text formatting here is very important so it is displayed correctly in-game! -->
+        <!-- Global Company -->
+        <e k="SlovakVillage_SeedMaker_FactoryName" v="Seed Maker"/>
+        <e k="SlovakVillage_SeedMaker_Description" v="Seed Maker erzeugt Saatgut aus Getreide und Flüssigdünger."/>
+        <e k="SlovakVillage_SeedMaker_ProductLine" v="Saatgut-Produktion"/>
+        <e k="SlovakVillage_ManureMaker_FactoryName" v="Manure Maker"/>
+        <e k="SlovakVillage_ManureMaker_Description" v="Der Komposter produziert Kompost aus Wasser und wahlweise Stroh, Gras oder Heu."/>
+        <e k="SlovakVillage_ManureMaker_ProductLine" v="Komposter"/>
+        <e k="SlovakVillage_FertilizerMaker_FactoryName" v="Fertilizer Maker"/>
+        <e k="SlovakVillage_FertilizerMaker_Description" v="Fertilizer Maker produziert Dünger aus Kompost und Wasser."/>
+        <e k="SlovakVillage_FertilizerMaker_ProductLine" v="Dünger Produktion"/>
+        <e k="SlovakVillage_PigFoodMixer_FactoryName" v="Schweinefutter-Mischer"/>
+        <e k="SlovakVillage_PigFoodMixer_Description" v="Schweinefutter-Mischer produziert Schweinefutter aus den Komponenten Kartoffeln/Zuckerrüber, Wasser und Getreide.."/>
+        <e k="SlovakVillage_PigFoodMixer_ProductLine" v="Schweinefutter Produktion"/>
+        <e k="SlovakVillage_GrainMill_FactoryName" v="Getreidemühle"/>
+        <e k="SlovakVillage_GrainMillBigBrother_FactoryName" v="Grain Mill the Big Brother"/>
+        <e k="SlovakVillage_GrainMill_Description" v="Die Getreidemühle produziert Getreideschrot aus Weizen, Gerste oder Körnermais."/>
+        <e k="SlovakVillage_GrainMill_ProductLine" v="Getreideschrot Produktion"/>
+        <e k="SlovakVillage_SawmillPlayer_FactoryName" v="Sägewerk"/>
+        <e k="SlovakVillage_SawmillPlayer_Description" v="Im Sägewerk kannst du Bretter herstellen und verkaufen, um bessere Profit als durch den Verkauf von Stämmen zu erziehlen. 
+
+Bretter können auch genutzt werden, um leere Paletten in der Paletten-Produktion herzustellen, so dass du keine leeren Paletten im Landhandel kaufen musst	. 
+
+Paletten-Produktion ist ein Teil des Sägewerkes."/>
+        <e k="SlovakVillage_SawmillPlayer_ProductLine" v="Bretter Produktion"/>
+        <e k="SlovakVillage_PalletFabrication_FactoryName" v="Paletten-Produktion"/>
+        <e k="SlovakVillage_PalletFabrication_Description" v="Mit deiner eigenen Paletten-Produktion brauchst du keine leeren Paletten mehr zu kaufen, du stellst sie selbst her. 
+
+Paletten werden in anderen Produktionen zum Abtransport von Waren benötigt.
+
+Paletten-Produktion ist ein Teil des Sägewerkes."/>
+        <e k="SlovakVillage_PalletFabrication_ProductLine" v="Paletten-Produktion"/>
+        <e k="SlovakVillage_SoyMilkProduction_FactoryName" v="Sojamilch-Produktion"/>
+        <e k="SlovakVillage_SoyMilkProduction_Description" v="In der Sojamilch-Produktion kannst du Sojamilch herstellen um wesentlich bessere Preise zu erzielen, als durch den Verkauf von Sojabohnen. 
+
+Als Nebenprodukte entstehen Schweinefutter, mit denen du deine Schweine versorgen kannst und Flüßigdünger für deine Felder. Dieser kann auch verkauft werden."/>
+        <e k="SlovakVillage_SoyMilkProduction_ProductLine" v="Sojamilch-Produktion"/>
+        <e k="SlovakVillage_Dairy_FactoryName" v="Molkerei"/>
+        <e k="SlovakVillage_Dairy_Description" v="Verarbeite die Milch zu Molkerei-Erzeugnissen. 
+
+Molkerei-Erzeugnisse können an die lokalen Supermärkte oder über die Spedition verkauft werden."/>
+        <e k="SlovakVillage_Dairy_ProductLine" v="Molkerei-Erzeugnisse"/>
+        <e k="SlovakVillage_MeatFactory_FactoryName" v="Schlachterei"/>
+        <e k="SlovakVillage_MeatFactory_Description" v="In der Schlachterei kannst du aus deinen Tieren Fleischprodukte herstellen. 
+
+Beim Abladen der Tiere werden diese in Liter-Einheiten umgerechnet: Kuh - 2500, Schwein - 700, Schaf - 700. 
+
+Fleischprodukte können an die lokalen Supermärkte oder über die Spedition verkauft werden.."/>
+        <e k="SlovakVillage_MeatFactory_ProductLine" v="Fleischprodukte"/>
+        <e k="SlovakVillage_Quarry_FactoryName" v="Steinbruch"/>
+        <e k="SlovakVillage_Quarry_Description" v="Sprengmeister-Büro benötigt Dynamit. Die Sprengmeister werden für eine gleichmäßige Produktion von Gestein und goldhaltiger Erde sorgen.
+Steinbrecher produzieren aus Gestein Schotter. Falls du mehr Gestein hast, als du verarbeiten kannst, verkaufe es über die Spedition.
+Mit dem Gold-Separator im Sprengmeister-Büro kannst du Gold aus Erde extrahieren. Das Gold kann bei der Bank in Geld getauscht werden. Das Nebenprodukt (Gestein) kann verkauft oder in einer anderen Produktion genutzt werden.
+In der Betonfabrik kannst du Bausteine aus Schotter, Wasser, Zement und leeren Paletten herstellen. Die Bausteine können an die Spedition verkauft werden, dies gilt auch für den nicht benötigten Schotter."/>
+        <e k="SlovakVillage_Quarry_ProductLine_BlastingOffice" v="Blasting Office"/>
+        <e k="SlovakVillage_Quarry_ProductLine_StoneCrusher" v="Steinbrecher"/>
+        <e k="SlovakVillage_Quarry_ProductLine_GoldSeparator" v="Gold-Separator"/>
+        <e k="SlovakVillage_Quarry_ProductLine_ConcretePLant" v="Betonfabrik"/>
+        <e k="SlovakVillage_Orchard_FactoryName" v="Obst- und Gemüsegarten"/>
+        <e k="SlovakVillage_Orchard_Description" v="Im Obst- und Gemüsegarten kannst du Früchte und Gemüse ernten: Äpfel, Aprikosen, Pflaumen, Birnen, Tomaten, grüner Pfeffer and Salat. 
+
+Der lokale Supermarkt nimmt Dir frisches Obst und Gemüse gerne ab.
+
+You need: Wasser, Treibstoff, Kompost und leere Paletten."/>
+        <e k="SlovakVillage_Orchard_ProductLine" v="Obst- und Gemüsegarten"/>
+        <e k="SlovakVillage_Orchard_ProductLine_Tomato" v="Tomaten-Gewächshaus"/>
+        <e k="SlovakVillage_Orchard_ProductLine_GreenPepper" v="Gewächshaus für grünen Pfeffer"/>
+        <e k="SlovakVillage_Orchard_ProductLine_Lettuce" v="Salat-Gewächshaus"/>
+        <e k="SlovakVillage_CartonProduction_FactoryName" v="Karton Produktion"/>
+        <e k="SlovakVillage_CartonProduction_Description" v="In der Kartonfabrik kannst du deine eigenen Kartons aus Wasser und Hackschnitzel herstellen um etwas Geld zu sparen. 
+
+Du benötigst außerdem leere Paletten um die Kartons zu transportieren."/>
+        <e k="SlovakVillage_CartonProduction_ProductLine" v="Karton Produktion"/>
+        <!-- Global Company resources -->
+        <e k="SlovakVillage_Resource_Animals" v="Tiere"/>
+        <e k="SlovakVillage_Resource_Board" v="Bretter"/>
+        <e k="SlovakVillage_Resource_Carton" v="Karton"/>
+        <e k="SlovakVillage_Resource_Cement" v="Zementement"/>
+        <e k="SlovakVillage_Resource_Dynamite" v="Dynamit"/>
+        <e k="SlovakVillage_Resource_EmptyPallet" v="leere Paletten"/>
+        <e k="SlovakVillage_Resource_Fuel" v="Treibstoff"/>
+        <e k="SlovakVillage_Resource_Grain" v="Getreide"/>
+        <e k="SlovakVillage_Resource_GrassOrHay" v="Gras / Heu"/>
+        <e k="SlovakVillage_Resource_Gravel" v="Schotter"/>
+        <e k="SlovakVillage_Resource_LiquidFertilizer" v="Flüssigdünger"/>
+        <e k="SlovakVillage_Resource_Maize" v="Mais"/>
+        <e k="SlovakVillage_Resource_Manure" v="Kompost"/>
+        <e k="SlovakVillage_Resource_Milk" v="Milch"/>
+        <e k="SlovakVillage_Resource_RootCrops" v="Hackfrüchte"/>
+        <e k="SlovakVillage_Resource_Soil" v="Erde"/>
+        <e k="SlovakVillage_Resource_Soybean" v="Sojabohnen"/>
+        <e k="SlovakVillage_Resource_Stone" v="Gestein"/>
+        <e k="SlovakVillage_Resource_Straw" v="Stroh"/>
+        <e k="SlovakVillage_Resource_Water" v="Wasser"/>
+        <e k="SlovakVillage_Resource_WholeGrain" v="Getreideschrot"/>
+        <e k="SlovakVillage_Resource_Wood" v="Baumstämme"/>
+        <e k="SlovakVillage_Resource_WoodChips" v="Hackschnitzel"/>
+    </elements>
+</l10n>

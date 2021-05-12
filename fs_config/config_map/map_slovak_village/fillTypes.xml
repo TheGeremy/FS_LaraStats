@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <fillTypes>
+        <fillType name="WHOLEGRAIN" title="$l10n_fillType_wholeGrain" showOnPriceTable="false" pricePerLiter="0.422" >
+            <image hud="hud/fillTypes/hud_fill_wholeGrain.png" hudSmall="hud/fillTypes/hud_fill_wholeGrain_sml.png" />
+            <physics massPerLiter="0.25" maxPhysicalSurfaceAngle="13" />
+        </fillType>
+		<fillType name="SOYMILK" title="$l10n_fillType_soyMilk" showOnPriceTable="true" pricePerLiter="1.23" >
+            <image hud="hud/fillTypes/hud_fill_soyMilk.png" hudSmall="hud/fillTypes/hud_fill_soyMilk_sml.png" />
+            <physics massPerLiter="0.5" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="DAIRYPRODUCTS" title="$l10n_fillType_dairyProducts" showOnPriceTable="true" pricePerLiter="0.9" >
+            <image hud="hud/fillTypes/hud_fill_dairyProducts.png" hudSmall="hud/fillTypes/hud_fill_dairyProducts_sml.png" />
+            <physics massPerLiter="0.5" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="MEATPRODUCTS" title="$l10n_fillType_meatProducts" showOnPriceTable="true" pricePerLiter="1.45" >
+            <image hud="hud/fillTypes/hud_fill_meatProducts.png" hudSmall="hud/fillTypes/hud_fill_meatProducts_sml.png" />
+            <physics massPerLiter="0.5" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="APPLE" title="$l10n_fillType_apple" showOnPriceTable="true" pricePerLiter="0.115" >
+            <image hud="hud/fillTypes/hud_fill_apple.png" hudSmall="hud/fillTypes/hud_fill_apple_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="PEAR" title="$l10n_fillType_pear" showOnPriceTable="true" pricePerLiter="0.12" >
+            <image hud="hud/fillTypes/hud_fill_pear.png" hudSmall="hud/fillTypes/hud_fill_pear_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="PLUM" title="$l10n_fillType_plum" showOnPriceTable="true" pricePerLiter="0.13" >
+            <image hud="hud/fillTypes/hud_fill_plum.png" hudSmall="hud/fillTypes/hud_fill_plum_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="APRICOT" title="$l10n_fillType_apricot" showOnPriceTable="true" pricePerLiter="0.135" >
+            <image hud="hud/fillTypes/hud_fill_apricot.png" hudSmall="hud/fillTypes/hud_fill_apricot_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="TOMATO" title="$l10n_fillType_tomato" showOnPriceTable="true" pricePerLiter="0.16" >
+            <image hud="hud/fillTypes/hud_fill_tomato.png" hudSmall="hud/fillTypes/hud_fill_tomato_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="GREENPEPPER" title="$l10n_fillType_greenPepper" showOnPriceTable="true" pricePerLiter="0.17" >
+            <image hud="hud/fillTypes/hud_fill_greenPepper.png" hudSmall="hud/fillTypes/hud_fill_greenPepper_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="LETTUCE" title="$l10n_fillType_lettuce" showOnPriceTable="true" pricePerLiter="0.15" >
+            <image hud="hud/fillTypes/hud_fill_lettuce.png" hudSmall="hud/fillTypes/hud_fill_lettuce_sml.png" />
+            <physics massPerLiter="0.3" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="GOLD" title="$l10n_fillType_gold" showOnPriceTable="true" pricePerLiter="60" >
+            <image hud="hud/fillTypes/hud_fill_gold.png" hudSmall="hud/fillTypes/hud_fill_gold_sml.png" />
+            <physics massPerLiter="0.01" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="BRICK" title="$l10n_fillType_brick" showOnPriceTable="true" pricePerLiter="0.53" >
+            <image hud="hud/fillTypes/hud_fill_brick.png" hudSmall="hud/fillTypes/hud_fill_brick_sml.png" />
+            <physics massPerLiter="0.65" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="BOARD" title="$l10n_fillType_board" showOnPriceTable="true" pricePerLiter="0.285" >
+            <image hud="hud/fillTypes/hud_fill_board.png" hudSmall="hud/fillTypes/hud_fill_board_sml.png" />
+            <physics massPerLiter="0.35" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="STONE" title="$l10n_fillType_stone" showOnPriceTable="true" pricePerLiter="0.12" >
+            <image hud="hud/fillTypes/hud_fill_stone.png" hudSmall="hud/fillTypes/hud_fill_stone_sml.png" />
+            <physics massPerLiter="0.80" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="GRAVEL" title="$l10n_fillType_gravel" showOnPriceTable="true" pricePerLiter="0.16" >
+            <image hud="hud/fillTypes/hud_fill_gravel.png" hudSmall="hud/fillTypes/hud_fill_gravel_sml.png" />
+            <physics massPerLiter="0.75" maxPhysicalSurfaceAngle="34" />
+        </fillType>
+		<fillType name="SOIL" title="$l10n_fillType_soil" showOnPriceTable="false" pricePerLiter="0.2" >
+            <image hud="hud/fillTypes/hud_fill_soil.png" hudSmall="hud/fillTypes/hud_fill_soil_sml.png" />
+            <physics massPerLiter="0.70" maxPhysicalSurfaceAngle="30" />
+        </fillType>
+		<fillType name="DYNAMITE" title="$l10n_fillType_dynamite" showOnPriceTable="false" pricePerLiter="2.5" >
+            <image hud="hud/fillTypes/hud_fill_dynamite.png" hudSmall="hud/fillTypes/hud_fill_dynamite_sml.png" />
+            <physics massPerLiter="0.1" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="CEMENT" title="$l10n_fillType_cement" showOnPriceTable="false" pricePerLiter="0.8" >
+            <image hud="hud/fillTypes/hud_fill_cement.png" hudSmall="hud/fillTypes/hud_fill_cement_sml.png" />
+            <physics massPerLiter="0.55" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="EMPTYPALLET" title="$l10n_fillType_emptyPallet" showOnPriceTable="false" pricePerLiter="30" >
+            <image hud="hud/fillTypes/hud_fill_emptyPallet.png" hudSmall="hud/fillTypes/hud_fill_emptyPallet_sml.png" />
+            <physics massPerLiter="30" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+		<fillType name="CARTON" title="$l10n_fillType_carton" showOnPriceTable="false" pricePerLiter="0.1" >
+            <image hud="hud/fillTypes/hud_fill_carton.png" hudSmall="hud/fillTypes/hud_fill_carton_sml.png" />
+            <physics massPerLiter="0.15" maxPhysicalSurfaceAngle="0" />
+        </fillType>
+    </fillTypes>
+
+    <fillTypeCategories>
+        <fillTypeCategory name="BULK" >WHOLEGRAIN STONE GRAVEL SOIL</fillTypeCategory>
+		<fillTypeCategory name="PIECE" >SOYMILK DAIRYPRODUCTS MEATPRODUCTS LETTUCE GOLD BRICK BOARD DYNAMITE CEMENT EMPTYPALLET CARTON</fillTypeCategory>
+		<fillTypeCategory name="AUGERWAGON" >WHOLEGRAIN</fillTypeCategory>
+        <fillTypeCategory name="LOADINGVEHICLE" >WHOLEGRAIN STONE GRAVEL SOIL</fillTypeCategory>
+		<fillTypeCategory name="FRUITPALLET" >APPLE PEAR PLUM APRICOT TOMATO GREENPEPPER</fillTypeCategory>
+		<fillTypeCategory name="PRODUCTTRAILER" >SOYMILK DAIRYPRODUCTS MEATPRODUCTS APPLE PEAR PLUM APRICOT TOMATO GREENPEPPER LETTUCE</fillTypeCategory>
+    </fillTypeCategories>
+
+    <fillTypeSounds>
+        <fillTypeSound isDefault="true">
+            <sound template="DEFAULT_SILO_FILL"/>
+        </fillTypeSound>
+    </fillTypeSounds>
+</map>

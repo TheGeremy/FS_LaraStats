@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>MrHector</translationContributors>
+    <texts>
+        <!-- Selling Points -->
+        <text name="station_farmer01" text="Wright Agribusiness" />                <!-- (Wright Agribusiness - name of company, no translation) -->
+        <text name="station_farmer02" text="Marijina Farma" />
+        <text name="station_foodstuffsDL" text="potraviny Dolný Lopašov" />        <!-- (Dolný Lopašov - name of village, no translation) -->
+        <text name="station_foodstuffsCH" text="potraviny Chtelnica" />            <!-- (Chtelnica - name of village, no translation) -->
+        <text name="station_furnitureFabrication" text="Výroba nábytku" />
+        <text name="station_trainStationAgriLB" text="Vlakové nádraží - AgriLB" /> <!-- (AgriLB - name of company, no translation) -->
+        <text name="station_bank" text="Banka" />
+
+        <!-- Buying Stations -->
+        <text name="buyStation_animalFoodTrader" text="Obchodník s krmivy pro zvířata" />
+        <text name="buyStation_manureTrader" text="Obchodník s hnojem" />
+        <text name="buyStation_liquidManureTrader" text="Obchodník s močůvkou" />
+
+        <!-- Shop Items -->
+        <text name="shopItem_smallUniversalSilo" text="Malé Univerzální Silo" />
+        <text name="shopItem_refillTankSeed" text="Nádrž na doplnění osiva" />
+        <text name="shopItem_refillTankChemicals" text="Nádrž na doplnění chemikálií" />
+        <text name="shopItem_waterTower01" text="Vodárenská věž budova" />
+        <text name="shopItem_waterTower02" text="Vodárenská věž" />
+        <text name="shopItem_bigStorageBarn" text="Velká skladovací stodola" />
+        <text name="shopItem_smallStorageBarn" text="Malá skladovací stodola" />
+        <text name="shopItem_poleBarn" text="Velký Přístřešek pro vozy" />
+        <text name="shopItem_oldVehicleShelter" text="Starý Přístřešek pro vozy" />
+        <text name="shopItem_lizardGarage3Door" text="Garáž 3 dveře" />
+        <text name="shopItem_lizardGarage4Door" text="Garáž 4 dveře" />
+        <text name="shopItem_farmGatehouse" text="Vrátnice" />
+        <text name="shopItem_sosnovkaBunkerSilo" text="Silážní jáma" />
+        <text name="shopItem_metalSlidingGate" text="Kovová posuvná brána" />
+        <text name="shopItem_metalSwingGate" text="Kovová dvoukřídlá brána" />
+        <text name="shopItem_cfWallA_4m" text="Betónový plot - A, 4m" />
+        <text name="shopItem_cfWallA_2.5m" text="Betónový plot - A, 2.5m" />
+        <text name="shopItem_cfWallB_4m" text="Betónový plot - B, 4m" />
+        <text name="shopItem_cfWallB_2.5m" text="Betónový plot - B, 2.5m" />
+        <text name="shopItem_cfWall_28m" text="Betónový plot - 28m" />
+        <text name="shopItem_cfWall_44m" text="Betónový plot - 44m" />
+        <!-- Global Company Shop Items -->
+        <text name="shopItem_seedMaker" text="Seed Maker" />                           <!-- (Seed Maker - name of machine, no translation) -->
+        <text name="shopItem_manureMaker" text="Manure Maker" />                       <!-- (Manure Maker - name of machine, no translation) -->
+        <text name="shopItem_fertilizerMaker" text="Fertilizer Maker" />               <!-- (Fertilizer Maker - name of machine, no translation) -->
+        <text name="shopItem_pigFoodMixer" text="Pig Food Mixer" />                    <!-- (Pig Food Mixer - name of machine, no translation) -->
+        <text name="shopItem_grainMill" text="Grain Mill" />                           <!-- (Grain Mill - name of machine, no translation) -->
+        <text name="shopItem_grainMillBigBrother" text="Grain Mill the Big Brother" /> <!-- (Grain Mill the Big Brother - name of machine, no translation) -->
+        <text name="shopItem_cartonProduction" text="Výroba Kartonů" />
+        <text name="shopItem_fuelCanister" text="Kanystr s Palivem" />
+        <text name="shopItem_fuelBarrel" text="Sud s Palivem" />
+        <text name="shopItem_productTrailer" text="Chladírenský Přívěs" />
+        <text name="configurationProductTrailerChrome" text="Chrom" />
+        <text name="configurationProductTrailerMetallic" text="Kovový" />
+        <text name="configurationProductTrailerGalvanizedMetal" text="Pozinkovaný kov" />
+        <text name="configurationProductTrailerSilver" text="Stříbrný" />
+
+        <!-- Function Texts -->
+        <text name="function_smallUniversalSilo" text="V tomto silu můžete uschovat všechny druhy obilí, krmivo pro vaše zvířata a také osiva nebo hnojivo. Umístěte toto silo blízko zvířecí pastviny a usnadněte si tak krmení." />
+        <text name="function_refillTankSeed" text="Z této nádrže můžete doplnit své secí stroje. Poznámka: Doplnění vás bude stát vyšší cenu za osivo než nákup v Big Bags v obchodě." />
+        <text name="function_refillTankChemicals" text="Z této nádrže můžete doplnit své postřikovače a rozmetadla hnojiv. Poznámka: Doplnění vás bude stát vyšší cenu než nákup v BigBags nebo paletách v obchodě." />
+        <text name="function_gasStation" text="Z této nádrže můžete natankovat své vozidla. Tankování z této nádrže je dražší, platíte poplatek za dodání paliva na vaši farmu." />
+        <text name="function_machineshed" text="V tomto přístřeší můžete parkovat své vozy a uchovat různé objekty." />
+        <text name="function_multished" text="V tomto přístřeší můžete parkovat své vozy a uchovat různé objekty nebo skladovat svou úrodu." />
+        <text name="function_fenceANDgate" text="TIP: Chcete-li mít i bránu, umístěte nejprve plot a pak bránu!" />
+        <text name="function_fencePlacement" text="TIP: Upravte terén před umístěním plotu. tak, že není příliš strmý - pro lepší umístění plotu." />
+        <text name="function_productTrailer" text="Tento přívěs lze použít k přepravě produktů z vašich továren místo použití palet. Pokud jste již vytvořili některé palety, lze do tohoto přívěsu nakládat i produkty z palet." />
+        <text name="function_fuelTank" text="S tímto přívěsem můžete doplňovat palivo do svých vozidel a také do továren, které vyžadují jako vstup palivo." />
+        <!-- Global Company Function Texts -->
+        <text name="function_seedMaker" text="Seed Maker vyrábí osiva pomocí obilí dle vašeho výběru a tekutého hnojiva." />
+        <text name="function_manureMaker" text="Manure Maker vyrábí mrvu pomocí slámy, vody a trávy nebo sena." />
+        <text name="function_fertilizerMaker" text="Fertilizer Maker vyrábí hnojivo pomocí mrvy a vody." />
+        <text name="function_pigFoodMixer" text="Pig Food Mixer vyrábí prasečí krmivo pomocí brambor nebo cukrové řepy, vody a šrotu." />
+        <text name="function_grainMill" text="Grain Mill vyrábí šrot pomocí pšenice nebo ječmene a kukuřice." />
+        <text name="function_cartonProduction" text="Ve Výrobě Kartonů si můžete vyrobit vlastní lepenkové krabice pomocí dřevní štěpky a vody." />
+        <!-- Pallet Function Texts -->
+        <text name="function_emptyPallets" text="Prázdné palety se používají ve vašich továrnách, pro přepravu vašich produktů." />
+        <text name="function_cartonPallet" text="Karton se používá ve vašich továrnách, pro přepravu vašich produktů." />
+        <text name="function_cementPallet" text="Cement se používá v betonárně na výrobu cihel." />
+        <text name="function_dynamitePallet" text="Dynamit se používá v lomu, na odstřel skal." />
+        <text name="function_fuelCanister" text="Tento kanystr s palivem lze použít k doplnění paliva ve vašich továrnách, které vyžadují jako vstup palivo. Může být také použit k tankování vašich vozidel." />
+        <text name="function_fuelBarrel" text="Tento sud s palivem lze použít k doplnění paliva ve vašich továrnách, které vyžadují jako vstup palivo. Může být také použit k tankování vašich vozidel." />
+
+        <!-- Animation Texts -->
+        <text name="action_openSidedoor" text="Otevřít boční dveře" />
+        <text name="action_closeSidedoor" text="Zavřít boční dveře" />
+        <text name="action_lightOn" text="Zapnout světla" />
+        <text name="action_lightOut" text="Vypnout světla" />
+        <text name="action_openCoverLeft" text="Otevřít levý kryt" />
+        <text name="action_closeCoverLeft" text="Zavřít levý kryt" />
+        <text name="action_openCoverRight" text="Otevřít pravý kryt" />
+        <text name="action_closeCoverRight" text="Zavřít pravý kryt" />
+
+        <!-- Map Hotspots -->
+        <text name="hotspot_loadingYardGrain" text="Nakládací dvůr - Obilí" />
+        <text name="hotspot_loadingYardRootCrops" text="Nakládací dvůr - Kořenové plodiny" />
+        <text name="hotspot_railroadSiloEast" text="Železniční silo východ" />
+        <text name="hotspot_railroadSiloForest" text="Železniční silo - Dřevěné štěpky" />
+        <text name="hotspot_sawmillPlayer" text="Pila" />
+        <text name="hotspot_palletFabrication" text="Výroba Palet" />
+        <text name="hotspot_soyMilkProduction" text="Výroba Sójového Mléka" />
+        <text name="hotspot_dairy" text="Mlékárna" />
+        <text name="hotspot_meatFactory" text="Masokombinát" />
+        <text name="hotspot_blastingOffice" text="Odstřelová Kancelář" />
+        <text name="hotspot_quarry" text="Lom" />
+        <text name="hotspot_orchard" text="Ovocný Sad" />
+
+        <!-- Transport Misions -->
+        <text name="mission_inn" text="Hospoda" />
+        <text name="mission_trainStation" text="Nakládací dvůr" />
+        <text name="mission_forestPond" text="Rybník" />
+
+        <!-- Seasons Snow Contracts -->
+        <text name="snowContract01_text" text="Celý nakládací dvůr je pokryt sněhem. Kamiony nemohou projít, nejsme schopni nakládat vlaky a přepravovat zboží. Prosím, vyčistěte oblast co nejvíce, včetně obou vstupů. Ujistěte se, že budete odklízet sníh během našich otevíracích hodin. (6:00 - 22:00)" />
+        <text name="snowContract02_text" text="Náš dvůr je pokryt sněhem. Přeprava našeho zboží je v tomto stavu velmi obtížná. Vyčistěte celý dvůr. Ujistěte se, že budete odklízet sníh během našich otevíracích hodin. (7:00 - 16:00)" />
+        <text name="snowContract03_text" text="Sníh ztěžuje naši práci se zvířaty. Vyčistěte celý dvůr a cestu, počínaje od hlavní cesty k naší společnosti. Ujistěte se, že budete odklízet sníh během našich otevíracích hodin. (7:00 - 19:00)" />
+        <text name="snowContract04_text" text="Některé kamiony uvízly ve sněhu, jiné nemohou projít. Prosím, zpřístupněte náš dvůr co nejdříve." />
+        <text name="snowContract05_name" text="Zemědělská Cesta" />
+        <text name="snowContract05_text" text="Vezměte prosím sněžný pluh nebo sněžnou frézu a odstraňte sníh ze Zemědělské Cesty, nebo použijte posypovu sůl, pokud je to možné. Vyčistěte sníh počínaje od vesnice až k železniční trati. Tato silnice je velmi důležitá pro dopravu, pro nás zemědělce." />
+        <text name="snowContract06_name" text="Cesta u Řeky" />
+        <text name="snowContract06_text" text="Sníh způsobuje, že je Cesta u Řeky je velmi nebezpečná pro jízdu. Vezměte sněžný pluh a odstraňte sníh ze silnice, počínaje od havní cesty až k mé farmě (Wright Agribusiness) Já, majitelé ranče a majitelé skladu zeleniny budou velmi vděčný." />
+        <text name="snowContract07_name" text="Průmyslová Cesta" />
+        <text name="snowContract07_text" text="Použijte nejaké vhodné vybavení pro odklízení sněhu a vyčistěte Průmyslovou Cestu, počínaje od hlavní cesty, kolem Dopravní Společnosti a končící u Výroboy Nábytku." />
+        <text name="snowContract08_name" text="Dolný Lopašov - ulice" />
+        <text name="snowContract08_text" text="Společnost, která dostala zaplaceno za odklízení sněhu v naší vesnici, nejak selhala. Menší ulice nechali pokryté sněhem. Vezměte sněžný pluh a vyčistěte zbývající ulice. Pokud je to možné, nechte vchody do našich domů volné. (během této mise se doporučuje vypnout provoz.)" />
+        <text name="snowContract09_text" text="Čerpací stanice je pokryta sněhem. Naši klienti nemohou bezpečně tankovat svá vozidla. Vyčistěte prosím celou plochu a výjezdovou cestu." />
+
+        <!-- Fill Types -->
+        <text name="fillType_wholeGrain" text="Šrot" />
+        <text name="fillType_board" text="Desky" />
+        <text name="fillType_emptyPallet" text="Prázdné palety" />
+        <text name="fillType_carton" text="Lepenkové krabice" />
+        <text name="fillType_soyMilk" text="Sójové mléko" />
+        <text name="fillType_dairyProducts" text="Mléčné výrobky" />
+        <text name="fillType_meatProducts" text="Maso výrobky" />
+        <text name="fillType_dynamite" text="Dynamit" />
+        <text name="fillType_stone" text="Kameny" />
+        <text name="fillType_gravel" text="Štěrk" />
+        <text name="fillType_soil" text="Půda" />
+        <text name="fillType_gold" text="Zlato" />
+        <text name="fillType_cement" text="Cement" />
+        <text name="fillType_brick" text="Cihly" />
+        <text name="fillType_apple" text="Jablko" />
+        <text name="fillType_pear" text="Hruška" />
+        <text name="fillType_plum" text="Švestka" />
+        <text name="fillType_apricot" text="Meruňka" />
+        <text name="fillType_tomato" text="Rajče" />
+        <text name="fillType_greenPepper" text="Paprika" />
+        <text name="fillType_lettuce" text="Salát" />
+
+        <!-- Misc -->
+        <text name="openingHours_closedDefault" text="Zavřeno." />
+    </texts>
+    <elements>
+        <!-- Text formatting here is very important so it is displayed correctly in-game! -->
+        <!-- Global Company -->
+        <e k="SlovakVillage_SeedMaker_FactoryName" v="Seed Maker"/>
+        <e k="SlovakVillage_SeedMaker_Description" v="Seed Maker vyrábí osiva pomocí obilí dle vašeho výběru a tekutého hnojiva."/>
+        <e k="SlovakVillage_SeedMaker_ProductLine" v="Výroba Osiva"/>
+        <e k="SlovakVillage_ManureMaker_FactoryName" v="Manure Maker"/>
+        <e k="SlovakVillage_ManureMaker_Description" v="Manure Maker vyrábí mrvu pomocí slámy, vody a trávy nebo sena."/>
+        <e k="SlovakVillage_ManureMaker_ProductLine" v="Výroba Mrvy"/>
+        <e k="SlovakVillage_FertilizerMaker_FactoryName" v="Fertilizer Maker"/>
+        <e k="SlovakVillage_FertilizerMaker_Description" v="Fertilizer Maker vyrábí hnojivo pomocí mrvy a vody."/>
+        <e k="SlovakVillage_FertilizerMaker_ProductLine" v="Výroba Hnojiva"/>
+        <e k="SlovakVillage_PigFoodMixer_FactoryName" v="Pig Food Mixer"/>
+        <e k="SlovakVillage_PigFoodMixer_Description" v="Pig Food Mixer vyrábí prasečí krmivo pomocí brambor nebo cukrové řepy, vody a šrotu."/>
+        <e k="SlovakVillage_PigFoodMixer_ProductLine" v="Výroba Prasečího krmiva"/>
+        <e k="SlovakVillage_GrainMill_FactoryName" v="Grain Mill"/>
+        <e k="SlovakVillage_GrainMillBigBrother_FactoryName" v="Grain Mill the Big Brother"/>
+        <e k="SlovakVillage_GrainMill_Description" v="Grain Mill vyrábí šrot pomocí pšenice nebo ječmene a kukuřice."/>
+        <e k="SlovakVillage_GrainMill_ProductLine" v="Výroba Šrotu"/>
+        <e k="SlovakVillage_SawmillPlayer_FactoryName" v="Pila"/>
+        <e k="SlovakVillage_SawmillPlayer_Description" v="Na pile můžete vyrábět desky a prodávat je pro lepší zisk než kulatinu. 
+
+Desky lze také použít k výrobě prázdných palet ve Výrobě Palet, takže nemusíte nakupovat prázdné palety v obchodě. 
+
+Výroba Palet je součástí pily."/>
+        <e k="SlovakVillage_SawmillPlayer_ProductLine" v="Výroba desek"/>
+        <e k="SlovakVillage_PalletFabrication_FactoryName" v="Výroba Palet"/>
+        <e k="SlovakVillage_PalletFabrication_Description" v="S vlastní výrobou palet nemusíte kupovat prázdné palety, můžete si vyrábět vlastní. 
+
+Prázdné palety jsou vyžadovány v jiných továrnách.
+
+Výroba Palet je součástí pily."/>
+        <e k="SlovakVillage_PalletFabrication_ProductLine" v="Výroba Palet"/>
+        <e k="SlovakVillage_SoyMilkProduction_FactoryName" v="Výroba Sójového Mléka"/>
+        <e k="SlovakVillage_SoyMilkProduction_Description" v="Ve Výrobě Sójového Mléka můžete vyrábět sójové mléko, které vám vydělá mnohem více peněz než prodej sóji samotné. 
+
+Jako vedlejší produkt je krmivo pro prasata, které může být podáváno vašim prasatům. A močůvka pro vaše pole, nebo ji můžete prodat někomu, kdo ji potřebuje více."/>
+        <e k="SlovakVillage_SoyMilkProduction_ProductLine" v="Výroba Sójového Mléka"/>
+        <e k="SlovakVillage_Dairy_FactoryName" v="Mlékárna"/>
+        <e k="SlovakVillage_Dairy_Description" v="Vyrábějte více výnosné mléčné výrobky v Mlékárne. 
+
+Mléčné výrobky mohou být prodávány místním potravinám nebo jinde prostřednictvím přepravní společnosti."/>
+        <e k="SlovakVillage_Dairy_ProductLine" v="Výroba Mléčných Výrobků"/>
+        <e k="SlovakVillage_MeatFactory_FactoryName" v="Masokombinát"/>
+        <e k="SlovakVillage_MeatFactory_Description" v="V masokombinátu můžete vyrábět maso výrobky z vašich zvířat. 
+
+Když vykládáte zvířata, změní se na jednotky: kráva - 2500, prase - 700, ovce - 700. 
+
+Maso výrobky lze prodávat místním potravinám nebo jinde prostřednictvím přepravní společnosti."/>
+        <e k="SlovakVillage_MeatFactory_ProductLine" v="Výroba Masa"/>
+        <e k="SlovakVillage_Quarry_FactoryName" v="Lom"/>
+        <e k="SlovakVillage_Quarry_Description" v="Odstřelová Kancelář vyžaduje dynamit. Technici Odstřelové Kanceláře se postarají o stabilní příjem kamene a půdy bohaté na zlato.
+Drtič kamenů se používá k výrobě štěrku z kamene. Pokud máte více kamene, než kolik dokážete spotřebovat, můžete jej také prodat přepravní společnosti.
+Pomocí Oddělovače Zlata můžete najít nějaké zlato v půdě bohaté na zlato, vyprodukovaná z Odstřelové Kanceláře. Zlato lze vyměnit za peníze v bance. Zbývající výstupní materiál (kámen) lze prodat nebo použít v jiné výrobě.
+V Betonárně můžete vyrábět cihly pomocí štěrku, vody, cementu a prázdných palet. Cihly mohou být prodány přepravní společnosti. Pokud máte více štěrku, než kolik dokážete spotřebovat, můžete jej také prodat přepravní společnosti"/>
+        <e k="SlovakVillage_Quarry_ProductLine_BlastingOffice" v="Odstřelová Kancelář"/>
+        <e k="SlovakVillage_Quarry_ProductLine_StoneCrusher" v="Drtič kamenů"/>
+        <e k="SlovakVillage_Quarry_ProductLine_GoldSeparator" v="Oddělovač Zlata"/>
+        <e k="SlovakVillage_Quarry_ProductLine_ConcretePLant" v="Betonárna"/>
+        <e k="SlovakVillage_Orchard_FactoryName" v="Ovocný Sad"/>
+        <e k="SlovakVillage_Orchard_Description" v="V tomto ovocném sadu můžete vyrábět ovoce a zeleninu: Jablka, Meruňky, Švestky, Hrušky, Rajčata, Papriku a Salát. 
+
+Místní potraviny přivítají vaše čerstvé ovoce a zeleninu.
+
+Potřebujete: Vodu, Palivo, Mrvu a Prázdné palety."/>
+        <e k="SlovakVillage_Orchard_ProductLine" v="Ovocný Sad"/>
+        <e k="SlovakVillage_Orchard_ProductLine_Tomato" v="Rajčatový skleník"/>
+        <e k="SlovakVillage_Orchard_ProductLine_GreenPepper" v="Paprikový skleník"/>
+        <e k="SlovakVillage_Orchard_ProductLine_Lettuce" v="Salátový skleník"/>
+        <e k="SlovakVillage_CartonProduction_FactoryName" v="Výroba Kartonů"/>
+        <e k="SlovakVillage_CartonProduction_Description" v="Ve Výrobě Kartonů si můžete vyrobit vlastní lepenkové krabice pomocí dřevní štěpky a vody, a ušetřit trochu peněz. 
+
+Na přepravu krabic budete potřebovat i prázdné palety"/>
+        <e k="SlovakVillage_CartonProduction_ProductLine" v="Výroba kartonů"/>
+        <!-- Global Company resources -->
+        <e k="SlovakVillage_Resource_Animals" v="Zvířata"/>
+        <e k="SlovakVillage_Resource_Board" v="Desky"/>
+        <e k="SlovakVillage_Resource_Carton" v="Lepenkové krabice"/>
+        <e k="SlovakVillage_Resource_Cement" v="Cement"/>
+        <e k="SlovakVillage_Resource_Dynamite" v="Dynamit"/>
+        <e k="SlovakVillage_Resource_EmptyPallet" v="Prázdné palety"/>
+        <e k="SlovakVillage_Resource_Fuel" v="Palivo"/>
+        <e k="SlovakVillage_Resource_Grain" v="Obilí"/>
+        <e k="SlovakVillage_Resource_GrassOrHay" v="Tráva / Seno"/>
+        <e k="SlovakVillage_Resource_Gravel" v="Štěrk"/>
+        <e k="SlovakVillage_Resource_LiquidFertilizer" v="Tekuté hnojivo"/>
+        <e k="SlovakVillage_Resource_Maize" v="Kukuřice"/>
+        <e k="SlovakVillage_Resource_Manure" v="Mrva"/>
+        <e k="SlovakVillage_Resource_Milk" v="Mléko"/>
+        <e k="SlovakVillage_Resource_RootCrops" v="Kořenové plodiny"/>
+        <e k="SlovakVillage_Resource_Soil" v="Půda"/>
+        <e k="SlovakVillage_Resource_Soybean" v="Sójové boby"/>
+        <e k="SlovakVillage_Resource_Stone" v="Kameny"/>
+        <e k="SlovakVillage_Resource_Straw" v="Sláma"/>
+        <e k="SlovakVillage_Resource_Water" v="Voda"/>
+        <e k="SlovakVillage_Resource_WholeGrain" v="Šrot"/>
+        <e k="SlovakVillage_Resource_Wood" v="Kulatina"/>
+        <e k="SlovakVillage_Resource_WoodChips" v="Štěpky"/>
+    </elements>
+</l10n>

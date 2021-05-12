@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="46">
+    <author>MrHector</author>
+    <version>1.2.0.0</version>
+
+    <title>
+        <en>Slovak Village</en>
+        <de>Slowakisches Dorf</de>
+        <cz>Slovenská Vesnice</cz>
+        <nl>Slowaaks Dorp</nl>
+        <fr>Village Slovaque</fr>
+		<hu>Szlovák Falu</hu>
+    </title>
+
+    <description>
+        <en>
+<![CDATA[Welcome to the Slovak Village. This is a fictional map based on real life location in Slovak Republic.
+
+Required Mods: Global Company(by LS-Modcompany) - Must be enabled. USE CURRENT OFFICIAL VERSION ON MODHUB.
+
+- This map includes all Farming Simulator 2019 features.
+- Animal pastures (cows, sheeps, pigs, chickens) built into the map for New Farmer game mode. Pastures can be sold aswell.
+- Big detailed farm area for New Farmer game mode. In Farm Manager and Start from Scratch modes you can build everything as you wish.
+- Preplaced detailed farm house in New Farmer game mode, located in village, connected with chicken pasture. So you can feel like a citizen.
+- Train system included.
+- 37 fields - small/medium/large - fields with its own specific shape and square fields.
+- 14 sell points - including BGA, train.
+- 4 railroad silos. In the city: Train loading yard - Grain, can load only grain. Train loading yard - Root Crops, can load only root crops + sugar cane. East of the map: Railroad silo east can load grain and root crops and sugarcane. In Forest area: Railroad silo - Wood chips, can load only wood chips.
+- All sell points, railroad silos and shop have their own specific opening hours - you can not buy/sell stuff if they have closed. Note: On first load everything is closed, just wait 1 in-game hour and everything will be back in its standard opening hours cycle.
+- Large forestry area
+- Missions - field jobs and transport missions included.
+- NPCs with Slovak names
+- Custom transport mission pallets + reworked standard pallets.
+- Large pallet of new placeable objects used in preplaced farm area in New Farmer game mode. So you can use them in other modes aswell. (small gas station, workshop, shelters, refilling stations...)
+- Buying stations scattered around the map - you can buy seeds, fertiliezer, liquid fertiliezer, herbicide, lime... or even food for animals - oats, pig food. These are of course a little more expensive than the pallets from shop but more comfortable.
+  Manure and Liquid Manure traders included. You can both sell or buy from them. Manure can be loaded directly to trailer or if you wish you can use manipulator and load it manually.
+- Small unique feature: In vehicle shop you can find Manitou forklift which is owned by nobody or the shop if you wish. This can be used to load your pallets you bought, do not need to bring your own manipulator. Especialy usefull for begining. It is there for everyone, do not steal it :)
+
+- Expand your farming business to new areas. Various factories included in the map, from big buit-in factories to small placeable machines. (Quarry, Sawmill, Meat Factory, Dairy, Orchard...) To be able to produce in these factories you have to buy them first, by buying farmland they are built on. Smaller placeable machines can be placed where ever you want.
+
+- Seasons dod ready, with everything that the seasons mod offers. Texture changes - bushes change color depending on season, roads and similar objects changes texture during winter and so on. Custom weather, crop growth and environment data to fit the location of the map. 
+  Cotton and Sugarcane are included, They will grow. These are not typical crops for the location of the map of course but if you strictly want to play realistically you can download seasons GEO mod from modHub by me - Seasons GEO: Slovakia, This is the same GEO used in the map, the only difference is that this is realistic (no cotton and sugarcane)
+- Animal Pen Extension mod ready.
+- Manure System mod ready.
+
+Follow me on my facebook page: www.facebook.com/MrHectorMods - here you can find any usefull info, updates and so on.
+
+Enjoy.
+
+Changelog v 1.0.1
+- Edited all heaps in quarry and chaff heaps in greenhouses, collisions removed for better loading capabilities.
+- Fixed inability to load stone, gravel and soil from heaps in quarry, on dedicated servers and multiplayer. Chaff heaps in greenhouses also improved.
+
+Changelog v 1.1
+- Price balancing - Increased selling price for soy milk, meat products, bricks, stone, gravel and slightly for gold and dairy products. Increased buying price for empty pallets. Lowered selling price for apples, pears, plums, apricots, tomatoes, green peppers and lettuce.
+- Pallet Fabrication: Redesigned functionality, empty pallets are now worth making as should have been and more boards produced from sawmill are to be sold, as ment.
+- Sawmill: Adjusted ratios, how much boards and wood chips should be made out of same amount of wood / 1 log to 70% boards and 30% wood chips (was 58% boards and 42% wood chips) Decreased maximum capacity of wood to 1500000 l(was 2500000 l), previous max capacity was unnecessary way too high.
+- Meat Facotry: Increased amount of meat you get from sheep to 700 l (was 400 l), to be profitable.
+- Soy Milk Production: Decreased water consumption to 50% (was 70%) and max capacity to 150000 l (was 200000 l).
+- Quarry: Added extra option / output type, how to take material out of heaps. For now at last - temporary solution, for those the direct loading with shovel does not work for some unknown reason.
+- Quarry: Increased water capacity for Concrete Plant to 120000 l (was 80000 l) and for Gold Separator to 90000 l (was 60000 l)
+- Orchard: Added extra option / output type for chaff heaps... .
+- Orchard: Increased water tank capacity to 120000 l (was 80000 l) Now you can also buy water and manure in Global Company menu. Increased storage capacity for all orchard products to 120000 l (was 60000 l).
+- Brick pallets, board pallets and empty pallets are now also spawned manually through GC menu, this works better and it is also better for performance. And with this change, storages have been added for theese products.
+- Added modified version of original Thunder Creek FST990 fuel trailer with ability to unload into triggers, allowing you also to fill fuel in your factories. Marked with small white Slovak Village logo in the shop.
+- Added placeable Carton Production, using wood chips and water you can make carton.
+- Added placeable Sosnovka cow and chicken pastures and custom pig, sheep and horse pastures, built to Sosnovka style - using Sosnovka buildings.
+- Added 2 placeable compositions of concrete fence wall of 28m and 44m length, for easier fence building. + placeable swing gate.
+- Added small placeable universal silo, useful for animal food when placed near animal pastures and can be also used as storage for any grain types or even seeds and fertilizer.
+- Added placeable Sosnovka bunker silo.
+- Added Manure System mod support for pig and cow pastures.
+- Added French language translation.
+- Fixed distance terrain textures on fields. Some terrain types (e.g. after spreading liquid manure) did not had their distance texture.
+- (SEASONS MOD) Redesigned seasons economy for most of the Slovak Village custom fill types.
+- (SEASONS MOD) All Global Company factories are now properly configured for Global Company - Seasons support feature (Production speed is based on season length setting - you get same amount of product per year regardless of your season length). The normal values are now set to 3 days season length, previously without configuration it was on 6 day days season length by script automatically.
+- (SEASONS MOD) Orchard will now stop produce fruits during the winter, greenhouses can now produce vegetables also during the winter. Tip blockers, which appeared previously during the winter, have been removed since they are no longer necessary.
+- Many other small tweaks, fixes and changes that does not need to be noted.
+
+Changelog v 1.2 (!!!IMPORTANT!!! - If you updated map from any older versions, new save game is required.)
+- Increased limit of fill types dump-able to ground, this allows to use more mods which are adding new fill types dump-able to ground and in various combinations, e.g. Straw Harvest Addon + Seasons mod...
+- Added Hungarian language translation.]]>
+        </en>
+        <de>
+<![CDATA[Willkommen im slowakischen Dorf. Dies ist eine fiktive Karte, die auf dem tatsächlichen Standort in der Slowakischen Republik basiert.
+
+Erforderliche Modifikationen: Global Company(von LS-Modcompany) - Muss aktiviert sein. NUTZEN SIE DIE AKTUELLE OFFIZIELLE VERSION AUF MODHUB.
+
+- Diese Karte enthält alle Funktionen von Farming Simulator 2019.
+- Tierweiden (Kühe, Schafe, Schweine, Hühner), die in die Karte für den Spielmodus "neuer Farmer" eingebaut wurden. Weiden können auch verkauft werden.
+- Große, detaillierte Farmfläche für den Spielmodus "neuer Farmer". In den Modi Farm Manager und Start from Scratch können Sie alles nach Ihren Wünschen erstellen.
+- Vorbereitetes, detailliertes Bauernhaus im Spielmodus "neuer Farmer" im Dorf, verbunden mit einem Hühnerstall. So können Sie sich wie ein Bürger fühlen.
+- Zugsystem eingeschlossen.
+- 37 Felder - klein / mittel / groß - Felder mit eigener Form und quadratischen Feldern.
+- 14 Verkaufsstellen - einschließlich BGA, Zug.
+- 4 Eisenbahnsilos. In der Stadt: Zugladehof - Getreide, kann nur Getreide laden. Zugladehof - Hackfrüchte, kann nur Hackfrüchte + Zuckerrohr laden. Östlich der Karte: Im Eisenbahnsilo Ost können Getreide, Hackfrüchte und Zuckerrohr geladen werden. Im Waldgebiet: Eisenbahnsilo - Hackschnitzel, kann nur Hackschnitzel einlagern.
+- Alle Verkaufsstellen, Eisenbahnsilos und Geschäfte haben ihre eigenen Öffnungszeiten - Sie können keine Waren kaufen / verkaufen, wenn diese geschlossen sind. Hinweis: Beim ersten Laden ist alles geschlossen. Warten Sie nur eine Spielstunde und alles ist wieder in den normalen Öffnungszeiten.
+- Große Forstfläche
+- Missionen - Feldjobs und Transportmissionen enthalten.
+- NPCs mit slowakischen Namen
+- Spezialtransportpaletten + überarbeitete Standardpaletten.
+- Große Palette neuer platzierbarer Objekte, die im New Farmer-Spielmodus im vorplatzierten Farmbereich verwendet werden. Sie können sie also auch in anderen Modi verwenden. (kleine Tankstelle, Werkstatt, Unterstände, Tankstellen ...)
+- Kaufen Sie überall auf der Karte verstreute Stationen - Sie können Samen, Dünger, Flüssigdünger, Herbizide, Limetten ... oder sogar Tierfutter - Hafer, Schweinefutter - kaufen. Diese sind natürlich etwas teurer als die Paletten aus dem Laden aber bequemer.
+  Gülle- und Güllehändler eingeschlossen. Sie können beide von ihnen verkaufen oder kaufen. Gülle kann direkt in den Anhänger geladen werden oder wenn Sie möchten, können Sie den Manipulator verwenden und manuell laden.
+- Kleines einzigartiges Merkmal: Im Fahrzeuggeschäft finden Sie Manitou-Gabelstapler, die Sie zur Verladung nutzen können. Sie müssen keinen eigenen Stapler mitbringen. Besonders nützlich für Anfänger. Es ist für alle da, also bitte nicht stehlen :)
+
+- Erweitern Sie Ihr landwirtschaftliches Geschäft auf neue Gebiete. Die Karte enthält verschiedene Fabriken, von großen eingebauten Fabriken bis hin zu kleinen platzierbaren Maschinen. (Steinbruch, Sägewerk, Schlachterei, Molkerei, Obst/Gemüsegarten ...) Um in diesen Fabriken produzieren zu können, muss man sie zuerst kaufen, indem man Ackerland kauft, auf dem sie gebaut sind. Kleinere platzierbare Maschinen können überall aufgestellt werden.
+
+- Für Seasons Mod vorbereitet, mit allem was der Seasons Mod bietet. Texturänderungen - Büsche ändern ihre Farbe je nach Jahreszeit, Straßen und ähnliche Objekte ändern ihre Textur im Winter und so weiter. Benutzerdefinierte Daten zu Wetter, Pflanzenwachstum und Umwelt, die an den Standort der Karte angepasst sind.
+  Baumwolle und Zuckerrohr sind enthalten. Sie werden wachsen. Dies sind natürlich keine typischen Ernten für die Position der Karte, aber wenn Sie unbedingt realistisch spielen möchten, können Sie Seasons GEO Mod von modHub von mir herunterladen - Seasons GEO: Slowakei, Dies ist das gleiche GEO, das in der Karte verwendet wird, der einzige Unterschied ist, dass dies realistisch ist (keine Baumwolle und Zuckerrohr)
+- Animal Pen Extension Mod fertig.
+- Manure System mod fertig.
+
+Folgen Sie mir auf meiner Facebook-Seite: http://www.facebook.com/MrHectorMods - hier finden Sie nützliche Informationen, Updates und so weiter.
+
+Genießen.
+
+Changelog v 1.0.1
+- Alle Häufen im Steinbruch und Spreu Häufen in den Gewächshäusern wurden angepasst, Kollisionen wurden entfernt, um das Verladen zu verbessern.
+- Der Fehler auf dedizierten Servern und im Multiplayer, dass man aus den Häufen im Steinbruch kein Kies, Erde oder Steine entnehmen konnte ist behoben. Spreu Häufen in den Gewächshäusernebenfalls verbessert.
+
+Changelog v 1.1
+- Preis anpassungen - Verkaufspreis für Sojamilch, Fleisch Produkte, Ziegel, Stein, Kies erhöht und zusätzlich Gold und Molkerei Produkte leicht erhöht. Niedrigerer Verkaufspreis für Äpfel, Birnen, Pflaumen, Aprikosen, Tomaten, Paprika und Salat.
+- Palletten Fabrik: Funktionalität überarbeitet, leere Paletten herzustellen ist lohnenswerter wie es sein sollte, Sägewerk produziert mehr Bretter die verkauft werden können.
+- Sägewerk: Angepasste Raten, wieviel Bretter und Hackschnitzel werden aus einem Stamm hergestellt. 1 Stamm = 70% Bretter und 30% Hackschnitzel (vorher 58% Bretter und 42% Hackschnitzel) Verringerung der maximalen Kapazität von Holz auf 1500000 (vorher 2500000), Kapazität war unnötig hoch.
+- Fleisch Fabrik: Fleischmenge die man von einem Schaf erhält auf 700l erhöht (vorher 400l) um profitabel zu sein.
+- Sojamilch Produktion: verringerter Wasserverbrauch auf 50% ( vorher70%) und Kapazität auf 150000l gesetzt(vorher 200000l).
+- Steinbruch: Extra Option eingefügt / Ausgabe, wie nimmt man Material aus den Häufen. Übergangslösung- für die aus unbekannten Gründen das laden mit der Schaufel nicht funktioniert
+- Steinbruch: Kapazität von Wasser im Betonwerk erhöht auf 120000l (vorher 80000l) beim Goldabscheider auf 90000l ( vorher 60000l).
+- Obstgarten: Extra Option eingefügt / Ausgabetyp Spreuhaufen... .
+- Obstgarten: Kapazität Wasserbehälter auf 120000l erhöht (vorher 80000l) zusätzlich kann nun Wasser und Dünger über das Global Company Menü gekauft werden. Erhöhung der Lagerkapazität für alle Obstgarten Produkte auf 120000 l (60000 l).
+- Ziegelpaletten, Kartonpaletten und leere Paletten werden nun auch manuell über das GC-Menü erzeugt. Es funktioniert nun besser und ist auch besser für die Performance. Zusätzlich wurden Lager für diese Produkte hinzugefügt.
+- Es wurde eine modifizierte Version des Thunder Creek FST990 Kraftstoff Anhänger hinzugefügt welcher es ermöglicht auch in die Trigger abzuladen, und die Fabriken aufzufüllen. Im Shop mit einem kleinen Slovakischen Dorf Logo markiert.
+- Platzierbare Kartonfabrik hinzugefügt, benötigt Hackschnitzel und Wasser, erzeugt Kartons.
+- Platzierbare Sosnovka Kuhweide und Hühnerstall sowie neue Schweine, Schafe und Pferdeställe im Sosnovka Style hinzugefügt.
+- Platzierbare Versionen von Betonzäunen mit 28m und 44m länge hinzugefügt, für einfacheres Zaun bauen. + platzierbares Metallschwingtor.
+- Kleines platzierbares Universales Silo zugefügt, nützlich für Tierfutter wenn man es in der Nähe platziert, kann auch als Lagersilo für Getreidearten, Saatgut und Dünger benutzt werden.
+- Platzierbares Sosnoka Fahrsilo hinzugefügt.
+- Manure System Mod Unterstützung für Schweine- und Kuhweiden hinzugefügt.
+- Französisch als Sprache hinzugefügt.
+- Behoben distance terrain Texturen von Feldern, manche terrain Typen ( z.B. nach dem Flüssigdüngen) hatten auf Entfernung nicht die richtige Textur.
+- (SEASONS MOD) überarbeitete Seasons Ökonomie für die meisten benutzerdefenierten Waren.
+- (Seasons Mod) Alle Global Company Fabriken sind ordnungsgemäß konfiguriert für Seasons (Produktionsgeschwindigkeit an die Jahreszeitlänge angepasst, sie bekommen unabhängig wie lange das Jahr dauert die gleiche Produktionsmenge) die Werte sind auf eine Jahreszeitlänge von 3 Tagen eingestellt, vorher wurde per script automatisch auf 6 Tage berechnet.
+- (SEASONS MOD) Obstgarten stoppt nun die Produktion während des Winters, Gewächshäuser können nun Gemüse auch im Winter produzieren. (((Spitzenblocker) die im Winter aufgetreten sind wurden entfernt da diese nicht mehr benötigt werden.
+- Jede Menge kleine Verbesserungen, Korrekturen und Änderungen die nicht weiter nennenswert sind.
+
+Changelog v1.2 (ACHTUNG WICHTIG- für dieses Update wird ein neuer Spielstand benötigt)
+- Anzahl von Filltypes welche auf man auf den Boden abladen kann erhöht, dies erlaubt es mehr Mods zu benutzen welche neue Filltypes hinzufügen die man auf dem Boden abladen kann, Beispiel Seasons+ Addon Strohbergung...
+- Ungarische Sprache hinzugefügt.]]>
+        </de>
+        <cz>
+<![CDATA[Vítejte ve Slovenské vesnici. Jedná se o fiktivní mapu založenou na skutečné lokaci v Slovenské Republice.
+
+Požadované mody: Global Company(od LS-Modcompany) - musí být zapnuto. POUŽÍVEJTE AKTUÁLNÍ, OFICIÁLNÍ VERZI NA MODHUB.
+
+- Tato mapa obsahuje všechny funkce Farming Simulator 2019.
+- Zvířecí pastviny (krávy, ovce, prasata, slepice) zabudované do mapy pro herní režim Nový Farmář. Pastviny mohou být také prodány.
+- Velké Zemědělské družstvo v herním režimu Nový Farmář. V režimu Manažer Farmy a Začít od Začátku, můžete stavět vše, jak si přejete.
+- Detailní farmářův dům v herním režimu Nový Farmář, který se nachází v obci, spojený s kurníkem. Takže se můžete cítit jako občan.
+- Vlakový systém obsažen.
+- 37 polí - malá / střední / velká - pole s vlastním specifickým tvarem a pole s čtvercovými tvary.
+- 14 prodejních bodů - včetně BGA, vlaku.
+- 4 železniční sila. Ve městě: Nakládací dvůr - Obilí, slouží k naložení obilí. Nakládací dvůr - Kořenové plodiny, slouží k naložení kořenových plodin a cukrové třiny. Na východě mapy: Železniční silo východ slouží k naložení obilí a kořenových plodin a cukrové třiny. V lese: Železniční silo - Dřevěné štěpky, slouží k naložení štěpky.
+- Všechna prodejní místa, železniční sila a obchod mají vlastní specifickou otevírací dobu - nemůžete koupit / prodat věci, pokud jsou uzavřené. Poznámka: Při prvním načtení je vše uzavřeno, počkejte 1 hodinu (ve hře) a vše bude zpět ve svém standardním cyklu.
+- Velká lesnická oblast
+- Mise - polní práce a přepravní mise obsaženy.
+- NPCčka se slovenskými jmény.
+- Nové palety pro přepravní mise + přepracované standardní palety.
+- Velká paleta nových objektů, použité pro Zemědělské družstvo v herním režimu Nový Farmář. Takže je můžete použít i v jiných herních režimech. (malá čerpací stanice, dílna, přístřešky, doplńovací stanice ...)
+- Nákupní stanice rozmístěny po mapě - můžete si koupit semena, pevné hnojivo, hnojivo, herbicid, vápno... nebo dokonce jídlo pro zvířata - oves, krmivo pro prasata... Tímto způsobem jsou samozřejmě o něco dražší než palety z obchodu, ale pohodlnější.
+  Na mapě najdete i obchodníky s hnojem a močůvkou. Můžete od nich nakupovat i jim prodávat. Hnojivo lze naložit přímo do přívěsu, nebo pokud si přejete, můžete použít manipulátor a naložit ho ručně.
+- Malá unikátní vlastnost: V obchodě najdete vysokozdvižný vozík Manitou, který není ve vlastnictví nikoho neboli obchodu. Může být použit k naložení palet, které jste si zakoupili, nepotřebujete si přivézt vlastní manipulátor. Zvláště užitečné pro začátek. Je tam pro všechny, nekradněte ho :)
+
+- Rozšiřte své zemědělské podnikání do nových oblastí. Různé továrny obsažené v mapě, od velkých výrobních závodů až po malé stroje. (Lom, Pila, Masokombinát, Mlékárna, Ovocný Sad ...) Abyste mohli v těchto závodech vyrábět, musíte si je nejprve koupit, a to zakoupením půdy, na které jsou postaveni. Menší - placeable stroje lze umístit kamkoli budete chtít.
+
+- Seasons mód podporován, se vším, co seasons mod nabízí. Změny barvy keřů v závislosti na ročním období, silnice a podobné objekty mění texturu během zimy a tak dále. Vlastní nastavení počasí, růstu plodin a prostředí, které odpovídají lokaci mapy.
+  Bavlna a cukrová třtina jsou zahrnuty, budou růst. Samozřejmě nejedná se o typické plodiny pro lokaci mapy, ale pokud chcete striktně hrát realisticky, můžete si stáhnout seasons GEO mod z modHub, ode mně - Seasons GEO: Slovensko, to je stejný GEO použitý na mapě, jediný rozdíl je, že tento je realistický (bez bavlny a cukrové třtiny)
+- Animal Pen Extension mód podporován.
+- Manure System mód podporován.
+
+Sledujte mě na mé facebookové stránce: www.facebook.com/MrHectorMods - zde najdete užitečné informace, aktualizace a podobne.
+
+Užijte si to.
+
+Změny ve verzi 1.0.1
+- Upraveny všechny hromady v lomu a hromady řezanky ve sklenících, odstraněny kolize pro pohodlnejší nakládání.
+- Opravena neschopnost nakládat kámen, štěrk a půdu v lomu, na serverech a multiplayer. Zlepšeny také hromady řezanky ve sklenících.
+
+Změny ve verzi 1.1
+- Úpravy cen - Zvýšená prodejní cena sójového mléka, maso výrobků, cihel, kamene, štěrku a mírně pro zlato a mléčné výrobky. Zvýšená kupní cena prázdných palet. Snížená prodejní cena pro jablka, hrušky, švestky, meruňky, rajčata, papriky a salátu.
+- Výroba palet: Přepracovaná funkčnost, prázdné palety se nyní vyplatí vyrábět, tak jak mělo být, a více desek vyrobených na pile je na prodej, jak bylo zamýšleno.
+- Pila: Upravené poměry, kolik desek a dřevěných štěpek by mělo být vyrobeno ze stejného množství dřeva / 1 klády na 70% desek a 30% dřevěných štěpek (bylo 58% desek a 42% dřevěných štěpek) Snížená maximální kapacita dřeva na 1500000 l (bylo 2500000 l), předchozí maximální kapacita byla zbytečně příliš vysoká.
+- Masokombinát: Zvýšené množství masa, které dostanete z ovce, na 700 l (bylo 400 l), aby ovce byli ziskové.
+- Výroba Sójového Mléka: Snížená spotřeba vody na 50% (bylo 70%) a maximální kapacita na 150000 l (bylo 200000 l).
+- Lom: Přidána extra možnost / způsob výstupu, jak odebrat materiál z hald. Prozatím - dočasné řešení, pro ty, které přímé nakládání lopatou nefunguje z nějakého neznámého důvodu.
+- Lom: Zvýšená kapacita vody pro betonárnu na 120000 l (bylo 80000 l) a pro oddělovač zlata na 90000 l (bylo 60000 l)
+- Ovocný Sad: Přidána extra možnost / způsob výstupu, jak odebrat řezanku z hald řezanky...
+- Ovocný Sad: Zvýšená kapacita nádrže na vodu na 120000 l (bylo 80000 l) Nyní můžete také koupit vodu a hnůj v nabídce Global Company. Zvýšená skladovací kapacita pro všechny produkty ze sadu na 120000 l (bylo 60000 l).
+- Cihly, desky a prázdné palety se nyní také ručně spawnují prostřednictvím nabídky GC, to funguje lépe a je to také lepší pro výkon. A s touto změnou byly přidány sklady pro tyto produkty.
+- Přidána upravená verze původního přívěsu na palivo Thunder Creek FST990 se schopností vykládat do triggerů, což vám také umožňuje plnit palivo ve vašich továrnách. V obchodě je označen malým bílým logem Slovenské Vesnice.
+- Přidána umístitelná Výroba Kartonu, pomocí dřevní štěpky a vody, můžete vyrábět karton (Lepenkové krabice).
+- Přidány umístitelné pastviny pro krávy a slepice z mapy Sosnovka a vlastní pastviny pro prasata, ovce a koně, postavené ve stylu Sosnovky - pomocí budov ze Sosnovky.
+- Přidány 2 umístitelné kompozice betonové zdi o délce 28m a 44m pro snadnější stavbu plotu. + Přidána umístitelná dvoukřídlá brána.
+- Přidáno malé umístitelné univerzální silo, užitečné na krmivo pro zvířata, když je umístěno v blízkosti zvířecích pastvin, a může být také použito jako běžné silo pro všechny typy obilí nebo taky osiva a hnojiva.
+- Přidána umístitelná Silážní jáma z mapy Sosnovka.
+- Přidána podpora pro Manure System módu na pastviny krav a prasat.
+- Přidán překlad do francouzského jazyka.
+- Opraveny textury terénu v dálce na polích. Některé typy terénu (např. po rozmetání močůvky) neměli vykreslenou svou textútu v dálce.
+- (SEASONS MÓD) Přepracovaná ekonomika pro většinu nových surovin na mapě Slovenská Vesnice.
+- (SEASONS MÓD) Všechny továrny Global Company jsou nyní správně nakonfigurovány pro podporu ročních období (Rychlost výroby závisí na nastavení délky sezóny - dostanete stejné množství produktu za rok bez ohledu na délku sezóny). Normální hodnoty jsou nyní nastaveny na 3denní délku sezóny, dříve bez konfigurace to bylo na 6denní délku sezóny scriptem automaticky.
+- (SEASONS MÓD) Ovocný Sad nyní přestane produkovat ovoce v zimě, skleníky nyní mohou produkovat zeleninu i v zimě. Blokátory vysypání, které se objevili v zimě, byly odstraněny, protože již nejsou potřebné.
+- Mnoho dalších malých vylepšení, oprav a změn, které není třeba zaznamenávat.
+
+Změny ve verzi 1.2 (!!! DŮLEŽITÉ !!! - Pokud jste aktualizovali mapu ze starších verzí, je nutná nová hra.)
+- Zvýšený limit surovin sypatelných na zem, což umožňuje použít více modů, které přidávají suroviny sypatelné na zem, a v různých kombinacích, např. Seasons mód + Straw Harverst Addon...
+- Přidán překlad do maďarského jazyka.
+]]>
+        </cz>
+        <fr>
+<![CDATA[Bienvenue dans ce village slovaque. Cette carte est fictive mais elle est basée sur des emplacements réels en République Slovaque.
+
+Mod indispensable : Global Company (par LS-Modcompany) - Doit être activé. UTILISEZ LA VERSION OFFICIELLE ACTUELLE DU MODHUB.
+
+- Cette carte inclut toutes les fonctionnalités de Farming Simulator 2019.
+- Pâturages et enclos (vaches, moutons, cochons, poules) placés sur la carte en mode Nouveau Fermier. Les enclos peuvent être vendus.
+- Grande ferme détaillée en mode Nouveau Fermier. En mode Gérant de la ferme ou Partir de zéro, vous pouvez construire comme cela vous plaît.
+- En mode Nouveau Fermier, le corps de ferme pré-placée est située au village. Il est connecté au poulailler. Vous pourrez ainsi vous sentir un citoyen à part entière immédiatement.
+- Système ferroviaire inclus.
+- 37 champs - petits/moyens/grands - champs rectangulaires et champs de forme irrégulière.
+- 14 points de vente - incluant l'usine de biogaz et les gares.
+- 4 silos ferroviaires. En ville : Transbordement - Grain, peut seulement charger du grain. Transbordement - Tubercules, peut seulement charger les tubercules et la canne à sucre. À l’est de la carte : Silo ferroviaire Est peut charger du grain, des tubercules et de la canne à sucre. Dans la zone forestière : Transbordement - Copeaux de bois, peut seulement charger des copeaux de bois.
+- Tous les points de vente, les silos ferroviaires et les boutiques ont des horaires d'ouverture spécifiques - vous ne pouvez rien acheter/vendre quand ils sont fermés. Remarque : Au premier chargement tout sera fermé. Attendez juste 1 heure du jeu et tout reviendra à la normale.
+- Grande zone forestière
+- Missions - travaux des champs et missions de transport inclus.
+- PNJs avec des noms slovaques
+- Missions de transport avec palettes spécifiques + palettes standard corrigées.
+- Large choix de nouveaux bâtiments et objets plaçables disponible pour les modes de difficulté Gérant de ferme et et Partir de zéro. (Petite station-service, atelier, abris, stations de ravitaillement...)
+- Plusieurs points de vente pour les semences, engrais, engrais liquide, herbicide, chaux et nourriture pour animaux répartis sur la carte. C'est un peu plus cher que les palettes du magasin mais c'est vendu en vrac.
+  Vous pouvez acheter et vendre du fumier et du lisier sur la carte. Le fumier peut être chargé directement sur une remorque ou chargé manuellement.
+- Petite particularité : Au concessionnaire, un chariot élévateur Manitou est disponible pour charger vos palettes. Très utile en début de partie. Il est là pour tout le monde, ne le volez pas :)
+
+- Développez votre entreprise agricole vers de nouvelles activités. Diverses usines sont présentes sur la carte, des grosses usines déjà placées et des petites machines à placer. (Mine, scierie, boucherie, laiterie, verger...) Pour utiliser ces usines, vous devez d'abord acheter la parcelle où elles sont situées. Les petites machines plaçable peuvent être placées n'importe où.
+
+- Compatible avec le mod Seasons, avec toutes les fonctionnalités offertes par ce mod. Modification des textures - les buissons changent de couleur suivant la saison, les routes et objets similaires changent de texture en hiver et ainsi de suite. Climat spécifique avec le mod GEO Slovaquie, la croissance des cultures et les données météorologiques sont adaptées pour cette carte. 
+  Le coton et la canne à sucre sont inclus sur cette carte mais ne pourront pas être cultivés si vous utilisez le mod GEO Slovaquie.
+- Compatible avec le mod Animal Pen Extension.
+- Compatible avec le mod Manure System.
+
+Suivez-moi sur ma page Facebook : www.facebook.com/MrHectorMods - là, vous trouverez toutes les informations utiles, les mises à jour et ainsi de suite.
+
+Amusez-vous bien.
+
+Notes de mise à jour v 1.0.1
+- Edité tous les tas à la mine et les tas de paille hachée des serres, retiré les collisions pour une meilleure compatibilité avec le chargement.
+- Corrigé l'impossibilité de charger des pierres, du gravier et des sédiments aurifères à partir des tas à la mine, sur les serveurs dédiés et en multijoueur. Les tas de paille hachée des serres ont aussi été améliorés.
+
+Notes de mise à jour v1.1
+- Ajustement des prix - Augmentation du prix de vente du lait de soja, de la viande, des briques en béton, des pierres, du gravier et légère augmentation de l’or et des produits laitiers. Prix d’achat des palettes vides augmenté. Prix de vente réduit pour les pommes, les poires, les prunes, les abricots, les tomates, les poivrons verts et la laitue.
+- Fabrique de palettes : Fonctionnalités repensées, les palettes vides valent désormais la peine d’être fabriquées comme cela aurait dû l’être et davantage de planches produites à la scierie devront être vendues, comme il était prévu. 
+- Scierie : Ratios ajustés, quantité de planches et de copeaux de bois devant être produits pour une quantité donnée de troncs / 1 tronc donne 70% de planches et 30% de copeaux (c’était 58% de planches et 42% de copeaux). Diminué la capacité maximale de stockage des troncs à 1500000 litres (était à 2500000 l), la capacité précédente était bien trop grande.
+- Boucherie : Augmenté la quantité de viande obtenue pour les moutons à 700 l (au lieu de 400 l), afin que ce soit profitable.
+- Fabrique de lait de soja : Réduit la consommation d’eau à 50% (au lieu de 70%) et la capacité maximale à 15000 l (au lieu de 200000 l).
+- Mine : Ajouté une option supplémentaire / type de sortie, comment retirer les matériaux des tas. Solution temporaire pour l’instant, le chargement avec une pelle ne fonctionne pas pour une raison inconnue.
+- Mine : Augmenté la capacité de stockage d‘eau de l’usine à béton à 120000 l (au lieu de 80000 l) et du séparateur aurifère à 90000 l (au lieu de 60000 l).
+- Verger : Ajouté une option supplémentaire / type de sortie pour les tas de paille hachée... .
+- Verger : Augmenté la capacité de stockage d’eau à 120000 l (au lieu de 80000 l). Maintenant vous pouvez acheter l’eau et le fumier par l’interface de Global Company. Augmentation de la capacité de stockage de tous les produits du verger à 120000 l (au lieu de 60000 l).
+- Les palettes de briques en béton, les palettes de planches et les palettes vides peuvent désormais être sorties manuellement par l'interface de Global Company. Cela fonctionne mieux et cela améliore les performances. Avec cette modification, il a été ajouté des stockages pour ces produits.
+- Ajouté une version modifiée de la remorque à carburant originale Thunder Creek FST990 afin qu’elle puisse décharger sur les triggers pour vous permettre de ravitailler vos usines. Elle comporte un petit logo Slovak Village au Magasin.
+- Ajouté une fabrique de cartons plaçable qui utilise des copeaux de bois et de l’eau pour produire les cartons.
+- Ajouté les enclos plaçables pour vaches et poulets de la map Sosnovka et des pâturages pour moutons et chevaux dans le même style, en utilisant des bâtiments de Sosnovka.
+- Ajouté 2 sortes de clôtures en béton plaçables de 28m et de 44m de long, pour faciliter la construction + portail battant plaçable.
+- Ajouté un petit silo universel plaçable, utile pour la nourriture des animaux lorsqu'il est placé près des enclos. Il peut également être utilisé comme stockage pour tous les types de grains ou même les semences et engrais.
+- Ajouté le silo bunker plaçable de Sosnovka.
+- Ajouter le support du Manure System mod pour les pâturages de porcs et de vaches.
+- Ajouté la traduction française.
+- Corrigé la distance des textures de terrain sur les champs. Certains types de terrains (par exemple après avoir répandu du lisier) ne possédaient pas de distance de texture.
+- (Mod Seasons) l’économie a été repensée pour la plupart des fruits du Village slovaque.
+- (Mod Seasons) Toutes les usines Global Company sont maintenant correctement configurées pour les fonctions de Global Company concernant le mod Seasons (la vitesse de production est basée sur le réglage de durée d’une saison, vous obtenez la même quantité de produit par an quelle que soit la durée de votre saison). Les valeurs normales sont désormais définies sur une durée de saison de 3 jours. Auparavant, sans configuration, la durée de la saison était de 6 jours par script automatiquement.
+- (Mod Seasons) Le verger arrêtera de produire des fruits en hiver. Les serres pourront produire des légumes en hiver. Les verrouillages des triggers qui apparaissaient autrefois durant l’hiver ont été retirés puisqu’ils ne sont plus nécessaires.
+- De nombreux petits ajustements et correctifs qui ne nécessitaient pas d’être spécifiés ici.
+
+Notes de mise à jour v 1.2 (!!! IMPORTANT !!! - Si vous avez mis à jour la carte depuis une ancienne version, une nouvelle sauvegarde est requise.)
+- Augmenté la limite des types de remplissages qu'on peut verser au sol, cela permet d'utiliser davantage de mods qui ajoutent de nouveaux types de remplissage qu'on peut verser au sol et dans diverses combinaisons, par ex. Straw Harvest Addon + mod Seasons...
+- Ajout de la traduction en langue hongroise.]]>
+        </fr>
+    </description>
+
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+
+    <l10n filenamePrefix="l10n" />
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/GC_Checker.lua" />
+        <sourceFile filename="scripts/l10nFix.lua" />
+    </extraSourceFiles>
+
+    <globalCompany minimumVersion="1.4.0.0" />
+
+    <maps>
+        <map id="SlovakVillage" className="SlovakVillageMap" filename="scripts/SlovakVillage.lua" configFilename="maps/slovakVillage.xml" defaultVehiclesXMLFilename="defaultVehicles.xml" defaultItemsXMLFilename="defaultItems.xml">
+            <title>
+                <en>Slovak Village</en>
+                <de>Slowakisches Dorf</de>
+                <cz>Slovenská Vesnice</cz>
+                <nl>Slowaaks Dorp</nl>
+                <fr>Village Slovaque</fr>
+				<hu>Szlovák Falu</hu>
+            </title>
+            <description>
+                <en>Welcome to the Slovak Village. This is a fictional map based on real life location in Slovak Republic.</en>
+                <de>Willkommen im slowakischen Dorf. Dies ist eine fiktive Karte, die auf dem tatsächlichen Standort in der Slowakischen Republik basiert.</de>
+                <cz>Vítejte ve slovenské vesnici. Jedná se o fiktivní mapu založenou na skutečné lokaci v Slovenské Republice.</cz>
+                <nl>Welkom bij het Slowaaks Dorp.Dit is een fictieve kaart gebaseerd op een bestaande locatie in de Slowaakse Republiek.</nl>
+                <fr>Bienvenue dans ce village slovaque. Cette carte est fictive mais elle est basée sur des emplacements réels en République Slovaque.</fr>
+				<hu>Üdvözöljük a szlovák faluban. Ez egy kitalált térkép, amelynek alapja a valós élet helye a Szlovák Köztársaságban.</hu>
+            </description>
+            <iconFilename>map_preview.png</iconFilename>
+        </map>
+    </maps>
+
+    <brands>
+        <brand name="kunzel" title="KÜNZEL" image="hud/brand_kunzel.png"/>
+        <brand name="cbk" title="CBK" image="hud/brand_cbk.png"/>
+        <brand name="blackRockDynamite" title="Black Rock Dynamite" image="hud/brand_blackRockDynamite.png"/>
+    </brands>
+
+    <vehicleTypes>
+        <type name="fuelTrailerSlovakVillage" parent="baseTipper" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <specialization name="fillTriggerVehicle" />
+        </type>
+    </vehicleTypes>
+
+    <storeItems>
+        <storeItem xmlFilename="vehicles/shopForklift/MC18.xml"/>
+        <storeItem xmlFilename="vehicles/crane/crane.xml"/>
+        <storeItem xmlFilename="vehicles/productTrailer/productTrailer.xml"/>
+        <storeItem xmlFilename="vehicles/thunderCreekFST990/FST990.xml"/>
+        <storeItem xmlFilename="placeables/trainSystem/trainSystem.xml"/>
+        <storeItem xmlFilename="$data/placeables/mapDE/farmBuildings/farmHouse.xml"/>
+        <storeItem xmlFilename="$data/placeables/mapDE/farmBuildings/farmBarn.xml"/>
+        <storeItem xmlFilename="$data/placeables/mapDE/farmBuildings/farmGarage.xml"/>
+        <storeItem xmlFilename="$data/placeables/mapDE/farmBuildings/farmStorageBarn.xml"/>
+        <storeItem xmlFilename="$data/placeables/limeStation/limeStation.xml"/>
+        <storeItem xmlFilename="$data/placeables/limeStation/limeStation03.xml"/>
+        <storeItem xmlFilename="placeables/crane/crane.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationBakery.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationFarmer01.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationFarmer02.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationFoodstuffsDL.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationFoodstuffsCH.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationGardencenter.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationTransportCompany.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationVegetableBase.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationBales.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/trainStationMill.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/trainStationFurnitureF.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationWoodFurnitureF.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationWood.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationWoodChips.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationSpinnery.xml"/>
+        <storeItem xmlFilename="placeables/sellingStations/sellingStationBank.xml"/>
+        <storeItem xmlFilename="placeables/railroadSilos/railroadSiloTown2Grain.xml"/>
+        <storeItem xmlFilename="placeables/railroadSilos/railroadSiloTown2Tuber.xml"/>
+        <storeItem xmlFilename="placeables/railroadSilos/railroadSilo01.xml"/>
+        <storeItem xmlFilename="placeables/railroadSilos/railroadSiloWoodchips.xml"/>
+        <storeItem xmlFilename="placeables/sellingStationVehicles/sellingStationVehicles.xml"/>
+        <storeItem xmlFilename="placeables/gasStation/gasStation01.xml"/>
+        <storeItem xmlFilename="placeables/gasStation/gasStation02.xml"/>
+        <storeItem xmlFilename="placeables/waterFillTriggers/waterFillTriggers.xml"/>
+        <storeItem xmlFilename="placeables/bga/bga.xml"/>
+        <storeItem xmlFilename="placeables/buyingStations/buyingStationAnimalFood.xml"/>
+        <storeItem xmlFilename="placeables/buyingStations/buyingStationManure.xml"/>
+        <storeItem xmlFilename="placeables/buyingStations/buyingStationLiquidManure.xml"/>
+        <storeItem xmlFilename="placeables/refillTankSeed/refillTankSeed.xml"/>
+        <storeItem xmlFilename="placeables/refillTankSeed/refillTankSeed_default.xml"/>
+        <storeItem xmlFilename="placeables/refillTankChemicals/refillTankChemicals.xml"/>
+        <storeItem xmlFilename="placeables/refillTankChemicals/refillTankChemicals_default.xml"/>
+        <storeItem xmlFilename="placeables/waterTowers/waterTower01_default.xml"/>
+        <storeItem xmlFilename="placeables/waterTowers/waterTower02_default.xml"/>
+        <storeItem xmlFilename="placeables/waterTowers/waterTower01.xml"/>
+        <storeItem xmlFilename="placeables/waterTowers/waterTower02.xml"/>
+        <!-- <storeItem xmlFilename="placeables/decoAnimalPastures/horseRanch_decoPasture_1.xml"/>
+        <storeItem xmlFilename="placeables/decoAnimalPastures/horseRanch_decoPasture_2.xml"/>
+        <storeItem xmlFilename="placeables/decoAnimalPastures/meatFactory_decoPasture.xml"/>
+        <storeItem xmlFilename="placeables/decoAnimalPastures/smallFarmer01_decoPasture.xml"/> -->
+        <storeItem xmlFilename="placeables/mainFarmArea/mainFarmArea.xml"/>
+        <storeItem xmlFilename="placeables/universalSilo/universalSilo.xml"/>
+        <storeItem xmlFilename="placeables/universalSilo/smallUniversalSilo.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/bigStorageBarn.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/smallStorageBarn.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/storageShelter01.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/storageShelter02.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/poleBarn.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/vehicleShelter.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/oldVehicleShelter.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/lizardGarage3Door.xml"/>
+        <storeItem xmlFilename="placeables/storageShelters/lizardGarage4Door.xml"/>
+        <storeItem xmlFilename="placeables/workshop/workshop.xml"/>
+        <storeItem xmlFilename="placeables/gasStation/smallGasStation.xml"/>
+        <storeItem xmlFilename="placeables/bunkerSilo/bunkerSiloLarge.xml"/>
+        <storeItem xmlFilename="placeables/farmHouse/farmHousePreplaced.xml"/>
+        <storeItem xmlFilename="placeables/cowHusbandry/cowHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/pigHusbandry/pigHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/sheepHusbandry/sheepHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/chickenHusbandry/chickenHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/chickenHusbandry/sosnovkaChickenHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/sheepHusbandry/sosnovkaSheepHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/pigHusbandry/sosnovkaPigHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/cowHusbandry/sosnovkaCowHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/horseHusbandry/sosnovkaHorseHusbandry.xml"/>
+        <storeItem xmlFilename="placeables/bunkerSilo/sosnovkaBunkerSilo.xml"/>
+        <storeItem xmlFilename="placeables/farmBuildings/farmGatehouse.xml"/>
+        <storeItem xmlFilename="placeables/fences/metalSlidingGate.xml"/>
+        <storeItem xmlFilename="placeables/fences/metalSwingGate.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_typeA_4m.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_typeA_2.5m.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_typeB_4m.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_typeB_2.5m.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_28m.xml"/>
+        <storeItem xmlFilename="placeables/fences/concreteFenceWall_44m.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/seedMaker/seedMaker.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/manureMaker/manureMaker.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/fertilizerMaker/fertilizerMaker.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/grainMill/grainMill.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/grainMill/grainMillBigBrother.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/pigFoodMixer/pigFoodMixer.xml"/>
+        <storeItem xmlFilename="placeables/globalCompany/cartonProduction/cartonProduction.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/wholeGrainBag.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/boardPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/emptyPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/emptyPallet_buyable.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/cartonPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/cartonPallet_crafted.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/soyMilkPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/dairyProductsPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/meatProductsPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/dynamitePallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/goldBox.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/cementPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/brickPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/fruitPallet.xml"/>
+        <storeItem xmlFilename="objects/pallets/globalCompany/lettucePallet.xml"/>
+        <storeItem xmlFilename="objects/fuelCanister/fuelCanister.xml"/>
+        <storeItem xmlFilename="objects/fuelBarrel/fuelBarrel.xml"/>
+    </storeItems>
+</modDesc>
