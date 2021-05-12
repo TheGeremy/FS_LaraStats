@@ -57,6 +57,9 @@ _ide_helper.php
 # Temporary files #
 ###################
 .cache/
+/database/mariadb
+/database/csv_load/savegame3
+/resources/views/test.blade.php
 
 # Laravel specific files #
 ##########################
@@ -67,6 +70,7 @@ _ide_helper.php
 storage/*.key
 /node_modules
 /public/hot
+/database/csv_load/saves
 /public/storage
 .env.backup
 .phpunit.result.cache
