@@ -59,7 +59,7 @@ _ide_helper.php
 .cache/
 /database/mariadb
 /database/csv_load/savegame3
-/resources/views/test.blade.php
+resources/views/test.blade.php
 
 # Laravel specific files #
 ##########################
