@@ -13,7 +13,7 @@ class CreateSavegameDetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_savegame_datail', function (Blueprint $table) {
+        Schema::create('fs_savegame_detail', function (Blueprint $table) {
             $table->id();        
             $table->unsignedBigInteger('save_id');
             // end of indexes section

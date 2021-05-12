@@ -17,7 +17,7 @@ class CreateFarmlandDetailTable extends Migration
             $table->id();
             $table->unsignedBigInteger('save_id');              
             $table->unsignedTinyInteger('farm_id');            
-            $table->unsignedTinyInteger('land_id');            
+            $table->unsignedTinyInteger('game_field_id');            
             // end of indexes section
             $table->string('land_name', 100)->nullable();
             // system colulmns            
@@ -26,7 +26,7 @@ class CreateFarmlandDetailTable extends Migration
             // define indexes
             $table->index('save_id');
             $table->index('farm_id');
-            $table->index('land_id');
+            $table->index('game_field_id');
         });
     }
 

@@ -17,7 +17,7 @@ class CreateTranslationTable extends Migration
             $table->id();
             $table->string('lang', 5);
             $table->string('label', 50);  // original name
-            // emd of indexes
+            // end of indexes
             $table->string('text', 50);
             // system colulmns
             $table->timestamp('created_at')->useCurrent();

@@ -16,8 +16,7 @@ class CreateMapTable extends Migration
         Schema::create('fs_map_dim', function (Blueprint $table) {
             $table->id();
             // end of indexes section           
-            $table->string('map_code', 100); // original mapId from savegame            
-            $table->string('map_title', 100); // original mapTitle from savegame
+            $table->string('map_title', 100); // from map mod modDesc.xml
             $table->string('note', 250)->nullable(); // note from user on backend
             // to fill those below, you need to extract from map mod zip file modDesc.xml to fs_config/map_config/map_name_of_map
             $table->string('author', 100)->nullable(); // map author from mod zip modDesc.xml file
