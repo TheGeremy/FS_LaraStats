@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFarmlandTable extends Migration
+class CreateMapFarmlandTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateFarmlandTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farmland_dim', function (Blueprint $table) {
+        Schema::create('fs_map_farmland_dim', function (Blueprint $table) {
             $table->id();  
-            $table->unsignedTinyInteger('map_id');
+            $table->unsignedBigInteger('map_id'); // id from fs_map_dim  
             $table->unsignedTinyInteger('game_field_id');
             // end of indexes section
             $table->string('npc_name', 50);
@@ -40,6 +40,6 @@ class CreateFarmlandTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farmland_dim');
+        Schema::dropIfExists('fs_map_farmland_dim');
     }
 }
