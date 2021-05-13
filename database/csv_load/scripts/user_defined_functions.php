@@ -172,7 +172,7 @@ function check_seasons($connection) {
 		return false;
 	}
 }
-function prepare_query($tableName,$columns,$values) {
+function prepare_query($tableName,$columns,$values) { // depreciated use prepare query ml (multiline)
 	$col_list = "";
 	$val_list = "";
 	// $columns is array of columns names
@@ -194,7 +194,6 @@ function prepare_query($tableName,$columns,$values) {
 	$query = "insert into " . $tableName ."\n(" . substr($col_list,0,-2) . ")\nvalues\n(" . substr($val_list,0,-2) . ");";
 	return $query;
 }
-
 function is_var_empty($var)
 {
     if (empty($var) === true)
