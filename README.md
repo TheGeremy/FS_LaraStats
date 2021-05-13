@@ -32,13 +32,13 @@ Later (multiplayer version):
 - Back end management of fields
 - Back end management of translations and labels
 
-## Technical prequirements
+## Technical Requirements
 
 - web server with PHP
 - mariadb / mysql database
 - savegame xml files accessible via FTP or network share
 
-## FS Config files prequirements
+## FS Map Config Files Requirements
 
 For each mod map you need to provide this files from map mod zip
 
@@ -76,6 +76,8 @@ needs to be adjusted if you want to have more details to this:
 
 You can manually change xml comment to note attribute, to be stored in database.
 You can manually add attribute sizeHa (size of the field in Ha) to be loaded to database. (latter you can adjust size of the field in backend, default value will be NULL)
+
+## FS Game Config Files Requirements
 
 ### Other info
 
