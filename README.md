@@ -56,22 +56,22 @@ farmlands.xml usual name "slovakVillage_farmlands.xml" needs to be changed to "f
 farmlands.xml usual structure:
 
 ```
-	<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" />	<!-- riverside parcel NW -->
-	<farmland id="2"  priceScale="1" npcName="NPC_SK_11" /> <!-- field 1 -->
-	<farmland id="3"  priceScale="1" npcName="NPC_SK_02" /> <!-- field 2 -->
-    <farmland id="4"  priceScale="1" npcName="NPC_SK_15" /> <!-- field 3 -->
-    <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" /> <!-- sheep pasture -->	
+<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" />	<!-- riverside parcel NW -->
+<farmland id="2"  priceScale="1" npcName="NPC_SK_11" /> <!-- field 1 -->
+<farmland id="3"  priceScale="1" npcName="NPC_SK_02" /> <!-- field 2 -->
+<farmland id="4"  priceScale="1" npcName="NPC_SK_15" /> <!-- field 3 -->
+<farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" /> <!-- sheep pasture -->	
 ```
 
 needs to be adjusted if you want to have more details to this:
 
 ```
-	<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" note="riverside parcel NW" />
-	<farmland id="2"  priceScale="1" npcName="NPC_SK_11" note="field 1" />
-	<farmland id="3"  priceScale="1" npcName="NPC_SK_02" note="field 2" />
-	<farmland id="4"  priceScale="1" npcName="NPC_SK_15" note="field 3" sizeHa="2.36"/>
-    <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" note="sheep pasture" />
-    <farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" note="riverside parcel S (road bridge)" />	
+<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" note="riverside parcel NW" />
+<farmland id="2"  priceScale="1" npcName="NPC_SK_11" note="field 1" />
+<farmland id="3"  priceScale="1" npcName="NPC_SK_02" note="field 2" />
+<farmland id="4"  priceScale="1" npcName="NPC_SK_15" note="field 3" sizeHa="2.36"/>
+<farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" note="sheep pasture" />
+<farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" note="riverside parcel S (road bridge)" />	
 ```
 
 ### Other info
