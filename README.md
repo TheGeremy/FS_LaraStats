@@ -74,6 +74,9 @@ needs to be adjusted if you want to have more details to this:
 <farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" note="riverside parcel S (road bridge)" />	
 ```
 
+You can manually change xml comment to note attribute, to be stored in database.
+You can manually add attribute sizeHa (size of the field in Ha) to be loaded to database. (latter you can adjust size of the field in backend, default value will be NULL)
+
 ### Other info
 
 Project is under development. At the moment I just parse xml files ant try to load them to database in nice structure.
