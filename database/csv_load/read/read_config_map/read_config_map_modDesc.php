@@ -1,26 +1,26 @@
 <?php
-// include external php code 
-// base_path() laravel base directory
-require base_path() . '/database/csv_load/scripts/user_defined_functions.php';
+// load modDesc.xml file for specified map mod
+$xml_map_moddesc = simplexml_load_file($map_dir . "modDesc.xml");
 
-// path to xml to process
-$xml_file_path = base_path() . "/fs_config/config_map/map_slovak_village/modDesc.xml";
+if($xml_map_moddesc === false)
+{
+	die('Unable to load and parse the xml file: ' . error_get_last()['message'] );
+}
 
-// load xml file to array
-$xml_file = simplexml_load_file($xml_file_path);
+$data[1] = array();
+$data[1]['map_title'] = $map_title;
+$data[1]['note'] = ""; // query preparing function will change this to nul
+$data[1]['author'] = (string)$xml_map_moddesc->author;
+$data[1]['version'] = (string)$xml_map_moddesc->version;
+$data[1]['mod_desc_version'] = (string)$xml_map_moddesc->attributes()->descVersion;
+$data[1]['short_desc_en'] = trim((string)$xml_map_moddesc->maps->map->description->en);
+$data[1]['short_desc_cz'] = trim((string)$xml_map_moddesc->maps->map->description->cz);
+$data[1]['description_en'] = trim((string)$xml_map_moddesc->description->en);
+$data[1]['description_cz'] = trim((string)$xml_map_moddesc->description->cz);
 
-// create array for data, those will be inserted into database
-$data = array();
+$query = prepare_query_ml('fs_map_dim', $data);
+//just_print($query);
+//execute_query($connection, $query);
+just_print('Map info stored in fs_map_dim.');
 
-$data[1]['map_title'] = (string)$xml_file->title->en;
-$data[1]['author'] = (string)$xml_file->author; 
-$data[1]['version'] = (string)$xml_file->version; 
-$data[1]['mod_desc_version'] = (string)$xml_file->attributes()->descVersion;
-$data[1]['short_desc_en'] = (string)$xml_file->maps->map->description->en;
-$data[1]['short_desc_cz'] = (string)$xml_file->maps->map->description->cz;
-$data[1]['description_en'] = (string)$xml_file->description->en;
-$data[1]['description_cz'] = (string)$xml_file->description->cz;
-
-$query = prepare_query_ml('fs_map_dim',$data);
-print_r($query);
 ?>
