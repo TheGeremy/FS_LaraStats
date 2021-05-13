@@ -18,6 +18,7 @@ class CreateSavegameTable extends Migration
             $table->smallInteger('current_day');
             $table->unsignedBigInteger('map_id'); // id from fs_map_dim
             // end of indexes section
+            $table->unsignedInteger('source_id');
             $table->string('savegame_name', 100);
             $table->date('save_date'); 
             $table->double('money', 16, 6);

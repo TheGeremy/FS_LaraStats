@@ -1,15 +1,4 @@
 <?php
-function just_print($message) {
-	print_r($message . "\n");
-}
-function print_heading($message) {
-	$message_length = 100;
-	$message = "--- " . $message . " " . strftime("%d.%m.%Y (%H:%M:%S)",time()) . " -----------------------------------------------------------------------------------------------------------------------------";
-	if(strlen($message) > $message_length) {
-		$message = substr($message,0,$message_length);
-	}
-	print_r($message . "\n");
-}
 function convert_string($str) {
 	// function to convert string from - to:
 	// "Some String" - "some_string"
@@ -48,13 +37,6 @@ function push_attributes($key, $value) {
 	array_push($GLOBALS['columns'],$key);
 	array_push($GLOBALS['values'],$value);
 }
-function get_map_id($map_title, $connection) {
-	// get id of map in map dimension table
-	$query = "select get_map_id('" . $map_title . "') as map_id;";
-	$result = execute_query($connection, $query);
-	$row = $result->fetch_array(MYSQLI_ASSOC);
-	return $row["map_id"]; // database return 0 if no map find
-}
 function get_savegame_id($connection) {
 	// get id of last savegame loaded 
 	$query = "select get_save_id() as id;";
@@ -69,7 +51,7 @@ function get_current_day($connection) {
 
 	return $row["currentDay"]; // if no save (current day) then database return 0
 }
-function console_log($msg, $redirect = 3) {
+function console_log($msg, $redirect) {
     // redirect => if 1 print to console log of chrome, if 2 print to javascript log ???, 3 echo to web page
 	if ($redirect == 1) {    
 	    $js_code = 'console.log(' . json_encode($msg, JSON_HEX_TAG) . ');';
@@ -108,13 +90,13 @@ function mariadb_connect() {
 
 }
 function execute_query($connection, $query) {
-	// console_log("==> Query: " . $query, 3);
+	console_log("==> Query: " . $query, 3);
 	// execute query
 	$result = $connection->query($query);
 	if (!$result) {
    		console_log("!!! Query: error\n(" . $connection->errno . ") " . $connection->error, 3);
 	} else {
-		//console_log("*** Query: success", 3);
+		console_log("*** Query: success", 3);
 		return $result;
 	}
 }
@@ -123,7 +105,7 @@ function mariadb_disconnect($connection) {
 	// $connection->close();
 	mysqli_close($connection);
 
-	console_log("Connection to db closed.", 3);
+	console_log("Connection to db closed.", $redirect);
 }
 function find_last_char($str, $char) {
 	$i = 0;
@@ -247,14 +229,10 @@ function prepare_query_ml($tableName, $data) {
 	$columns = array(); // ensure same order of columns and values
 
 	// add columns list to query
-	foreach($data as $row) {
-		foreach(array_keys($row) as $_ => $column) {
-			if(!in_array($column, $columns)) {
-				$query .= "`" . $column. "`, ";
-				array_push($columns,$column);
-			}
-		}
-	}		
+	foreach(array_keys($data[min(array_keys($data))]) as $_ => $column) {
+		$query .= "`" . $column. "`, ";
+		array_push($columns,$column);
+	}
 
 	$query = substr($query,0,-2) . ")\nvalues\n";
 
@@ -272,26 +250,7 @@ function prepare_query_ml($tableName, $data) {
 	  	$query = substr($query,0,-2) . "),\n";
 	}
 
-	return substr($query,0,-2) . ";";
-}
-function prepare_update_query($table_name, $data, $key_column, $key_value) {
-	$columns_list = array(); // ensure same order of columns and values
-	$query = "update " . $table_name .  " set\n";
-
-	// add values to update
-	foreach($data as $column => $value) {
-		if(!(is_numeric($value) or $value == 'true' or $value == 'false' or $value == 'NULL')) {
-			$value = "'" . $value . "'";
-	  	}
-	  	$query .= "`" . $column . "` = ". $value .  ",\n";	  	
-	}
-
-	if(!(is_numeric($key_value) or $key_value == 'true' or $key_value == 'false' or $key_value == 'NULL')) {
-			$key_value = "'" . $key_value . "'";
-	}
-
-	$query = substr($query,0,-2) . "\nwhere `" . $key_column . "` = " . $key_value . ";";	
-	return $query;
+	return substr($query,0,-2);
 }
 
 ?>

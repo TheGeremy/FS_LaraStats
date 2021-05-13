@@ -1,67 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <map>
     <farmlands densityMapFilename="maps/slovakVillage/slovakVillage_farmland.grle" numChannels="6" pricePerHa="60000">
-        <farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" note="riverside parcel NW" />
-        <farmland id="2"  priceScale="1" npcName="NPC_SK_11" note="field 1" />
-        <farmland id="3"  priceScale="1" npcName="NPC_SK_02" note="field 2" />
-        <farmland id="4"  priceScale="1" npcName="NPC_SK_15" note="field 3" sizeHa="2.36"/>
-        <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" note="sheep pasture" />
-        <farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" note="riverside parcel S (road bridge)" />
-        <farmland id="7"  priceScale="1" npcName="NPC_SK_18" note="field 7" />
-        <farmland id="8"  priceScale="1" npcName="NPC_SK_18" note="field 8" />
-        <farmland id="9"  priceScale="0.5" npcName="NPC_SK_18" note="riverside parcel S (wegetable base)" />
-        <farmland id="10" priceScale="0.5" npcName="NPC_SK_18" note="riverside parcel SE (farmer 1)" />
-        <farmland id="11" priceScale="1" npcName="NPC_SK_06" note="field 9" />
-        <farmland id="12" priceScale="1" npcName="NPC_SK_15" note="field 4" />
-        <farmland id="13" priceScale="1" npcName="NPC_SK_11" note="field 5" />
-        <farmland id="14" priceScale="1" npcName="NPC_SK_18" note="field 6" />
-        <farmland id="15" priceScale="1" npcName="NPC_SK_15" note="field 10" />
-        <farmland id="16" priceScale="1" npcName="NPC_SK_08" note="field 11" />
-        <farmland id="17" priceScale="1" npcName="NPC_SK_08" note="field 12" />
-        <farmland id="18" priceScale="0.7" npcName="NPC_SK_13" defaultFarmProperty="true" note="field 13, main farm area" />
-        <farmland id="19" priceScale="1" npcName="NPC_SK_13" defaultFarmProperty="true" note="field 14" />
-        <farmland id="20" priceScale="1" npcName="NPC_SK_13" note="field 15" />
-        <farmland id="21" priceScale="1" npcName="NPC_SK_03" defaultFarmProperty="true" note="field 16" />
-        <farmland id="22" priceScale="1" npcName="NPC_SK_03" note="field 17" />
-        <farmland id="23" priceScale="3" npcName="NPC_SK_03" defaultFarmProperty="true" note="pig pasture" />
-        <farmland id="24" priceScale="1" npcName="NPC_SK_14" note="field 18" />
-        <farmland id="25" priceScale="1" npcName="NPC_SK_14" note="field 19" />
-        <farmland id="26" priceScale="1" npcName="NPC_SK_16" note="field 20" />
-        <farmland id="27" priceScale="1" npcName="NPC_SK_16" note="field 21" />
-        <farmland id="28" priceScale="1" npcName="NPC_SK_10" note="field 22" />
-        <farmland id="29" priceScale="1" npcName="NPC_SK_10" note="field 23" />
-        <farmland id="30" priceScale="1" npcName="NPC_SK_10" defaultFarmProperty="true" note="chicken pasture, farmer house" />
-        <farmland id="31" priceScale="1" npcName="NPC_SK_07" note="field 24" />
-        <farmland id="32" priceScale="1" npcName="NPC_SK_07" note="field 25" />
-        <farmland id="33" priceScale="1" npcName="NPC_SK_04" note="field 26" />
-        <farmland id="34" priceScale="1" npcName="NPC_SK_20" note="field 27" />
-        <farmland id="35" priceScale="1" npcName="NPC_SK_20" note="field 28" />
-        <farmland id="36" priceScale="1" npcName="NPC_SK_12" note="field 29" />
-        <farmland id="37" priceScale="1" npcName="NPC_SK_09" note="field 30" />
-        <farmland id="38" priceScale="1" npcName="NPC_SK_04" note="field 31" />
-        <farmland id="39" priceScale="1" npcName="NPC_SK_05" note="field 32" />
-        <farmland id="40" priceScale="1" npcName="NPC_SK_01" note="field 33" />
-        <farmland id="41" priceScale="1" npcName="NPC_SK_19" note="field 34" />
-        <farmland id="42" priceScale="1" npcName="NPC_SK_19" note="field 35" />
-        <farmland id="43" priceScale="1" npcName="NPC_SK_17" note="field 36" />
-        <farmland id="44" priceScale="3" npcName="NPC_SK_17" note="biogas plant" />
-        <farmland id="45" priceScale="1" npcName="NPC_SK_17" note="field 37" />
-        <farmland id="46" priceScale="1" npcName="NPC_SK_17" note="field 38" />
-        <farmland id="47" priceScale="1" npcName="NPC_SK_02" note="forest area 1" />
-        <farmland id="48" priceScale="1" npcName="NPC_SK_06" note="forest area 2" />
-        <farmland id="49" priceScale="1" npcName="NPC_SK_14" note="forest area 3" />
-        <farmland id="50" priceScale="1" npcName="NPC_SK_03" note="forest area 4" />
-        <farmland id="51" priceScale="1" npcName="NPC_SK_14" note="forest area 5" />
-        <farmland id="52" priceScale="1" npcName="NPC_SK_01" note="forest area 6" />
-        <farmland id="53" priceScale="1" npcName="NPC_SK_16" note="forest area 7" />
-        <farmland id="54" priceScale="1" npcName="NPC_SK_12" note="forest area 8" />
-		<farmland id="55" priceScale="1" npcName="NPC_SK_12" note="forest area 9" />
-		<farmland id="56" priceScale="6" npcName="NPC_SK_10" note="quarry" />
-		<farmland id="57" priceScale="6" npcName="NPC_SK_05" note="sawmill player" />
-		<farmland id="58" priceScale="5.5" npcName="NPC_SK_01" note="meat factory" />
-		<farmland id="59" priceScale="6.5" npcName="NPC_SK_19" note="soymilk production" />
-		<farmland id="60" priceScale="4.5" npcName="NPC_SK_04" note="dairy" />
-		<farmland id="61" priceScale="2.5" npcName="NPC_SK_17" note="orchard" />
-		<farmland id="62" priceScale="100" npcName="NPC_SK_PP" note="villages, deco fields, private property (not meant to be buyable but must have farmland)" />
+        <farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" />	<!-- riverside parcel NW -->
+        <farmland id="2"  priceScale="1" npcName="NPC_SK_11" /> <!-- field 1 -->
+        <farmland id="3"  priceScale="1" npcName="NPC_SK_02" /> <!-- field 2 -->
+        <farmland id="4"  priceScale="1" npcName="NPC_SK_15" /> <!-- field 3 -->
+        <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" /> <!-- sheep pasture -->
+        <farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" /> <!-- riverside parcel S (road bridge) -->
+        <farmland id="7"  priceScale="1" npcName="NPC_SK_18" /> <!-- field 7 -->
+        <farmland id="8"  priceScale="1" npcName="NPC_SK_18" /> <!-- field 8 -->
+        <farmland id="9"  priceScale="0.5" npcName="NPC_SK_18" /> <!-- riverside parcel S (wegetable base) -->
+        <farmland id="10" priceScale="0.5" npcName="NPC_SK_18" /> <!-- riverside parcel SE (farmer 1) -->
+        <farmland id="11" priceScale="1" npcName="NPC_SK_06" /> <!-- field 9 -->
+        <farmland id="12" priceScale="1" npcName="NPC_SK_15" /> <!-- field 4 -->
+        <farmland id="13" priceScale="1" npcName="NPC_SK_11" /> <!-- field 5 -->
+        <farmland id="14" priceScale="1" npcName="NPC_SK_18" /> <!-- field 6 -->
+        <farmland id="15" priceScale="1" npcName="NPC_SK_15" /> <!-- field 10 -->
+        <farmland id="16" priceScale="1" npcName="NPC_SK_08" /> <!-- field 11 -->
+        <farmland id="17" priceScale="1" npcName="NPC_SK_08" /> <!-- field 12 -->
+        <farmland id="18" priceScale="0.7" npcName="NPC_SK_13" defaultFarmProperty="true" /> <!-- field 13, main farm area -->
+        <farmland id="19" priceScale="1" npcName="NPC_SK_13" defaultFarmProperty="true" /> <!-- field 14 -->
+        <farmland id="20" priceScale="1" npcName="NPC_SK_13" /> <!-- field 15 -->
+        <farmland id="21" priceScale="1" npcName="NPC_SK_03" defaultFarmProperty="true" /> <!-- field 16 -->
+        <farmland id="22" priceScale="1" npcName="NPC_SK_03" /> <!-- field 17 -->
+        <farmland id="23" priceScale="3" npcName="NPC_SK_03" defaultFarmProperty="true" /> <!-- pig pasture -->
+        <farmland id="24" priceScale="1" npcName="NPC_SK_14" /> <!-- field 18 -->
+        <farmland id="25" priceScale="1" npcName="NPC_SK_14" /> <!-- field 19 -->
+        <farmland id="26" priceScale="1" npcName="NPC_SK_16" /> <!-- field 20 -->
+        <farmland id="27" priceScale="1" npcName="NPC_SK_16" /> <!-- field 21 -->
+        <farmland id="28" priceScale="1" npcName="NPC_SK_10" /> <!-- field 22 -->
+        <farmland id="29" priceScale="1" npcName="NPC_SK_10" /> <!-- field 23 -->
+        <farmland id="30" priceScale="1" npcName="NPC_SK_10" defaultFarmProperty="true" /> <!-- chicken pasture, farmer house -->
+        <farmland id="31" priceScale="1" npcName="NPC_SK_07" /> <!-- field 24 -->
+        <farmland id="32" priceScale="1" npcName="NPC_SK_07" /> <!-- field 25 -->
+        <farmland id="33" priceScale="1" npcName="NPC_SK_04" /> <!-- field 26 -->
+        <farmland id="34" priceScale="1" npcName="NPC_SK_20" /> <!-- field 27 -->
+        <farmland id="35" priceScale="1" npcName="NPC_SK_20" /> <!-- field 28 -->
+        <farmland id="36" priceScale="1" npcName="NPC_SK_12" /> <!-- field 29 -->
+        <farmland id="37" priceScale="1" npcName="NPC_SK_09" /> <!-- field 30 -->
+        <farmland id="38" priceScale="1" npcName="NPC_SK_04" /> <!-- field 31 -->
+        <farmland id="39" priceScale="1" npcName="NPC_SK_05" /> <!-- field 32 -->
+        <farmland id="40" priceScale="1" npcName="NPC_SK_01" /> <!-- field 33 -->
+        <farmland id="41" priceScale="1" npcName="NPC_SK_19" /> <!-- field 34 -->
+        <farmland id="42" priceScale="1" npcName="NPC_SK_19" /> <!-- field 35 -->
+        <farmland id="43" priceScale="1" npcName="NPC_SK_17" /> <!-- field 36 -->
+        <farmland id="44" priceScale="3" npcName="NPC_SK_17" /> <!-- biogas plant -->
+        <farmland id="45" priceScale="1" npcName="NPC_SK_17" /> <!-- field 37 -->
+        <farmland id="46" priceScale="1" npcName="NPC_SK_17" /> <!-- field 38 -->
+        <farmland id="47" priceScale="1" npcName="NPC_SK_02" /> <!-- forest area 1 -->
+        <farmland id="48" priceScale="1" npcName="NPC_SK_06" /> <!-- forest area 2 -->
+        <farmland id="49" priceScale="1" npcName="NPC_SK_14" /> <!-- forest area 3 -->
+        <farmland id="50" priceScale="1" npcName="NPC_SK_03" /> <!-- forest area 4 -->
+        <farmland id="51" priceScale="1" npcName="NPC_SK_14" /> <!-- forest area 5 -->
+        <farmland id="52" priceScale="1" npcName="NPC_SK_01" /> <!-- forest area 6 -->
+        <farmland id="53" priceScale="1" npcName="NPC_SK_16" /> <!-- forest area 7 -->
+        <farmland id="54" priceScale="1" npcName="NPC_SK_12" /> <!-- forest area 8 -->
+		<farmland id="55" priceScale="1" npcName="NPC_SK_12" /> <!-- forest area 9 -->
+		<farmland id="56" priceScale="6" npcName="NPC_SK_10" /> <!-- quarry -->
+		<farmland id="57" priceScale="6" npcName="NPC_SK_05" /> <!-- sawmill player -->
+		<farmland id="58" priceScale="5.5" npcName="NPC_SK_01" /> <!-- meat factory -->
+		<farmland id="59" priceScale="6.5" npcName="NPC_SK_19" /> <!-- soymilk production -->
+		<farmland id="60" priceScale="4.5" npcName="NPC_SK_04" /> <!-- dairy -->
+		<farmland id="61" priceScale="2.5" npcName="NPC_SK_17" /> <!-- orchard -->
+		<farmland id="62" priceScale="100" npcName="NPC_SK_PP" /> <!-- villages, deco fields, private property (not meant to be buyable but must have farmland) -->
     </farmlands>
 </map>

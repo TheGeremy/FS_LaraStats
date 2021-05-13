@@ -20,7 +20,6 @@ class CreateModTable extends Migration
             $table->string('mod_name', 100);
             $table->string('title', 250);
             $table->string('version', 50)->default('1.0.0.0');
-            $table->boolean('required');            
             $table->string('file_hash', 50);
             // system colulmns
             $table->timestamp('created_at')->useCurrent();

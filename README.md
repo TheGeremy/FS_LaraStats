@@ -7,73 +7,56 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Projet
+## About Laravel
 
-I try to build web based app called "FS Webstats". Goal here is to create web app to display various statistics or information from Farming Simulator 2019 gamesave.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- Overview dashboad (some key stats from gamesave)
-- Farm statistics
-- Financial 5 day overview
-- Each animal husbandry information
-- Varoius financial stats
-- Information about farm property (vehicles, buildings, fuits, pallets and so on...)
-- Information about fruit / product prices
-- Information about missions
-- Information about farm fields
-- Forestry stats
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Later (multiplayer version):
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-- Information about farms
-- Information about players
-- Back end management of players
-- Back end management of farms
-- Back end management of maps
-- Back end management of fields
-- Back end management of translations and labels
+## Learning Laravel
 
-## Technical prequirements
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-- web server with PHP
-- mariadb / mysql database
-- savegame xml files accessible via FTP or network share
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## FS Config files prequirements
+## Laravel Sponsors
 
-For each mod map you need to provide this files from map mod zip
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-- modDesc.xml
-- farmlands.xml
-- fillTypes.xml
+### Premium Partners
 
-If possible also translations files (cz/de/en)
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
 
-- l10n_cz.xml
-- l10n_de.xml
-- l10n_en.xml
+## Contributing
 
-farmlands.xml usual name "slovakVillage_farmlands.xml" needs to be changed to "farmlands.xml":
-farmlands.xml usual structure:
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-<pre>
-	<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" />	<!-- riverside parcel NW -->
-	<farmland id="2"  priceScale="1" npcName="NPC_SK_11" /> <!-- field 1 -->
-	<farmland id="3"  priceScale="1" npcName="NPC_SK_02" /> <!-- field 2 -->
-    <farmland id="4"  priceScale="1" npcName="NPC_SK_15" /> <!-- field 3 -->
-    <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" /> <!-- sheep pasture -->	
-</pre>
+## Code of Conduct
 
-needs to be adjusted if you want to have more details to this:
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-<pre>
-	<farmland id="1"  priceScale="0.75" npcName="NPC_SK_02" note="riverside parcel NW" />
-	<farmland id="2"  priceScale="1" npcName="NPC_SK_11" note="field 1" />
-	<farmland id="3"  priceScale="1" npcName="NPC_SK_02" note="field 2" />
-	<farmland id="4"  priceScale="1" npcName="NPC_SK_15" note="field 3" sizeHa="2.36"/>
-    <farmland id="5"  priceScale="1" npcName="NPC_SK_15" defaultFarmProperty="true" note="sheep pasture" />
-    <farmland id="6"  priceScale="0.5" npcName="NPC_SK_11" note="riverside parcel S (road bridge)" />	
-</pre>
+## Security Vulnerabilities
 
-### Other info
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-Project is under development. At the moment I just parse xml files ant try to load them to database in nice structure.
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
