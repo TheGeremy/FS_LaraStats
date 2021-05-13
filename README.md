@@ -38,15 +38,13 @@ Later (multiplayer version):
 - mariadb / mysql database
 - savegame xml files accessible via FTP or network share
 
-## Config Files Requirements
-
-### Game xml config files requirements
+## Game XML Config Files Requirements
 
 to be specified...
 
-### Config xml files requirements for each moded map 
+## Config XML Files Requirements (for each map MOD)
 
-For each mod map you need to provide this files from map mod zip
+For each map MOD you need to provide this files from map mod zip
 
 - modDesc.xml
 - farmlands.xml
@@ -58,7 +56,15 @@ If possible also translations files (cz/de/en)
 - l10n_de.xml
 - l10n_en.xml
 
-farmlands.xml usual name "slovakVillage_farmlands.xml" needs to be changed to "farmlands.xml":
+Files should be stored under /fs_config/config_map/[map config folder]/. For example you have map MOD >> FS19_SlovakVillage.zip >> map title is "Slovak Village" (from modDesc.xml) then path to map config folder is:
+
+```
+/fs_config/config_map/map_slovak_village/
+
+```
+
+farmlands.xml usual name "slovakVillage_farmlands.xml" needs to be changed to "farmlands.xml"
+
 farmlands.xml usual structure:
 
 ```
@@ -81,7 +87,8 @@ needs to be adjusted if you want to have more details to this:
 ```
 
 You can manually change xml comment to note attribute, to be stored in database.
-You can manually add attribute sizeHa (size of the field in Ha) to be loaded to database. (latter you can adjust size of the field in backend, default value will be NULL)
+You can manually add attribute sizeHa (size of the field in Ha) to be loaded to database.
+If those attributes are not provided, then the default value will be NULL.
 
 ## Other info
 
