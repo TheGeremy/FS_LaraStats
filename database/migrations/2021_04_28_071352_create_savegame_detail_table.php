@@ -28,7 +28,7 @@ class CreateSavegameDetailTable extends Migration
             $table->boolean('fuel_usage_low');
             $table->boolean('helper_buy_fuel');
             $table->boolean('helper_buy_seeds');
-            $table->boolean('helperBuyFertilizer');
+            $table->boolean('helper_buy_fertilizer');
             $table->unsignedTinyInteger('helper_slurry_source');
             $table->unsignedTinyInteger('helper_manure_source');
             $table->unsignedTinyInteger('difficulty');
