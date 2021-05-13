@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFarmlandDetailTable extends Migration
+class CreateMapFarmlandDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFarmlandDetailTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farmland_detail', function (Blueprint $table) {
+        Schema::create('fs_map_farmland_detail', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');              
             $table->unsignedTinyInteger('farm_id');            
@@ -37,6 +37,6 @@ class CreateFarmlandDetailTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farmland_detail');
+        Schema::dropIfExists('fs_map_farmland_detail');
     }
 }
