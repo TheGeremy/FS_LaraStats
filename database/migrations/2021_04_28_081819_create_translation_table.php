@@ -19,7 +19,7 @@ class CreateTranslationTable extends Migration
             $table->string('lang', 5);                                      // language to translate to
             $table->string('text_from', 50);                                // original name
             // end of indexes
-            $table->string('text_to', 50);                                  // translation
+            $table->text('text_to', 50);                                    // 65535 long
             // system colulmns
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
