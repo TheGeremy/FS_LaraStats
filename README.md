@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Projet
+## About Project
 
 I try to build web based app called "FS Webstats". Goal here is to create web app to display various statistics or information from Farming Simulator 2019 gamesave.
 
