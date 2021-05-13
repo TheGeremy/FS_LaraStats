@@ -42,7 +42,7 @@ Later (multiplayer version):
 
 to be specified...
 
-## Config XML Files Requirements (for each map MOD)
+## Map MOD Config XML Files Requirements
 
 For each map MOD you need to provide this files from map mod zip
 
@@ -58,10 +58,7 @@ If possible also translations files (cz/de/en)
 
 Files should be stored under /fs_config/config_map/[map config folder]/. For example you have map MOD >> FS19_SlovakVillage.zip >> map title is "Slovak Village" (from modDesc.xml) then path to map config folder is:
 
-```
-/fs_config/config_map/map_slovak_village/
-
-```
+```/fs_config/config_map/map_slovak_village/```
 
 farmlands.xml usual name "slovakVillage_farmlands.xml" needs to be changed to "farmlands.xml"
 
