@@ -38,7 +38,13 @@ Later (multiplayer version):
 - mariadb / mysql database
 - savegame xml files accessible via FTP or network share
 
-## FS Map Config Files Requirements
+## Config Files Requirements
+
+### Game xml config files requirements
+
+to be specified...
+
+### Config xml files requirements for each moded map 
 
 For each mod map you need to provide this files from map mod zip
 
@@ -77,8 +83,6 @@ needs to be adjusted if you want to have more details to this:
 You can manually change xml comment to note attribute, to be stored in database.
 You can manually add attribute sizeHa (size of the field in Ha) to be loaded to database. (latter you can adjust size of the field in backend, default value will be NULL)
 
-## FS Game Config Files Requirements
+## Other info
 
-### Other info
-
-Project is under development. At the moment I just parse xml files ant try to load them to database in nice structure.
+Project is under development. At the moment I just parse xml files and try to load them to database in nice structure.
