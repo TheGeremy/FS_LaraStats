@@ -13,7 +13,7 @@ class CreateSeasonPriceTable extends Migration
      */
     public function up()
     {
-        Schema::create('season_price', function (Blueprint $table) {
+        Schema::create('fs_season_price', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');
             $table->unsignedTinyInteger('season');
@@ -40,6 +40,6 @@ class CreateSeasonPriceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('season_price');
+        Schema::dropIfExists('fs_season_price');
     }
 }
