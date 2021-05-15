@@ -1,48 +1,14 @@
 <?php
-function just_print($message, $output = 1, $restart = 0) {
-	// file_put_contents ( string $filename , mixed $data , int $flags = 0 , resource $context = ? ) : int
-	// If filename does not exist, the file is created. Otherwise, the existing file is overwritten, unless the FILE_APPEND flag is set.
-	// This function returns the number of bytes that were written to the file, or false on failure.
-	
-	// $output >> 1 - web page, 2 - file
-	// $restart >> 1 - create new file, 2 - append to existing lof file
-
-	$message = $message . "\n";
-	// log file
-	$log_file = base_path() . "/logs/savegame_load.log";
-	
-	if($output == 1) {
-		print_r($message);
-	}
-
-	if($output == 2 && $restart == 1) {
-		// Write the contents back to the file
-		file_put_contents($log_file, $message);
-	}
-
-	if($output == 2 && $restart == 0) {
-		// add line to log
-		file_put_contents($log_file, $message, FILE_APPEND | LOCK_EX);
-	}
+function just_print($message) {
+	print_r($message . "\n");
 }
-function print_heading($message, $output = 1) {
+function print_heading($message) {
 	$message_length = 100;
 	$message = "--- " . $message . " " . strftime("%d.%m.%Y (%H:%M:%S)",time()) . " -----------------------------------------------------------------------------------------------------------------------------";
 	if(strlen($message) > $message_length) {
 		$message = substr($message,0,$message_length);
 	}
-	just_print($message, $output, 0);
-}
-function load_xml_file($path_to_file) {
-	if(file_exists($path_to_file))  {
-		$xml_file = simplexml_load_file($path_to_file);
-		return $xml_file;
-	} else {
-		exit("Unable to load required file: $path_to_file");
-	}
-}
-function execute_query($query) {
-	DB::statement($query);
+	print_r($message . "\n");
 }
 function convert_string($str) {
 	// function to convert string from - to:
@@ -78,28 +44,86 @@ function convert_string($str) {
     
     return $str;
 }
-function get_map_id($map_title) {
+function push_attributes($key, $value) {
+	array_push($GLOBALS['columns'],$key);
+	array_push($GLOBALS['values'],$value);
+}
+function get_map_id($map_title, $connection) {
 	// get id of map in map dimension table
 	$query = "select get_map_id('" . $map_title . "') as map_id;";
-	$result = DB::select($query);
-	return $result[0]->map_id; // database return 0 if no map find
+	$result = execute_query($connection, $query);
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+	return $row["map_id"]; // database return 0 if no map find
 }
-function get_save_id() {
+function get_savegame_id($connection) {
 	// get id of last savegame loaded 
 	$query = "select get_save_id() as id;";
-	$result = DB::select($query);
-	return $result[0]->id; // database return 0 if no savegame
+	$result = execute_query($connection, $query);
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+	return $row["id"]; // database return 0 if no savegame
 }
-function get_current_day() {
-	// get current day of last savegame loaded
-	$query = "SELECT get_current_day() AS current_day;";
-	$result = DB::select($query);
-	return $result[0]->current_day; // if no save (current day) then database return 0
+function get_current_day($connection) {
+	$query = "SELECT get_current_day() AS currentDay;";
+	$result = execute_query($connection, $query);
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+
+	return $row["currentDay"]; // if no save (current day) then database return 0
 }
-function check_seasons() {
-	$query = "SELECT check_seasons() as seasons;";
-	$result = DB::select($query);
-	return $result[0]->seasons; // sql return true / false based on if last loaded savegame has seasons mod enabled
+function console_log($msg, $redirect = 3) {
+    // redirect => if 1 print to console log of chrome, if 2 print to javascript log ???, 3 echo to web page
+	if ($redirect == 1) {    
+	    $js_code = 'console.log(' . json_encode($msg, JSON_HEX_TAG) . ');';
+	    echo $js_code;
+	} elseif ($redirect == 2) {
+		$js_code = '<script>' . $js_code . '</script>';
+		echo $js_code;
+	} else {
+		echo($msg ."\n");
+	}
+}
+function print_before() {
+	echo"<html><head><title>Load XML to DB</title></head><body style=\"color:#E7D1B0;background-color:#191919;\"><p><pre>";
+}
+function print_after() {
+	echo "</pre></p></body></html>";
+}
+function mariadb_connect() {
+	// redirect => if 1 print to console log of chrome, if 2 print to command line
+	$redirect = 2;	
+	// definde parameters
+	$server = "nuba.synology.me";
+	$database = "fs_lara_stats";
+	$user = "fs19webstats";
+	$pass = "159-Fs19-951";
+	// connect to database
+	$mysqli = new mysqli($server, $user, $pass, $database, 3307);
+	if ($mysqli->connect_errno) {
+   	console_log("Failed to connect to MySQL:\n(" . $mysqli->connect_errno . ") " . $mysqli->connect_error, $redirect);
+   	return FALSE;
+	} else {
+		console_log("Connection to db opened.", 3);
+
+		return $mysqli;
+	}
+
+}
+function execute_query($connection, $query) {
+	// console_log("==> Query: " . $query, 3);
+	// execute query
+	$result = $connection->query($query);
+	if (!$result) {
+   		console_log("!!! Query: error\n(" . $connection->errno . ") " . $connection->error, 3);
+	} else {
+		//console_log("*** Query: success", 3);
+		return $result;
+	}
+}
+function mariadb_disconnect($connection) {
+	// close connection
+	// $connection->close();
+	mysqli_close($connection);
+
+	console_log("Connection to db closed.", 3);
 }
 function find_last_char($str, $char) {
 	$i = 0;
@@ -137,6 +161,38 @@ function cut_filename($str,$start_ch,$end_ch) {
 	} else {
 		return substr($str,$str_start,$str_end);
 	}
+}
+function check_seasons($connection) {
+	$query = "SELECT `rowId` FROM `fs19_mod` WHERE `saveId` = (SELECT MAX(`id`) FROM `fs19_savegame`) AND LOWER(`title`) = 'seasons';";
+	$result = execute_query($connection, $query);
+	$row = $result->fetch_array(MYSQLI_ASSOC);
+	if($row["rowId"] > 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+function prepare_query($tableName,$columns,$values) { // depreciated use prepare query ml (multiline)
+	$col_list = "";
+	$val_list = "";
+	// $columns is array of columns names
+	// $values is array of values
+	foreach($columns as $column) {
+		$col_list .= "`" . $column . "`, ";	
+	}
+
+	foreach($values as $value) {
+		$value = (is_var_empty($value)) ? 'NULL' : $value;
+		if(is_numeric($value) or $value == 'true' or $value == 'false' or $value == 'NULL') {
+			$val_list .= $value . ", ";
+		} else {
+			$val_list .= "'" . $value . "', ";
+		}
+	}
+
+
+	$query = "insert into " . $tableName ."\n(" . substr($col_list,0,-2) . ")\nvalues\n(" . substr($val_list,0,-2) . ");";
+	return $query;
 }
 function is_var_empty($var)
 {
@@ -206,11 +262,10 @@ function prepare_query_ml($tableName, $data) {
 		$query .= "(";
 	  	foreach($columns as $column) {	  		
 	  		$value = (array_key_exists($column,$row)) ? $row[$column] : 'NULL';
-	  		$value = $value == NULL ? 'NULL' : $value;
 	  		if(is_numeric($value) or $value == 'true' or $value == 'false' or $value == 'NULL') {
 				$query .= $value . ", ";
 			} else {
-				$query .= "'" . str_replace("'","\'",$value) . "', ";
+				$query .= "'" . $value . "', ";
 			}	  		
 	  	}
 	  	$query = substr($query,0,-2) . "),\n";
@@ -237,4 +292,5 @@ function prepare_update_query($table_name, $data, $key_column, $key_value) {
 	$query = substr($query,0,-2) . "\nwhere `" . $key_column . "` = " . $key_value . ";";	
 	return $query;
 }
+
 ?>
