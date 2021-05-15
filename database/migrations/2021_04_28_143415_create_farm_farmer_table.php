@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFarmerTable extends Migration
+class CreateFarmFarmerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateFarmerTable extends Migration
     public function up()
     {
         // table fs_farmer to store users from Farming Simulator Game
-        Schema::create('fs_farmer', function (Blueprint $table) {
+        Schema::create('fs_farm_farmer', function (Blueprint $table) {
             $table->id();        
             $table->unsignedBigInteger('save_id');
             $table->unsignedTinyInteger('farm_id');             
@@ -53,6 +53,6 @@ class CreateFarmerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farmer');
+        Schema::dropIfExists('fs_farm_farmer');
     }
 }

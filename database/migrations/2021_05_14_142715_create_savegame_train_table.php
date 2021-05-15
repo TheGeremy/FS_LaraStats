@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFarmVehicleTable extends Migration
+class CreateSavegameTrainTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,29 +13,24 @@ class CreateFarmVehicleTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farm_vehicle', function (Blueprint $table) {
+        Schema::create('fs_savegame_train', function (Blueprint $table) {
             $table->id();        
             $table->unsignedBigInteger('save_id');
             $table->unsignedTinyInteger('farm_id');
             $table->unsignedBigInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
             // end of indexes section
-            $table->string('mod_name',100)->nullable();
             $table->string('filename',100);
             $table->unsignedTinyInteger('property_state')->default(0);            
             $table->double('age', 16, 6);
             $table->double('price', 16, 6);
             $table->double('operating_time', 16, 6);
             // vehicle >> fillUnit >> unit >> attributes (fillTYpe fillLevel)
-            $table->double('diesel', 16, 6)->nullable();
-            $table->double('def', 16, 6)->nullable();
-            $table->double('air', 16, 6)->nullable();
-            // if vehicle can transrpot other fill types or vehicle is trailer
             $table->string('fill_type_1', 100)->nullable();
             $table->double('fill_level_1', 16, 6)->nullable();
             $table->string('fill_type_2', 100)->nullable();
             $table->double('fill_level_2', 16, 6)->nullable();
             $table->string('fill_type_3', 100)->nullable();
-            $table->double('fill_level_3', 16, 6)->nullable();              
+            $table->double('fill_level_3', 16, 6)->nullable();            
             // FS19_RM_Seasons >> seasonsVehicle >> attributes 
             $table->double('seasons_years', 16, 6)->nullable();
             $table->double('seasons_next_repair', 16, 6)->nullable();
@@ -47,7 +42,7 @@ class CreateFarmVehicleTable extends Migration
             $table->index('farm_id');
             $table->index('game_id');
         });
-    } 
+    }
 
     /**
      * Reverse the migrations.
@@ -56,6 +51,6 @@ class CreateFarmVehicleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farm_vehicle');
+        Schema::dropIfExists('fs_savegame_train');
     }
 }

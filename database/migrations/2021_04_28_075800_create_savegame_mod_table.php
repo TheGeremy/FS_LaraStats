@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateModTable extends Migration
+class CreateSavegameModTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateModTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_mod', function (Blueprint $table) {
+        Schema::create('fs_savegame_mod', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');
             // end of indexes
@@ -37,6 +37,6 @@ class CreateModTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_mod');
+        Schema::dropIfExists('fs_savegame_mod');
     }
 }
