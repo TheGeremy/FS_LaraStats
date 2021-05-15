@@ -122,8 +122,8 @@ just_print("Data loaded to fs_savegame_train (" . (string)array_key_last($data) 
 
 // proces other items
 $data = process_train_items($pallets, $mapping, $save_id, "pallet");
-$query = prepare_query_ml('fs_farm_item',$data);
+$query = prepare_query_ml('fs_farm_pallet',$data);
 execute_query($query);
-just_print("Data loaded to fs_farm_item (" . (string)array_key_last($data)  . " rows).");
+just_print("Data loaded to fs_farm_pallet (" . (string)array_key_last($data)  . " rows).");
 
 ?>
