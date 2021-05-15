@@ -1,41 +1,49 @@
 <?php
 // base_path() laravel base directory
-require base_path() . '/database/csv_load/scripts/user_defined_functions.php';
+$required_file = base_path() . "/database/csv_load/scripts/user_defined_functions.php";
+
+if(file_exists($required_file))  {
+	require $required_file;
+} else {
+	exit("Unable to load required file: $required_file");
+}
 
 // savegame dir
-$savegame_dir = base_path() . "/database/csv_load/savegame3/";
-
-//connect to db
-$connection = mariadb_connect();
+$savegame_dir = base_path() . "/fs_config/savegame/";
 
 // get last savegame id
-$savegame_id = get_savegame_id($connection);
-print_r("Savegame id: " . $savegame_id . "\n");
+$save_id = get_save_id();
+just_print("Savegame id: " . $save_id);
 
 // get last stored current day
-$db_current_day = get_current_day($connection);
-print_r("DB current day: " .  $db_current_day . "\n");
+$db_current_day = get_current_day();
+just_print("DB current day: " .  $db_current_day);
 
 // get savegame current game
-$xml_file = simplexml_load_file($savegame_dir . "environment.xml");
+$xml_file = load_xml_file($savegame_dir . "environment.xml");
 $xml_current_day = (int)$xml_file->{'currentDay'};
-print_r("XML current day: " . $xml_current_day . "\n");
+just_print("XML current day: " . $xml_current_day);
 
 // check if savegame is valid
-$xml_file = simplexml_load_file($savegame_dir . "careerSavegame.xml");
+$xml_file = load_xml_file($savegame_dir . "careerSavegame.xml");
 $valid_savegame = (string)$xml_file->attributes()['valid'];
-print_r("Valid savegame: " . (($valid_savegame) ? 'Yes' : 'No') . "\n");
+just_print("Valid savegame: " . (($valid_savegame) ? 'Yes' : 'No'));
 
 // if xml valid is true and xml current day is more than database current day
 if($valid_savegame && $xml_current_day > $db_current_day) {
 	print_heading("Savegame load start");
-	require base_path() . '/database/csv_load/read/read_savegame/read_savegame_xml.php';	
+	// load savegame.xml
+	require base_path() . '/database/csv_load/load/load_savegame/load_savegame_xml.php';
+	// load vehicles.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_vehicles_xml.php";
+	// load economy.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_economy_xml.php";
 	print_heading("Savegame load end");
 }  else {
-	print_r("No valid savegame or not a new day.\n");
+	just_print("!!! No valid save or not a new day in save.");
 }
 
-// disconnect from db
-mariadb_disconnect($connection);
+// load economy.xml
+require base_path() . "/database/csv_load/load/load_savegame/load_items_xml.php";
 
 ?>
