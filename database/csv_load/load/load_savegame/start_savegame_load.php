@@ -34,6 +34,10 @@ if($valid_savegame && $xml_current_day > $db_current_day) {
 	print_heading("Savegame load start");
 	// load savegame.xml
 	require base_path() . '/database/csv_load/load/load_savegame/load_savegame_xml.php';
+	// load farms.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_farms_xml.php";	
+	// load farmland.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_farmland_xml.php";
 	// load vehicles.xml
 	require base_path() . "/database/csv_load/load/load_savegame/load_vehicles_xml.php";
 	// load economy.xml
@@ -43,7 +47,7 @@ if($valid_savegame && $xml_current_day > $db_current_day) {
 	just_print("!!! No valid save or not a new day in save.");
 }
 
-// load economy.xml
-require base_path() . "/database/csv_load/load/load_savegame/load_items_xml.php";
+// testing
+//require base_path() . "/database/csv_load/load/load_savegame/load_farmland_xml.php";
 
 ?>
