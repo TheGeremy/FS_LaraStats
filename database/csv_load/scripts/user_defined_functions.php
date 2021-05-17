@@ -78,6 +78,12 @@ function convert_string($str) {
     
     return $str;
 }
+function game_to_farm_id($game_id) {
+	// change game farm_id stored as game_id in fs_farm to internal database farm_id which is id from fs_farm
+	$query = "select game_to_farm_id('" . $game_id . "') as farm_id;";
+	$result = DB::select($query);
+	return $result[0]->farm_id; // database return 0 if no map find
+}
 function get_map_id($map_title) {
 	// get id of map in map dimension table
 	$query = "select get_map_id('" . $map_title . "') as map_id;";
@@ -212,7 +218,7 @@ function prepare_query_ml($tableName, $data) {
 		$query .= "(";
 	  	foreach($columns as $column) {	  		
 	  		$value = (array_key_exists($column,$row)) ? $row[$column] : 'NULL';
-	  		$value = $value == NULL ? 'NULL' : $value;
+	  		$value = ($value == NULL) ? 'NULL' : $value;
 	  		if(is_numeric($value) or $value == 'true' or $value == 'false' or $value == 'NULL') {
 				$query .= $value . ", ";
 			} else {
