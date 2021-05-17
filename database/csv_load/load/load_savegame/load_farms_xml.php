@@ -10,6 +10,7 @@ unset($xml_file);
 
 // array of values to save into fs_farm
 $mapping = array(
+	"farmId" => "game_id",
 	"name" => "name",
 	"color" => "color",
 	"loan" => "loan",

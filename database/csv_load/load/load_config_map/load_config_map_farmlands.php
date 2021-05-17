@@ -5,12 +5,12 @@ $price_per_ha = (integer)$xml_map_farmlands->{'farmlands'}->attributes()->{'pric
 
 // this only if xml field name differ from database field name
 $field_mapping = array(
-	"id" => "game_field_id",
+	"id" => "land_id",
 	"npcName" => "npc_name",
 	"priceScale" => "price_scale",
 	"sizeHa" => "ha",
 	"note" => "note",
-	"defaultFarmProperty" => "owning"
+	"defaultFarmProperty" => "default"
 );
 
 $data = array();
@@ -25,12 +25,12 @@ foreach ($xml_map_farmlands->farmlands->farmland as $farmland) {
 	++$row;
 }
 
-$query = prepare_query_ml('fs_map_farmland_dim', $fs_farmland_dim_data);
+$query = prepare_query_ml('fs_map_land_dim', $fs_farmland_dim_data);
 execute_query($query);
 unset($xml_map_farmlands);
 unset($price_per_ha);
 unset($field_mapping);
 unset($data);
 unset($fs_farmland_dim_data);
-just_print("Data loaded to fs_map_farmland_dim (" . (string)($row - 1) . " rows).");
+just_print("Data loaded to fs_map_land_dim (" . (string)($row - 1) . " rows).");
 ?>
