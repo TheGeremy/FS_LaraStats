@@ -16,6 +16,7 @@ class CreateFarmTable extends Migration
         Schema::create('fs_farm', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');
+            $table->unsignedTinyInteger('game_id');
             // end of indexes section                       
             $table->string('name', 100);
             $table->unsignedTinyInteger('color');
@@ -27,6 +28,7 @@ class CreateFarmTable extends Migration
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
             $table->index('save_id');
+            $table->index('game_id');
         });
     }
 
