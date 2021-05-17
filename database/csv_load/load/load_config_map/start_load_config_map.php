@@ -43,4 +43,6 @@ if(file_exists($required_file))  {
 // print info that this section end
 print_heading("Map config load end");
 
+unset($map_code);
+unset($map_dir);
 ?>
