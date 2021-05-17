@@ -15,8 +15,8 @@ class CreateFarmPalletTable extends Migration
     {
         Schema::create('fs_farm_pallet', function (Blueprint $table) {
             $table->id();        
-            $table->unsignedTinyInteger('farm_id');
-            $table->unsignedBigInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
+            $table->unsignedBigInteger('farm_id');
+            $table->unsignedInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
             // end of indexes section
             $table->string('mod_name',100)->nullable();
             $table->string('filename',100);

@@ -16,7 +16,7 @@ class CreateMissionTable extends Migration
         Schema::create('fs_mission', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id'); 
-            $table->unsignedTinyInteger('farm_id');
+            $table->unsignedBigInteger('farm_id');
             $table->unsignedTinyInteger('field_id');
             $table->unsignedBigInteger('fruit_type_id')->default(1);
             // end of indexes   

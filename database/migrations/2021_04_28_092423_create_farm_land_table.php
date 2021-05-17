@@ -16,7 +16,7 @@ class CreateFarmLandTable extends Migration
         Schema::create('fs_farm_land', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');              
-            $table->unsignedTinyInteger('farm_id');            
+            $table->unsignedBigInteger('farm_id');            
             $table->unsignedTinyInteger('land_id');            
             // end of indexes section
             // system colulmns            

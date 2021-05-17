@@ -15,7 +15,7 @@ class CreateFarmFinStatsTable extends Migration
     {
         Schema::create('fs_farm_fin_stat', function (Blueprint $table) {
             $table->id();        
-            $table->unsignedTinyInteger('farm_id');                
+            $table->unsignedBigInteger('farm_id');                
             // end of indexes section
             $table->unsignedTinyInteger('stats_day');
             // incomes
