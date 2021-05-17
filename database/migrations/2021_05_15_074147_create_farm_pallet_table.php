@@ -15,11 +15,9 @@ class CreateFarmPalletTable extends Migration
     {
         Schema::create('fs_farm_pallet', function (Blueprint $table) {
             $table->id();        
-            $table->unsignedBigInteger('save_id');
             $table->unsignedTinyInteger('farm_id');
             $table->unsignedBigInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
             // end of indexes section
-            $table->string('item_type',20);
             $table->string('mod_name',100)->nullable();
             $table->string('filename',100);
             $table->unsignedTinyInteger('property_state')->default(0);            
@@ -40,7 +38,6 @@ class CreateFarmPalletTable extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
-            $table->index('save_id');
             $table->index('farm_id');
             $table->index('game_id');
         });

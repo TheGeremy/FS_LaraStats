@@ -16,7 +16,6 @@ class CreateSavegameTrainTable extends Migration
         Schema::create('fs_savegame_train', function (Blueprint $table) {
             $table->id();        
             $table->unsignedBigInteger('save_id');
-            $table->unsignedTinyInteger('farm_id');
             $table->unsignedBigInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
             // end of indexes section
             $table->string('filename',100);
@@ -39,7 +38,6 @@ class CreateSavegameTrainTable extends Migration
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
             $table->index('save_id');
-            $table->index('farm_id');
             $table->index('game_id');
         });
     }
