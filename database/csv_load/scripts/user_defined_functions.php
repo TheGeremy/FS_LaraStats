@@ -90,6 +90,12 @@ function get_save_id() {
 	$result = DB::select($query);
 	return $result[0]->id; // database return 0 if no savegame
 }
+function get_farm_id() {
+	// get id of last savegame loaded 
+	$query = "select get_farm_id() as farm_id;";
+	$result = DB::select($query);
+	return $result[0]->farm_id; // database return 0 if no savegame
+}
 function get_current_day() {
 	// get current day of last savegame loaded
 	$query = "SELECT get_current_day() AS current_day;";
