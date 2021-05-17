@@ -7,6 +7,7 @@
 // environment.xml file
 $xml_environment = load_xml_file($savegame_dir . "environment.xml");
 $day_time = (int)$xml_environment->{'dayTime'};
+unset($xml_environment);
 
 // careerSavegame.xml file
 $xml_career_savegame = load_xml_file($savegame_dir . "careerSavegame.xml");
@@ -46,6 +47,7 @@ $fs_savegame_data[0] = array(
 
 $query = prepare_query_ml('fs_savegame',$fs_savegame_data);
 execute_query($query);
+unset($fs_savegame_data);
 just_print("Data loaded to fs_savegame.");
 
 //--- fs_savegame_detail table ----------------------------------------------------------------------------------------------------------------
@@ -88,6 +90,8 @@ foreach($xml_career_savegame->{'settings'}->children() as $key => $value) {
 
 $query = prepare_query_ml('fs_savegame_detail',$fs_savegame_detail_data);
 execute_query($query);
+unset($fs_savegame_detail_cols_list);
+unset($fs_savegame_detail_data);
 just_print("Data loaded to fs_savegame_detail.");
 
 //--- fs_map_detail table --------------------------------------------------------------------------------------------------------------------------
@@ -115,6 +119,8 @@ foreach($xml_career_savegame->{'settings'}->children() as $key => $value) {
 
 $query = prepare_query_ml('fs_map_detail',$fs_map_detail_data);
 execute_query($query);
+unset($mapping);
+unset($fs_map_detail_data);
 just_print("Data loaded to fs_map_detail.");
 
 
@@ -122,6 +128,7 @@ just_print("Data loaded to fs_map_detail.");
 
 // load savegame mods (we strore all values so we don't need column list')
 $savegame_mods = $xml_career_savegame->xpath('//careerSavegame/mod');
+unset($xml_career_savegame);
 $row = 1; // to properly do the rows count
 foreach($savegame_mods as $mod) {
 	foreach($mod->attributes() as $key => $value) {
@@ -133,6 +140,8 @@ foreach($savegame_mods as $mod) {
 
 $query = prepare_query_ml('fs_savegame_mod',$fs_mod_data);
 execute_query($query);
+unset($savegame_mods);
+unset($fs_mod_data);
 just_print("Data loaded to fs_savegame_mod (" . (string)($row - 1) . " rows).");
 
 ?>
