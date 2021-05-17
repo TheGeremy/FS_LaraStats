@@ -13,14 +13,20 @@ class CreateFarmTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farm_dim', function (Blueprint $table) {
+        Schema::create('fs_farm', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('save_id');
             // end of indexes section                       
             $table->string('name', 100);
-            $table->string('note', 100);
+            $table->unsignedTinyInteger('color');
+            $table->double('loan', 16, 6);            
+            $table->double('money', 16, 6);
+            $table->double('loan_annual_rate', 16, 6);                    
             // system colulmns
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
+            // define indexes
+            $table->index('save_id');
         });
     }
 
@@ -31,6 +37,6 @@ class CreateFarmTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farm_dim');
+        Schema::dropIfExists('fs_farm');
     }
 }

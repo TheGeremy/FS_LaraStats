@@ -13,9 +13,8 @@ class CreateFarmFinStatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farm_fin_stats', function (Blueprint $table) {
+        Schema::create('fs_farm_fin_stat', function (Blueprint $table) {
             $table->id();        
-            $table->unsignedBigInteger('save_id');
             $table->unsignedTinyInteger('farm_id');                
             // end of indexes section
             $table->unsignedTinyInteger('stats_day');
@@ -54,7 +53,6 @@ class CreateFarmFinStatsTable extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
-            $table->index('save_id');
             $table->index('farm_id');
             $table->index('stats_day');
         });
@@ -67,6 +65,6 @@ class CreateFarmFinStatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farm_fin_stats');
+        Schema::dropIfExists('fs_farm_fin_stat');
     }
 }
