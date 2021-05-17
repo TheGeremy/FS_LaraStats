@@ -27,5 +27,10 @@ foreach ($xml_map_farmlands->farmlands->farmland as $farmland) {
 
 $query = prepare_query_ml('fs_map_farmland_dim', $fs_farmland_dim_data);
 execute_query($query);
+unset($xml_map_farmlands);
+unset($price_per_ha);
+unset($field_mapping);
+unset($data);
+unset($fs_farmland_dim_data);
 just_print("Data loaded to fs_map_farmland_dim (" . (string)($row - 1) . " rows).");
 ?>

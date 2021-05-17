@@ -35,4 +35,5 @@ foreach ($xml_lang_list as $xml_file_name) {
 	store_translation($map_dir, $xml_file_name);
 }
 
+unset($xml_lang_list);
 ?>

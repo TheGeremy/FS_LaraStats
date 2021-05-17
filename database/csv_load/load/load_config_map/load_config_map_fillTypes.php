@@ -14,5 +14,7 @@ foreach ($xml_map_fillTypes->fillTypes->fillType as $fillType) {
 
 $query = prepare_query_ml('fs_map_fill_type_dim', $data);
 execute_query($query);
+unset($xml_map_fillTypes);
+unset($data);
 just_print("Data loaded to fs_map_fill_type (" . (string)($row - 1) . " rows).");
 ?>

@@ -15,6 +15,8 @@ $data[1]['description_cz'] = trim((string)$xml_map_moddesc->description->cz);
 
 $query = prepare_query_ml('fs_map_dim', $data);
 execute_query($query);
+unset($xml_map_moddesc);
+unset($data);
 just_print('Map info stored in fs_map_dim.');
 // update map_id
 $map_id = get_map_id($map_title);
