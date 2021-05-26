@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <farmlands densityMapFilename="maps/mapDE/mapDE_farmland.grle" numChannels="7" pricePerHa="60000">
+        <farmland id="1"  priceScale="1.2" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!-- Mainfarm  -->
+        <farmland id="2"  priceScale="1" npcName="NPC_DE_04" defaultFarmProperty="false" /> <!--Feld überhalb der Mainfarm  -->
+        <farmland id="3"  priceScale="1" npcName="NPC_DE_05" defaultFarmProperty="false" /> <!--Feld rechts der Mainfarm  -->
+        <farmland id="4"  priceScale="1" npcName="NPC_DE_06" defaultFarmProperty="false" /> <!--Feld rechts von3 -->
+        <farmland id="5"  priceScale="1.2" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--Feld Gras hinter dem Saegewerk -->
+		<farmland id="6"  priceScale="1.2" npcName="NPC_DE_08" defaultFarmProperty="false" /> <!--Feld Acker hinter Saegewerk -->
+		<farmland id="7"  priceScale="1" npcName="NPC_DE_07" defaultFarmProperty="false" /> <!--Feld darunter der Wald -->
+		<farmland id="8"  priceScale="1" npcName="NPC_DE_09" defaultFarmProperty="false" /> <!--Feld rechts der Wald -->
+		<farmland id="9"  priceScale="1" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--Feld und Wald noerdlich des Saegewerkes -->
+		<farmland id="10"  priceScale="1" npcName="NPC_DE_01" defaultFarmProperty="false" /> <!--Feld ueber 9 -->
+		<farmland id="11"  priceScale="1.2" npcName="NPC_DE_01" defaultFarmProperty="false" /> <!--Feld Kreuzung 1 Feld Richtung HK -->
+		<farmland id="12"  priceScale="1" npcName="NPC_DE_01" defaultFarmProperty="false" /> <!--Feld Kreuzung 2 Feld Richtung HK -->
+		<farmland id="13"  priceScale="1" npcName="NPC_DE_01" defaultFarmProperty="false" /> <!--Feld rechts von HK ganz hinten -->
+		<farmland id="14"  priceScale="1" npcName="NPC_DE_01" defaultFarmProperty="true" /> <!--Feld 1 Feld beim Marterl -->
+		<farmland id="15"  priceScale="1" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--Feld 2 Feld beim Marterl -->
+		<farmland id="16"  priceScale="1.2" npcName="NPC_DE_04" defaultFarmProperty="false" /> <!--Wald hinter HK -->
+		<farmland id="17"  priceScale="1.5" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!--Feld hinter dem Wald von HK und vor der BGA -->
+		<farmland id="18"  priceScale="1.2" npcName="NPC_DE_04" defaultFarmProperty="false" /> <!--Feld rechts von der BGA -->
+		<farmland id="19"  priceScale="1" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!--Feld 2 Acker rechts von BGA -->
+		<farmland id="20"  priceScale="1" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!--Wiese zwischen Teich animaldealer und BGA -->
+		<farmland id="21"  priceScale="1.2" npcName="NPC_DE_01" defaultFarmProperty="false" /> <!--Wiese links von BGA -->
+		<farmland id="22"  priceScale="1.4" npcName="NPC_DE_05" defaultFarmProperty="false" /> <!--Acker neben Wiese links von BGA -->
+		<farmland id="23"  priceScale="1.2" npcName="NPC_DE_05" defaultFarmProperty="false" /> <!--Neben Mainfarm 2 Acker neben Wiese links von BGA -->
+		<farmland id="24"  priceScale="1" npcName="NPC_DE_05" defaultFarmProperty="false" /> <!--Eingezaente Wiese neben Haubthof blaue Holzstapel -->
+		<farmland id="25"  priceScale="1.2" npcName="NPC_DE_06" defaultFarmProperty="false" /> <!--Eingezaente Wiese neben Haubthof blaue Holzstapel, Wiese rechts -->
+		<farmland id="26"  priceScale="1" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--Acker , Hauptstrasse in Richtung Animal einfahrt richtung BGA -->
+		<farmland id="27"  priceScale="1.5" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--Wiese neben Pferdestall-->
+		<farmland id="28"  priceScale="1" npcName="NPC_DE_07" defaultFarmProperty="false" /> <!--2 Wiese neben Pferdestall beim Animaldealer-->
+		<farmland id="29"  priceScale="1" npcName="NPC_DE_08" defaultFarmProperty="false" /> <!--1 Wald über Pferdestall -->
+		<farmland id="30"  priceScale="1.5" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--2 Wald über Pferdestall RECHTS -->
+		<farmland id="31"  priceScale="1" npcName="NPC_DE_09" defaultFarmProperty="false" /> <!--kleines Feld hinter Schafhof -->
+		<farmland id="32"  priceScale="1.5" npcName="NPC_DE_10" defaultFarmProperty="false" /> <!--Grosses Feld rechts Schafhof -->
+		<farmland id="33"  priceScale="1" npcName="NPC_DE_11" defaultFarmProperty="false" /> <!--kleines Feld hinter Schafhof  2 kleine Felder darueber -->
+		<farmland id="34"  priceScale="1" npcName="NPC_DE_12" defaultFarmProperty="false" /> <!--kleines Feld hinter Schafhof  2 kleine Felder darueber grosses Feld rechts in der Ecke -->
+		<farmland id="35"  priceScale="1" npcName="NPC_DE_13" defaultFarmProperty="false" /> <!--kleines Feld hinter Schafhof  2 kleine Felder darueber grosses Feld rechts in der Ecke -->
+		<farmland id="36"  priceScale="1.2" npcName="NPC_DE_13" defaultFarmProperty="false" /> <!--kleines Feld neben Baeckerei und hinter weide Hof 2 -->
+		<farmland id="37"  priceScale="1" npcName="NPC_DE_14" defaultFarmProperty="false" /> <!--kleines Feld neben Baeckerei und hinter weide Hof 2  1Feld ueberhalb -->
+		<farmland id="38"  priceScale="1" npcName="NPC_DE_15" defaultFarmProperty="false" /> <!--kleines Feld neben Baeckerei und hinter weide Hof 2  2Feld ueberhalb -->
+		<farmland id="39"  priceScale="1" npcName="NPC_DE_16" defaultFarmProperty="false" /> <!--kleines Feld mit Wald und Wiese rechts davon -->
+		<farmland id="40"  priceScale="1" npcName="NPC_DE_17" defaultFarmProperty="false" /> <!--2 Felder wo die Einfahrt hinten bei den gewaechshausern des agrar ist -->
+		<farmland id="41"  priceScale="1" npcName="NPC_DE_18" defaultFarmProperty="false" /> <!--Animaldealer letztes Feld bei Border rechts -->
+		<farmland id="42"  priceScale="1" npcName="NPC_DE_19" defaultFarmProperty="false" /> <!--kleines Feld links von 41 -->
+		<farmland id="43"  priceScale="1" npcName="NPC_DE_20" defaultFarmProperty="false" /> <!--kleines Feld links von 41 links -->
+		<farmland id="44"  priceScale="1.5" npcName="NPC_DE_14" defaultFarmProperty="false" /> <!--Grosses Feld unter 41 42 43 -->
+		<farmland id="45"  priceScale="2" npcName="NPC_DE_02" defaultFarmProperty="false" /> <!--PIG FARM -->
+		<farmland id="46"  priceScale="3" npcName="NPC_DE_07" defaultFarmProperty="false" /> <!--HOF 2 -->
+		<farmland id="47"  priceScale="2" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!--SCHAFHOF -->
+		<farmland id="48"  priceScale="2" npcName="NPC_DE_03" defaultFarmProperty="false" /> <!--SCHAFHOF -->
+		<farmland id="49"  priceScale="2.5" npcName="NPC_DE_04" defaultFarmProperty="false" /> <!--BGA -->
+		<farmland id="50"  priceScale="2" npcName="NPC_DE_01" defaultFarmProperty="true" /> <!--OGF FARM -->
+		<farmland id="51"  priceScale="1.4" npcName="NPC_DE_05" defaultFarmProperty="false" /><!-- Mainfarm Feld -->
+		<farmland id="52"  priceScale="1.4" npcName="NPC_DE_06" defaultFarmProperty="false" /><!-- Feld  -->
+		<farmland id="53"  priceScale="1.4" npcName="NPC_DE_07" defaultFarmProperty="false" /><!-- Feld  -->
+		<farmland id="54"  priceScale="1.4" npcName="NPC_DE_08" defaultFarmProperty="false" /><!-- Feld  -->
+		<farmland id="55"  priceScale="1.4" npcName="NPC_DE_08" defaultFarmProperty="false" /><!-- Feld  -->
+		<farmland id="56"  priceScale="1.4" npcName="NPC_DE_08" defaultFarmProperty="false" /><!-- Feld  -->
+<!--		<farmland id="255" neutral -->	
+    </farmlands>
+</map>

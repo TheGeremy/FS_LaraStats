@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="46">
+    <author>BERNIESCS und RichiF, Zetor6245, McBee</author>
+    <version>3.0.0.0</version>
+    <title>
+        <en>HINTERKAIFECK</en>
+        <de>HINTERKAIFECK</de>
+    </title>
+    <description>
+        <en>The Mythos</en>
+        <de>The Mythos</de>
+    </description>
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+	
+		<storeItems>
+		<storeItem xmlFilename="maps/PLACEABLE/HK_KUHWEIDE.xml"/>
+		<storeItem xmlFilename="maps/PLACEABLE/HK_CHICKEN_HOUSE.xml"/>
+		<storeItem xmlFilename="maps/PLACEABLE/HK_HOF_SILO_BIG_SCHEUNE.xml"/>
+		<storeItem xmlFilename="maps/PLACEABLE/HK_FUTTERSILO.xml"/> 
+		<storeItem xmlFilename="maps/PLACEABLE/HK_FAHRSILO_KLEIN.xml"/> 	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_FAHRSILO_KLEIN_MUELL.xml"/> 
+		<storeItem xmlFilename="maps/PLACEABLE/silo.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_HOF_4_KUHWEIDE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/bga.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/husbandrySheep.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/pig1.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/sellingStationWood.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/hayLoft.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/gasStation.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/sellingStationVehicles.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/sellingStationWool.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/sellingStationWoodChips.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/waterFillTriggers.xml" />		
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_BAECKEREI.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/MilkStation.xml" />			
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_VIEHAENDLER.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_VIEHAENDLER_GRAS.xml" />		
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VIEHANDEL_KUHWEIDE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VIEHANDEL_KUHWEIDE_STALL.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_FUTTER_SILO_KLEIN.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_HOF2_HOCHSILO_FRUCHT.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_PFERDESTALL.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_HOF2_SILO_SEEDS.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_WIRTSCHAFT.xml" />		
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_AGRARHANDEL_MANURE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_AGRARHANDEL_LIQUIDMANURE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VERKAUF_SILO_KALK.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VERKAUF_SILO_PIGFOOD.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VERKAUF_SILO_SAATGUT.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_VERKAUF_SILO_FERTILIZER.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/VERKAUF_HK_AGRARHANDEL_FRUITS.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_SEEDS_SILO_KLEIN.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/Liquid_Herbicide.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/Liquid_Fertilizer.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/SCS_SCHLAFTRIGGER.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_HUNDEHUETTE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_DECO_KUHWEIDE.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_HOF_KUHWEIDE.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_HOF_SCHWEINESTALL.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_CHICKENS.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_FARMSILO.xml" />			
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_SEED_SILO.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_BUNKERSILO.xml" />	
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_HOF_WATER_TRIGGER.xml" />
+		<storeItem xmlFilename="maps/PLACEABLE/HK_OGF_FUTTERSILO.xml" />
+
+        </storeItems>
+	
+	<extraSourceFiles>
+		<sourceFile filename="scripts/l10nFix.lua"/>
+		<sourceFile filename="scripts/morepens.lua" />
+		<sourceFile filename="scripts/SeasonsAnimalDeathFix.lua" />
+	</extraSourceFiles>
+	
+	<l10n>
+		<text name="fillType_incarase_grass"><en>Incarase Grass</en><de>Vermehrungsgras</de></text>
+		<text name="fillType_rye"><en>Rye</en><de>Roggen</de></text>
+	</l10n>
+	
+    <maps>
+        <map id="SampleModMap" className="ModMap" filename="scripts/ModMap.lua" configFilename="maps/xml/mapDE.xml" defaultVehiclesXMLFilename="defaultVehicles.xml" defaultItemsXMLFilename="defaultItemsMULTIPLAYER.xml" defaultSingleplayerItemsXMLFilename="defaultItemsSINGLEPLAYER.xml">
+            <title>
+                <en>HINTERKAIFECK</en>
+                <de>HINTERKAIFECK</de>
+            </title>
+            <description>
+                <en>The Mythos.</en>
+                <de>The Mythos</de>
+            </description>
+            <iconFilename>map_preview.png</iconFilename>
+        </map>
+    </maps>
+</modDesc>
