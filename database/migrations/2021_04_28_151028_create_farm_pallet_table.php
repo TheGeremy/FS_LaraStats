@@ -18,7 +18,7 @@ class CreateFarmPalletTable extends Migration
             $table->unsignedBigInteger('farm_id');
             $table->unsignedInteger('game_id');                  // original id from game, can change from save to save, just to match any connected device
             // end of indexes section
-            $table->string('mod_name',100)->nullable();
+            $table->string('mod_name',100)->nullable()->comment('mods only');
             $table->string('filename',100);
             $table->unsignedTinyInteger('property_state')->default(0);            
             $table->double('age', 16, 6);

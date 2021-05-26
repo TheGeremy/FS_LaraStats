@@ -31,7 +31,7 @@ class CreateFarmStatsTable extends Migration
             $table->unsignedInteger('breed_horses')->default(0);
             // missions
             $table->unsignedInteger('field_job_mission')->default(0);
-            $table->unsignedInteger('field_job_mission_npc')->default(0);
+            //$table->unsignedInteger('field_job_mission_npc')->default(0);  // crazy numbers here, so I dump this
             $table->unsignedInteger('transport_mission')->default(0);
             // forestry
             $table->unsignedInteger('planted_trees')->default(0);

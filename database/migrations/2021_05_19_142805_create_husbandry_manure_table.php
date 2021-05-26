@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFarmLandTable extends Migration
+class CreateHusbandryManureTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateFarmLandTable extends Migration
      */
     public function up()
     {
-        Schema::create('fs_farm_land', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('save_id');              
-            $table->unsignedBigInteger('farm_id');            
-            $table->unsignedTinyInteger('land_id');            
+        Schema::create('fs_husbandry_manure', function (Blueprint $table) {
+            $table->unsignedBigInteger('husbandry_id');
             // end of indexes section
-            // system colulmns            
+            $table->string('fill_type', 50);
+            $table->double('fill_capacity', 16, 6);  
+            $table->double('manure_to_drop', 16, 6);            
+            $table->double('manure_to_remove', 16, 6);          
+            // system colulmns
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
             // define indexes
-            $table->index('save_id');
-            $table->index('farm_id');
-            $table->index('land_id');
+            $table->index('husbandry_id');            
         });
     }
 
@@ -36,6 +35,6 @@ class CreateFarmLandTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fs_farm_land');
+        Schema::dropIfExists('fs_husbandry_manure');
     }
 }

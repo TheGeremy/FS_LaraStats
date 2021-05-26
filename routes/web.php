@@ -32,8 +32,7 @@ Route::get('/missions', function () {
 
 Route::get('/test', function () {
 	return view('test')->with([
-		'active_mi' => 'test',
-		'name' => 'Taylor' 
+		'active_mi' => 'test'
 	]);
 });
 
@@ -43,6 +42,11 @@ Route::view('/farms', 'farms', ['active_mi' => 'farms']);
 Route::view('/fields', 'fields', ['active_mi' => 'fields']);
 Route::view('/forestry', 'forestry', ['active_mi' => 'forestry']);
 Route::view('/settings', 'settings', ['active_mi' => 'settings']);
+
+
+Route::view('/load_savegame', 'load_savegame', ['active_mi' => 'load_savegame']);
+Route::view('/load_vehicles', 'load_vehicles', ['active_mi' => 'load_vehicles']);
+Route::view('/load_items', 'load_items', ['active_mi' => 'load_items']);
 
 /*
 Route::get('/', function () {

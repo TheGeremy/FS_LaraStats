@@ -1,4 +1,12 @@
 <?php
+// process vehicles.xml
+// load tables:
+//   fs_vehicle
+//   fs_vehicle_fill
+//   fs_savegame_train
+//   fs_savegame_train_fill
+//   fs_farm_pallet
+//   fs_savegame_attach
 
 // path to xml to process
 $xml_file = load_xml_file(base_path() . "/fs_config/savegame/vehicles.xml");
@@ -13,7 +21,7 @@ $attachments = $xml_file->xpath('//vehicles/attachments'); // all vehicle elemen
 foreach ($vehicles_items as $item) {
 	if(str_contains(strtolower($item->attributes()->filename),'train')) {
 		array_push($train,$item); 
-	} elseif(str_contains(strtolower($item->attributes()->filename),'pallet')) {
+	} elseif(str_contains(strtolower($item->attributes()->filename),'pallets')) {
 		array_push($pallets,$item); 
 	} else {
 		array_push($vehicles,$item); 
@@ -42,23 +50,15 @@ $mapping = array(
 	"nextRepair" => "seasons_next_repair"
 );
 
-function check_fill_type($fill_type) {
-	return $fill_type == 'UNKNOWN' ? NULL : $fill_type;
-}
-
-function check_fill_level($fill_level) {
-	return $fill_level == floatval(0) ? NULL : $fill_level;
-}
-
-function process_items($data_to_process, $mapping, $save_id = 0, $farm_id = 0) {
+function process_items($data_to_process, $mapping, $farm_map = 0, $save_id = 0) {
 	$data = array();
 	$row = 1;
 	foreach($data_to_process as $item) {
 		if($save_id != 0) {
 			$data[$row]['save_id'] = $save_id;
 		}
-		if($farm_id !=  0) {
-			$data[$row]['farm_id'] = $farm_id;
+		if($farm_map != 0) {
+			$data[$row]['farm_id'] = find_farm_id((int)$item->attributes()->farmId,$farm_map);			
 		}
 		
 		// item atributes
@@ -83,22 +83,6 @@ function process_items($data_to_process, $mapping, $save_id = 0, $farm_id = 0) {
 				        	$data[$row]['air'] = (float)$unit->attributes()->fillLevel;
 				        	break;
 					}			
-				} else {				
-					// we store only 3 fill types (should be enough)
-					switch ((int)$unit->attributes()->index) {
-				    	case 1:
-				        	$data[$row]['fill_type_1'] = check_fill_type((string)$unit->attributes()->fillType);
-				        	$data[$row]['fill_level_1'] = check_fill_level((float)$unit->attributes()->fillLevel);
-				        	break;
-				    	case 2:
-				        	$data[$row]['fill_type_2'] = check_fill_type((string)$unit->attributes()->fillType);
-				        	$data[$row]['fill_level_2'] = check_fill_level((float)$unit->attributes()->fillLevel);
-				        	break;
-				    	case 3:
-				        	$data[$row]['fill_type_3'] = check_fill_type((string)$unit->attributes()->fillType);
-				        	$data[$row]['fill_level_3'] = check_fill_level((float)$unit->attributes()->fillLevel);
-				        	break;
-					}
 				}
 			}
 		}
@@ -113,54 +97,127 @@ function process_items($data_to_process, $mapping, $save_id = 0, $farm_id = 0) {
 }
 
 // process vehicles
-$data = process_items($vehicles, $mapping, 0, $farm_id);
-$query = prepare_query_ml('fs_farm_vehicle',$data);
-execute_query($query);
-unset($vehicles);
-just_print("Data loaded to fs_farm_vehicle (" . (string)array_key_last($data)  . " rows).");
-
-// process train
-$data = process_items($train, $mapping, $save_id, 0);
-$query = prepare_query_ml('fs_savegame_train',$data);
-execute_query($query);
-unset($train);
-just_print("Data loaded to fs_savegame_train (" . (string)array_key_last($data)  . " rows).");
-
-// proces other items
-$data = process_items($pallets, $mapping, 0, $farm_id);
-$query = prepare_query_ml('fs_farm_pallet',$data);
-execute_query($query);
-unset($pallets);
-just_print("Data loaded to fs_farm_pallet (" . (string)array_key_last($data)  . " rows).");
-
-// process attachments
-unset($mapping);
-$mapping = array(
-	"rootVehicleId" => "root_Id",
-	"attachmentId" => "attach_id",
-	"inputJointDescIndex" => "joint_index_input",
-	"jointIndex" => "joint_index",
-	"moveDown" => "move_down",
-);
-
-$data = array();
-$row = 1;
-foreach ($attachments as $attach) {
-	$data[$row]['save_id'] = $save_id;
-	$data[$row]['root_id'] = (string)$attach->attributes()->rootVehicleId;
-	$data[$row]['attach_id'] = (string)$attach->attachment->attributes()->attachmentId;
-	$data[$row]['joint_index_input'] = (string)$attach->attachment->attributes()->inputJointDescIndex;
-	$data[$row]['joint_index'] = (string)$attach->attachment->attributes()->jointIndex;
-	$data[$row]['move_down'] = (string)$attach->attachment->attributes()->moveDown;
-	++$row;
+if(array_key_last($vehicles) === NULL) {
+	just_print("No vehicles in savegame!");
+} else {
+	$data = process_items($vehicles, $mapping, $farm_map, $save_id);
+	$query = prepare_query_ml('fs_vehicle',$data);
+	execute_query($query);
+	just_print("Data loaded to fs_vehicle (" . (string)array_key_last($data)  . " rows).");
 }
 
-$query = prepare_query_ml('fs_savegame_attach',$data);
+// vehicle maping
+sleep(3);
+$vehicle_map = get_maping($save_id, 'fs_vehicle');
+
+// process vehicle fill
+unset($data);
+$data = array();
+$row = 1;
+foreach ($vehicles as $vehicle) {
+	//just_print((string)$vehicle->attributes()->id);
+	// vehicle fill units
+	if($vehicle->fillUnit)	{
+		foreach ($vehicle->fillUnit->unit as $unit) {
+			$fill_type = (string)$unit->attributes()->fillType;
+			if(!($fill_type == 'DIESEL' OR $fill_type == 'DEF' OR $fill_type == 'AIR')) {
+				$data[$row]['vehicle_id'] = $vehicle_map[(int)$vehicle->attributes()->id];
+				$data[$row]['fill_type'] = (string)$unit->attributes()->fillType;
+	        	$data[$row]['fill_level'] = (float)$unit->attributes()->fillLevel;
+	        	++$row;
+			}
+		}
+	}
+}
+
+if(!empty($data)) {
+	$query = prepare_query_ml('fs_vehicle_fill',$data);
+	execute_query($query);
+	just_print("Data loaded to fs_vehicle_fill (" . (string)array_key_last($data)  . " rows).");
+}
+unset($vehicles);
+unset($vehicle_map);
+
+// process train
+if(array_key_last($train) === NULL) {
+	just_print("No train in savegame!");
+} else {
+	$data = process_items($train, $mapping, 0, $save_id);
+	$query = prepare_query_ml('fs_savegame_train',$data);
+	execute_query($query);
+	just_print("Data loaded to fs_savegame_train (" . (string)array_key_last($data)  . " rows).");
+}
+
+// train mapping
+sleep(3);
+$train_map = get_maping($save_id, 'fs_savegame_train');
+
+// process train fill
+unset($data);
+$data = array();
+$row = 1;
+foreach ($train as $vagon) {
+	// vehicle fill units
+	if($vagon->fillUnit)	{
+		foreach ($vagon->fillUnit->unit as $unit) {
+			$fill_type = (string)$unit->attributes()->fillType;
+			$data[$row]['train_id'] = $train_map[(int)$vagon->attributes()->id];
+			$data[$row]['fill_type'] = (string)$unit->attributes()->fillType;
+	        $data[$row]['fill_level'] = (float)$unit->attributes()->fillLevel;
+	        ++$row;
+		}
+	}
+}
+$query = prepare_query_ml('fs_savegame_train_fill',$data);
 execute_query($query);
-just_print("Data loaded to fs_savegame_attach (" . (string)array_key_last($data)  . " rows).");
+just_print("Data loaded to fs_savegame_train_fill (" . (string)array_key_last($data)  . " rows).");
+unset($train);
+unset($train_map);
+
+// proces other items
+if(array_key_last($pallets) === NULL) {
+	just_print("No pallets in savegame!");
+} else {
+	$data = process_items($pallets, $mapping, $farm_map);
+	$query = prepare_query_ml('fs_farm_pallet',$data);
+	execute_query($query);
+	unset($pallets);
+	just_print("Data loaded to fs_farm_pallet (" . (string)array_key_last($data)  . " rows).");
+}
+
+// process attachments
+if(array_key_last($attachments) === NULL) {
+	just_print("No attachments in savegame!");
+} else {
+	unset($mapping);
+	$mapping = array(
+		"rootVehicleId" => "root_Id",
+		"attachmentId" => "attach_id",
+		"inputJointDescIndex" => "joint_index_input",
+		"jointIndex" => "joint_index",
+		"moveDown" => "move_down",
+	);
+
+	$data = array();
+	$row = 1;
+	foreach ($attachments as $attach) {
+		$data[$row]['save_id'] = $save_id;
+		$data[$row]['root_id'] = (string)$attach->attributes()->rootVehicleId;  // id from vehicles.xml file game_id
+		$data[$row]['attach_id'] = (string)$attach->attachment->attributes()->attachmentId; // id from vehicles.xml file game_id
+		$data[$row]['joint_index_input'] = (string)$attach->attachment->attributes()->inputJointDescIndex;
+		$data[$row]['joint_index'] = (string)$attach->attachment->attributes()->jointIndex;
+		$data[$row]['move_down'] = (string)$attach->attachment->attributes()->moveDown;
+		++$row;
+	}
+
+	$query = prepare_query_ml('fs_savegame_attach',$data);
+	execute_query($query);
+	just_print("Data loaded to fs_savegame_attach (" . (string)array_key_last($data)  . " rows).");
+}
 
 unset($data);
 unset($row);
 unset($attachments);
+unset($mapping);
 
 ?>

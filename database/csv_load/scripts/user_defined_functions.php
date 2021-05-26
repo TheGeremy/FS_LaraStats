@@ -78,17 +78,49 @@ function convert_string($str) {
     
     return $str;
 }
-function game_to_farm_id($game_id) {
-	// change game farm_id stored as game_id in fs_farm to internal database farm_id which is id from fs_farm
-	$query = "select game_to_farm_id('" . $game_id . "') as farm_id;";
-	$result = DB::select($query);
-	return $result[0]->farm_id; // database return 0 if no map find
+function get_product_map($save_id) {
+	// this will get all farms for save_id and create a mapping array to map farmId from xml to database farm_id
+	// game_id - in load process we call each xml id as game_id, int this case farmId, so when we process farms.xml each id of farmId from xml is game_id
+	// farm_id - is a database id of each farm, so it is id from fs_farm table
+	$map = array();
+	$results = DB::select("select p.`id`, ss.`game_id` as sell_st_game_id, p.`fill_type` from fs_sellst_product as p inner join fs_sellst as ss on ss.`id` = p.`sell_st_id` where `save_id` = :save_id;", ['save_id' => $save_id]);
+
+	foreach($results as $result) {
+		$map[$result->sell_st_game_id][$result->fill_type] = $result->id; 
+	}
+
+	// you can use this $farm_map as $farm_map[$game_id] and you will get farm_id
+	return $map;
+
+}
+function find_farm_id($id, $farm_map) {
+	return array_key_exists($id,$farm_map) ? $farm_map[$id] : 0;
+}
+function get_maping($save_id, $table_name) {
+	// this will get all farms for save_id and create a mapping array to map farmId from xml to database farm_id
+	// game_id - in load process we call each xml id as game_id, int this case farmId, so when we process farms.xml each id of farmId from xml is game_id
+	// farm_id - is a database id of each farm, so it is id from fs_farm table
+	$map = array();
+	$results = DB::select("select `id`, `game_id` from $table_name where `save_id` = :save_id;", ['save_id' => $save_id]);
+
+	foreach($results as $result) {
+		$map[$result->game_id] = $result->id; 
+	}
+
+	// you can use this $farm_map as $farm_map[$game_id] and you will get farm_id
+	return $map;
+
 }
 function get_map_id($map_title) {
 	// get id of map in map dimension table
 	$query = "select get_map_id('" . $map_title . "') as map_id;";
 	$result = DB::select($query);
 	return $result[0]->map_id; // database return 0 if no map find
+}
+function get_seasons_id($save_id) {
+	// get id of seasons int fs_season table
+	$result = DB::select("select `id` from `fs_seasons` where `save_id` = :save_id;", ['save_id' => $save_id]);
+	return $result[0]->id;
 }
 function get_save_id() {
 	// get id of last savegame loaded 
@@ -102,6 +134,12 @@ function get_farm_id() {
 	$result = DB::select($query);
 	return $result[0]->farm_id; // database return 0 if no savegame
 }
+function check_last_save_id($table_name) {
+	// check what is the last save_id in specified table 
+	$query = "select max(save_id) as save_id from " . $table_name . ";";
+	$result = DB::select($query);
+	return $result[0]->save_id ? $result[0]->save_id : 0; // return zero if NULL
+}
 function get_current_day() {
 	// get current day of last savegame loaded
 	$query = "SELECT get_current_day() AS current_day;";
@@ -113,6 +151,12 @@ function check_seasons() {
 	$result = DB::select($query);
 	return $result[0]->seasons; // sql return true / false based on if last loaded savegame has seasons mod enabled
 }
+function check_gcomp() {
+	$query = "SELECT check_gcomp() as gcomp;";
+	$result = DB::select($query);
+	return $result[0]->gcomp; // sql return true / false based on if last loaded savegame has global company mod enabled
+}
+
 function find_last_char($str, $char) {
 	$i = 0;
 	$pos = -1;
@@ -132,17 +176,6 @@ function cut_string($str,$start_ch,$end_ch) {
 	$start_ch_pos = find_last_char($str, $start_ch);
 	$str_start = $start_ch_pos + 1;
 	$end_ch_pos = find_last_char($str, $end_ch);
-	$str_end = $end_ch_pos - strlen($str);
-	if($start_ch_pos < 0 or $end_ch_pos < 0) {
-		return $str;
-	} else {
-		return substr($str,$str_start,$str_end);
-	}
-}
-function cut_filename($str,$start_ch,$end_ch) {
-	$start_ch_pos = find_last_char($str, $start_ch);
-	$str_start = $start_ch_pos + 1;
-	$end_ch_pos = strpos($str, $end_ch);
 	$str_end = $end_ch_pos - strlen($str);
 	if($start_ch_pos < 0 or $end_ch_pos < 0) {
 		return $str;
@@ -218,7 +251,7 @@ function prepare_query_ml($tableName, $data) {
 		$query .= "(";
 	  	foreach($columns as $column) {	  		
 	  		$value = (array_key_exists($column,$row)) ? $row[$column] : 'NULL';
-	  		$value = ($value == NULL) ? 'NULL' : $value;
+	  		$value = ($value === NULL) ? 'NULL' : $value;
 	  		if(is_numeric($value) or $value == 'true' or $value == 'false' or $value == 'NULL') {
 				$query .= $value . ", ";
 			} else {

@@ -38,16 +38,34 @@ if($valid_savegame && $xml_current_day > $db_current_day) {
 	require base_path() . "/database/csv_load/load/load_savegame/load_farms_xml.php";	
 	// load farmland.xml
 	require base_path() . "/database/csv_load/load/load_savegame/load_farmland_xml.php";
-	// load vehicles.xml
-	require base_path() . "/database/csv_load/load/load_savegame/load_vehicles_xml.php";
 	// load economy.xml
 	require base_path() . "/database/csv_load/load/load_savegame/load_economy_xml.php";
+	// load missions.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_missions_xml.php";
+	// load npc.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_npc_xml.php";
+	// load treePlant.xml
+	require base_path() . "/database/csv_load/load/load_savegame/load_treePlant_xml.php";
+
+	if(check_seasons()) {
+		// load seasons.xml
+		just_print("Savegame has seasons mod enabled");
+		require base_path() . "/database/csv_load/load/load_savegame/load_seasons_xml.php";
+	}
+	
+	if(check_gcomp()) {
+		// load globalCompany.xml
+		just_print("Savegame has global company mod enabled");
+		require base_path() . "/database/csv_load/load/load_savegame/load_global_comp_xml.php";
+	}
+	
+	// load vehicles.xml
+	//require base_path() . "/database/csv_load/load/load_savegame/load_vehicles_xml.php";
+	// load economy.xml
+	//require base_path() . "/database/csv_load/load/load_savegame/load_items_xml.php";
 	print_heading("Savegame load end");
 }  else {
 	just_print("!!! No valid save or not a new day in save.");
 }
-
-// testing
-//require base_path() . "/database/csv_load/load/load_savegame/load_farmland_xml.php";
 
 ?>

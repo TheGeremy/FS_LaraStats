@@ -2,11 +2,6 @@
 
 // path to xml to process
 $xml_file = load_xml_file(base_path() . "/fs_config/savegame/farms.xml");
-$farms = $xml_file->xpath('//farms/farm'); // all farm
-$stats = $xml_file->xpath('//farms/farm/statistics'); // various stats about farm
-$fin_stats = $xml_file->xpath('//farms/farm/finances'); // finance stats about farm
-
-unset($xml_file);
 
 // array of values to save into fs_farm
 $mapping = array(
@@ -20,7 +15,7 @@ $mapping = array(
 
 $data = array();
 $row = 1;
-foreach ($farms as $farm) {
+foreach ($xml_file->farm as $farm) {
 	$data[$row]['save_id'] = $save_id;
 	foreach ($farm->attributes() as $key => $value) {
 		if(array_key_exists($key,$mapping)) {
@@ -32,9 +27,30 @@ foreach ($farms as $farm) {
 
 $query = prepare_query_ml('fs_farm', $data);
 execute_query($query);
-unset($farms);
+//just_print($query);
 
-$farm_id = get_farm_id();
+// get mapping game_id (xml farmId) to farm_id, only for current save_id
+$farm_map = get_maping($save_id, 'fs_farm');
+
+//--- process farm farmers -----------------------------------------
+foreach ($xml_file->farm as $farm) {
+	unset($data);
+	$data = array();
+	$row = 1;
+	if($farm->players) {
+		foreach($farm->players->children() as $player) {
+			$data[$row]['farm_id'] = $farm_map[(int)$farm->attributes()->farmId];
+			foreach($player->attributes() as $key => $value) {
+				// find database id of farm from fs_farm table for current save_id
+				$data[$row][convert_string($key)] = (string)$value;
+			}	
+			++$row;
+		}
+		$query = prepare_query_ml('fs_farm_farmer', $data);
+		execute_query($query);
+		//just_print($query);
+	}
+}
 
 //--- process farm various statistics -----------------------------------------
 unset($mapping);
@@ -53,7 +69,7 @@ $mapping = array(
     "breedHorsesCount" => "breed_horses",
     // missions
     "fieldJobMissionCount" => "field_job_mission",
-    "fieldJobMissionByNPC" => "field_job_mission_npc",
+    //"fieldJobMissionByNPC" => "field_job_mission_npc", // crazy numbers here, so I dump
     "transportMissionCount" => "transport_mission",
     // forestry
     "plantedTreeCount" => "planted_trees",
@@ -83,16 +99,19 @@ $mapping = array(
 
 unset($data);
 $data = array();
-foreach($stats[0] as $key => $value) {
-	$data[0]['farm_id'] = $farm_id;
-	if(array_key_exists($key,$mapping)) {
-		$data[0][$mapping[$key]] = (string)$value;
-	}	
+foreach ($xml_file->farm as $farm) {
+	$data[0]['farm_id'] = $farm_map[(int)$farm->attributes()->farmId];
+	foreach($farm->statistics->children() as $key => $value) {
+		// find database id of farm from fs_farm table for current save_id
+		if(array_key_exists($key,$mapping)) {
+			$data[0][$mapping[$key]] = (string)$value;
+		}	
+	}
+	$query = prepare_query_ml('fs_farm_stat', $data);
+	execute_query($query);
+	//just_print($query);
 }
 
-$query = prepare_query_ml('fs_farm_stat', $data);
-execute_query($query);
-unset($stats);
 
 //-- process farm finance statistics --------------------------------------------
 
@@ -131,24 +150,26 @@ $mapping = array(
 	"seasons_livery_stable" => "seasons_livery_stable"
 );
 
-unset($data);
-$data = array();
-$row = 1;
-foreach($fin_stats[0] as $stat) {
-	$data[$row]['farm_id'] = $farm_id;
-	$data[$row]['stats_day'] = (string)$stat->attributes()->day;
-	foreach ($stat as $key => $value) {
-		$data[$row][$mapping[$key]] = (string)$value;
+foreach ($xml_file->farm as $farm) {
+	if($farm->finances) {
+		unset($data);
+		$data = array();
+		$row = 1;
+		foreach($farm->finances->children() as $stats_day) {
+			$data[$row]['farm_id'] = $farm_map[(int)$farm->attributes()->farmId];
+			$data[$row]['stats_day'] = (string)$stats_day->attributes()->day;
+			foreach ($stats_day->children() as $key => $value) {
+				$data[$row][$mapping[$key]] = (string)$value;
+			}
+			++$row;
+		}
+		$query = prepare_query_ml('fs_farm_fin_stat',$data);
+		execute_query($query);
+		//just_print($query);
 	}
-	++$row;
 }
-
-$query = prepare_query_ml('fs_farm_fin_stat',$data);
-execute_query($query);
-unset($fin_stats);
 
 unset($mapping);
 unset($data);
 unset($row);
-
 ?>
