@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
+use App\Models\Savegame;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,13 @@ Route::get('/missions', function () {
 Route::get('/test', function () {
 	return view('test')->with([
 		'active_mi' => 'test'
+	]);
+});
+
+Route::get('/savegames', function () {
+	return view('savegames')->with([
+		'active_mi' => 'savegames',
+		'savegames' => Savegame::all()->sortByDesc('save_date')
 	]);
 });
 
