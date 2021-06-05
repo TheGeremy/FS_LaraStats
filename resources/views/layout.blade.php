@@ -93,14 +93,16 @@
             <a href="/forestry" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'forestry') ? 'w3-blue' : '' }}"><i class="fa fa-tree fa-fw"></i>Forestry</a>
             <a href="/about" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'about') ? 'w3-blue' : '' }}"><i class="fa fa-info-circle fa-fw"></i>About</a>
             <a href="/settings" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'settings') ? 'w3-blue' : '' }}"><i class="fa fa-cog fa-fw"></i>Settings</a>
+            <!-- SEPARATE EXTERNAL LINKS WITH HORIZONTAL LINE -->
+            <hr>
+            <a href="http://fs19.nuba.synology.me/" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-server fa-fw"></i>Dedic Web</a>
+            <a href="http://stats1.nuba.synology.me/index.php" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-minus fa-fw"></i>OLD Stats</a>
+            <!-- SEPARATE TEMPORARY TESTING LINKS WITH HORIZONTAL LINE -->
+            <hr>
             <a href="/test" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'test') ? 'w3-blue' : '' }}"><i class="fa fa-minus fa-fw"></i>test</a>            
             <a href="/load_savegame" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'load_savegame') ? 'w3-blue' : '' }}"><i class="fa fa-minus fa-fw"></i>load_savegame</a>
             <a href="/load_vehicles" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'load_vehicles') ? 'w3-blue' : '' }}"><i class="fa fa-minus fa-fw"></i>load_vehicles</a>
             <a href="/load_items" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'load_items') ? 'w3-blue' : '' }}"><i class="fa fa-minus fa-fw"></i>load_items</a>
-            <!-- SEPARATE EXTERNAL LINKS WITH HORIZONTAL LINE -->
-            <hr>
-            <a href="http://fs19.nuba.synology.me/" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-server fa-fw"></i>Server</a>
-            <a href="http://stats1.nuba.synology.me/index.php" target="_blank" class="w3-bar-item w3-button w3-padding"><i class="fa fa-minus fa-fw"></i>OLD Stats</a>
             <br>
             <br>
           </div>
