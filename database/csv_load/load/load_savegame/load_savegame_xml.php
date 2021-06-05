@@ -34,15 +34,15 @@ if($map_id == 0) {
 
 // fs_savegame columns
 $fs_savegame_data[0] = array(
-	"current_day" => $xml_current_day,
+	"game_day" => $xml_current_day,
 	"map_id" => $map_id,
-	"savegame_name" => (string)$xml_career_savegame->settings->savegameName,
+	"name" => (string)$xml_career_savegame->settings->savegameName,
 	"save_date" => (string)$xml_career_savegame->settings->saveDate,
 	"money" => (int)$xml_career_savegame->statistics->money,
 	"play_time" => (float)$xml_career_savegame->statistics->playTime,
 	"day_hour" => round($day_time/60,0),
 	"day_min" => $day_time%60,
-	"player_name" => (string)$xml_career_savegame->settings->playerName
+	"player_name" => (string)$xml_career_savegame->settings->playerName // !!!!!!!!!!!! if savegame from server, player_name value is Server !!!!!!!!!!!!!!!!!!!!
 );
 
 $query = prepare_query_ml('fs_savegame',$fs_savegame_data);
