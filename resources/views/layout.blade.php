@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title', 'FS19 - Webstats')</title>
+        <title>LaraStats: @yield('title', 'LaraStats')</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
         <!-- Styles -->
@@ -18,9 +19,8 @@
         <link rel="icon" href="{{ asset('img/favicon.ico') }}">
 
         <style>
-            html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}            
+            html,body,h1,h2,h3,h4,h5 {font-family: 'Roboto', sans-serif;}            
         </style>
-
         <script>
             function close_open_submenu(id) {
                 var x = document.getElementById(id);
@@ -45,13 +45,13 @@
               <img src="{{ asset('img/fs19_logo_full.jpg') }}" class="w3-margin-right" style="width:80px">
             </div>
             <div class="w3-col s8 w3-bar" style="font-size: x-large; margin-top: 5px; padding-left: 15px">
-              <span>Webstats</span>
+              <span>LaraStats</span>
             </div>
           </div>
           <hr>
           <div class="w3-bar-block">
-            <a href="http://ws.nuba.synology.me/" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'home_overview') ? 'w3-blue' : '' }}"><i class="fa fa-globe fa-fw"></i>Overview</a>
-            <a href="/stats" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'stats') ? 'w3-blue' : '' }}"><i class="fa fa-pie-chart fa-fw"></i>Statistics</a>
+            <a href="/" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'home_overview') ? 'w3-blue' : '' }}"><i class="fa fa-globe fa-fw"></i>Overview</a>
+            <a href="/savegames" class="w3-bar-item w3-button w3-padding {{ ($active_mi == 'savegames') ? 'w3-blue' : '' }}"><i class="fa fa-database fa-fw"></i>Savegames</a>
             <a id="myBtn" onclick="close_open_submenu('animals')" href="javascript:void(0)" class="w3-bar-item w3-button">
                 <i class="fa fa-bars fa-fw"></i>Animals<i class="fa fa-caret-down w3-margin-left"></i>
             </a>
@@ -115,7 +115,7 @@
 
           <!-- Header -->
           <header class="w3-container" style="padding-top:22px">
-            <h5><b><i class="fa fa-dashboard fa-fw"></i>@yield('header_text','My Dashboard')</b></h5>
+            <h5><b><i class="fa fa-star fa-fw"></i>@yield('header_text','My Dashboard')</b></h5>
           </header>
 
           @yield('content')
