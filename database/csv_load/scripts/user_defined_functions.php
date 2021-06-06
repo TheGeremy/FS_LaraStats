@@ -97,9 +97,9 @@ function find_farm_id($id, $farm_map) {
 	return array_key_exists($id,$farm_map) ? $farm_map[$id] : 0;
 }
 function get_maping($save_id, $table_name) {
-	// this will get all farms for save_id and create a mapping array to map farmId from xml to database farm_id
-	// game_id - in load process we call each xml id as game_id, int this case farmId, so when we process farms.xml each id of farmId from xml is game_id
-	// farm_id - is a database id of each farm, so it is id from fs_farm table
+	// this function return array where key is game_id from the save and value is id of coresponding record from database table
+	// game_id - in load process we call each xml id as game_id (id of xml farm, id of xml husbandry and so on), so when we process farms.xml each id of farm from xml is game_id
+	// farm_id - is a database id of each farm, so it is id from fs_farm table or id from any other table specified on fucntion call
 	$map = array();
 	$results = DB::select("select `id`, `game_id` from $table_name where `save_id` = :save_id;", ['save_id' => $save_id]);
 
@@ -120,7 +120,11 @@ function get_map_id($map_title) {
 function get_seasons_id($save_id) {
 	// get id of seasons int fs_season table
 	$result = DB::select("select `id` from `fs_seasons` where `save_id` = :save_id;", ['save_id' => $save_id]);
-	return $result[0]->id;
+	if(array_key_exists(0, $result)) {
+		return $result[0]->id;
+	} else {
+		return 0; // return zero if null
+	}
 }
 function get_save_id() {
 	// get id of last savegame loaded 
