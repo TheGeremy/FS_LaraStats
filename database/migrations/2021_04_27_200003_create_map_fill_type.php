@@ -8,12 +8,15 @@ class CreateMapFillType extends Migration
 {
     /**
      * Information about mod map non standard fill types from map config folder and fillTypes.xml file
+     * Tables with suffx _dim are independent from savegame table, values do not change from savegame to savegame
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('fs_map_fill_type_dim', function (Blueprint $table) {
+        $tableName = 'fs_map_fill_type_dim';
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('map_id'); // id from fs_map_dim            
             // end of indexes            
@@ -27,6 +30,8 @@ class CreateMapFillType extends Migration
             // define indexes
             $table->foreign('map_id')->references('id')->on('fs_map_dim')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        DB::statement("ALTER TABLE `$tableName` comment 'Information about mod map non standard fill types from map config folder and fillTypes.xml file'");
     }
 
     /**

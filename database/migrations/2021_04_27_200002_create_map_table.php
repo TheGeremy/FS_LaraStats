@@ -8,12 +8,15 @@ class CreateMapTable extends Migration
 {
     /**
      * Table to store information about mod map from map config folder and modDesc.xml
+     * Talbes with suffix _dim are independent from savegame table, values dont change from savegame to savegame
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('fs_map_dim', function (Blueprint $table) {
+        $tableName = 'fs_map_dim';
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->id();
             // end of indexes section           
             $table->string('title', 100); // from map mod modDesc.xml
@@ -30,6 +33,8 @@ class CreateMapTable extends Migration
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });
+
+        DB::statement("ALTER TABLE `$tableName` comment 'Table to store information about mod map from map config folder and modDesc.xml'");
     }
 
     /**

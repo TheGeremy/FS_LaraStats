@@ -7,13 +7,15 @@ use Illuminate\Support\Facades\Schema;
 class CreateSavegameTable extends Migration
 {
     /**
-     * Save savegames, it means load savegame xml files each time the game day (currentDay) of savegame folder >> environment.xml change.
+     * Saved savegames, it means load savegame xml files each time the game day (currentDay) of savegame folder >> environment.xml change
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('fs_savegame', function (Blueprint $table) {
+        $tableName = 'fs_savegame';
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('map_id'); // id from fs_map_dim
             // end of indexes section
@@ -32,6 +34,8 @@ class CreateSavegameTable extends Migration
             $table->index('game_day');
             $table->foreign('map_id')->references('id')->on('fs_map_dim')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        DB::statement("ALTER TABLE `$tableName` comment 'Saved savegames, it means load savegame xml files each time the game day (currentDay) of savegame folder >> environment.xml change'");
     }
 
     /**

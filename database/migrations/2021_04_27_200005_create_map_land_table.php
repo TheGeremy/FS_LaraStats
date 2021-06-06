@@ -8,12 +8,15 @@ class CreateMapLandTable extends Migration
 {
     /**
      * Information about fields on map from map config folder and farmlands.xml file
+     * Tables with suffix _dim are independent from savegame table, values dont change from savegame to savegame
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('fs_map_land_dim', function (Blueprint $table) {
+        $tableName = 'fs_map_land_dim';
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->id();  
             $table->unsignedBigInteger('map_id');           // id from fs_map_dim database table 
             $table->unsignedTinyInteger('land_id');         // id from map config farmlands.xml
@@ -31,6 +34,8 @@ class CreateMapLandTable extends Migration
             $table->foreign('map_id')->references('id')->on('fs_map_dim')->onDelete('cascade')->onUpdate('cascade');
             $table->index('land_id');
         });
+
+        DB::statement("ALTER TABLE `$tableName` comment 'Information about fields on map from map config folder and farmlands.xml file'");
     }
 
     /**

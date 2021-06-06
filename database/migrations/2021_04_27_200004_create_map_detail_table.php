@@ -8,12 +8,15 @@ class CreateMapDetailTable extends Migration
 {
     /**
      * Information about mod map settings from savegame folder and gameSavegame.xml, can change from savegame to savegame
+     * Values here can change from savegame to savegame
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('fs_map_detail', function (Blueprint $table) {
+        $tableName = 'fs_map_detail';
+
+        Schema::create($tableName, function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('save_id');
             $table->unsignedBigInteger('map_id'); // id from fs_map_dim
@@ -35,6 +38,8 @@ class CreateMapDetailTable extends Migration
             $table->index('save_id');
             $table->foreign('map_id')->references('id')->on('fs_map_dim')->onDelete('cascade')->onUpdate('cascade');
         });
+
+        DB::statement("ALTER TABLE `$tableName` comment 'Information about mod map settings from savegame folder and gameSavegame.xml, can change from savegame to savegame'");
     }
 
     /**
