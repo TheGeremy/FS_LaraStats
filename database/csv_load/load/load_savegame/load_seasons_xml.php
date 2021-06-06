@@ -107,30 +107,33 @@ unset($data);
 unset($forecast);
 
 /*
+<fill fillType="WHEAT">
+    <values>611.31802602482;627.83103900576;641.98505013228;640.97405105925;624.79804178667;608.6220325141;595.47902648664;585.36902370429;575.25902092195;...</values>
+</fill>
+*/
+
 $data = array();
 $row = 1;
-foreach ($trees as $tree) {
-    $data[$row]['save_id'] = $save_id;
-    foreach ($tree->attributes() as $key => $value) {
-        if(array_key_exists($key,$mapping)) {
-            $data[$row][$mapping[$key]] = (string)$value;
-        }
+foreach ($prices as $price) {
+    $season_day = 0;
+    $values = explode(';', (string)$price->values);
+
+    foreach ($values as $value) {
+        $data[$row]['seasons_id'] = $seasons_id;
+        $data[$row]['fill_type'] = $price->attributes()->fillType;  
+        $data[$row]['day'] = ++$season_day;
+        $data[$row]['price'] = $value;
+        ++$row;
     }
-    ++$row;
+
 }
-*/
 
-/*
-    <fill fillType="STRAWPELLETS">
-        <values>450;445.49463615954;450.61028177913;446.4489273978;451.18802847308;452.55083680485;451.05904198666;443.24441480921;450.23096065261;449.15428394401;457.03163288659;440.40949220277;453.70987700763;455.16300977778;448.73390741294;452.92191670403;462.33686437988;448.74265497002;445.83249211192;461.56376205719;428.2472787404;449.85670161495;439.82628974231;444.79076388781;449.5809760919;451.3698717032;461.21829764526;465.65971476485;448.09454770801;466.90338978788;451.38089951956;452.05879249117;450.67143022612;450.95535035915;443.93420724633;439.63350624258;439.52574569572;447.00480777845;434.65482342355;467.86847780178;429.19587818012;450;450;450;450;450;450;450</values>
-    </fill>
-*/
+unset($values);
+$query = prepare_query_ml('fs_seasons_price',$data);
+//just_print($query);
+execute_query($query);
+just_print("Data loaded to fs_seasons_price (" . (string)array_key_last($data)  . " rows).");
+unset($data);
+unset($prices);
 
-// $query = prepare_query_ml('fs_savegame_forestry',$data);
-// just_print($query);
-// execute_query($query);
-// just_print("Data loaded to fs_savegame_npc (" . (string)array_key_last($data)  . " rows).");
-// unset($data);
-// unset($mapping);
-// unset($trees);
 ?>
