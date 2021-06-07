@@ -122,3 +122,5 @@ nohup.out
 /.vagrant
 .phpunit.result.cache
 database/csv_load/load/load_savegame/test.php
+composer.json
+composer.lock
