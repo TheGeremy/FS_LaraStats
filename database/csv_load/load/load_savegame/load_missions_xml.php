@@ -17,10 +17,7 @@ $mapping = array (
     "numObjects" => "trans_amount",
     "field_id" => "field_id",
     "field_vehicleUseCost" => "rental",
-    "field_fruitTypeName" => "fruit_type",              // only those missions that are able to specify fruit type
-    "activeId" => "active_id",                          // when is mission contracted by any farm, else missiog, it looks like it is a farm_id
-    "farmId" => "farm_id",                              // when is missoin contracted by any farm, else missing
-    "stealingCost" => "stealing_cost"                   // when is missoin contracted by any farm, else missing
+    "field_fruitTypeName" => "fruit_type"              // only those missions that are able to specify fruit type
 );
 
 $data = array();
@@ -40,18 +37,24 @@ foreach ($missions as $mission) {
     }
     /*** only when mission is contracted by any farm ***/
 
-
+    // go trough all mission attributes
     foreach ($mission->attributes() as $key => $value) {
         //just_print($mission->getName() . "_" . (string)$key . ": " . (string)$value);
+        
         $key = $mission->getName() . "_" . (string)$key;
         if(array_key_exists($key, $mapping)) {
+            if($key == 'mission_status') {
+                $value = (int)$value + 1;
+            }
             $data[$row][$mapping[$key]] = (string)$value;
         }
     }
 
+    // go trough all child tags (field, bale, harvest) attributes
     foreach ($mission->children() as $child) {
         foreach ($child->attributes() as $key => $value) {
             //just_print($child->getName() . "_" . (string)$key . ": " . (string)$value);
+
             $key = $child->getName() . "_" . (string)$key;
             if(array_key_exists($key, $mapping)) {
                 $data[$row][$mapping[$key]] = (string)$value;

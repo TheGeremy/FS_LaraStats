@@ -2,46 +2,54 @@
 
 @section('title', 'FS19 - Webstats: Missions')
 
-@section('header_text','Available missions')
+@section('header_text')
+@if ($savegame->id == $current_savegame->id)
+   Available missions for most recent savegame
+@else
+   Available missions for savegame {{ $savegame->id }} saved {{ date_format(date_create($savegame->save_date),"d.m.Y") }}
+@endif
+@endsection
+
+@section('stylesheet')
+<style type="text/css">
+  td.format, th.format {
+    text-align: right;
+  }
+  td.center, th.center {
+    text-align: center;
+  }
+</style>
+@endsection
 
 @section('content')
 <div class="w3-container">
-   <table class="w3-table w3-striped w3-white">
+   <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
       <tr>
-         <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-         <td>New record, over 90 views.</td>
-         <td><i>10 mins</i></td>
+         <th class="center">#</th>                  
+         <th>Type</th>
+         <th class="format">Field</th>
+         <th>Product</th>         
+         <th class="format">Reward</th>
+         <th class="format">Rental</th>    
+         <th class="center"><i class="fa fa-info w3-text-blue w3-large"></i></th>              
+         <th>Farm</th>
+         <th>Status</th>                  
+         <th>Success</th>       
       </tr>
-      <tr>
-         <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-         <td>Database error.</td>
-         <td><i>15 mins</i></td>
-      </tr>
-      <tr>
-         <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-         <td>New record, over 40 users.</td>
-         <td><i>17 mins</i></td>
-      </tr>
-      <tr>
-         <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-         <td>New comments.</td>
-         <td><i>25 mins</i></td>
-      </tr>
-      <tr>
-         <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-         <td>Check transactions.</td>
-         <td><i>28 mins</i></td>
-      </tr>
-      <tr>
-         <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-         <td>CPU overload.</td>
-         <td><i>35 mins</i></td>
-      </tr>
-      <tr>
-         <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-         <td>New shares.</td>
-         <td><i>39 mins</i></td>
-      </tr>
+      @foreach($savegame->missions as $mission)
+         <tr>
+            <td class="center">{{ $loop->iteration }}</td>               
+            <td>{{ ucfirst($mission->type) }}</td>
+            <td class="format">{{ $mission->field_id ? $mission->field_id : '---' }}</td>            
+            <td>{{ ucfirst(strtolower($mission->type == 'transport' ? $mission->trans_product : $mission->fruit_type)) }}</td> <!-- will be tranlated -->            
+            <td class="format">{{ number_format($mission->reward, 0, ',', ' ') }}</td>
+            <td class="format">{{ number_format($mission->rental, 0, ',', ' ') }}</td>            
+            <td class="center"><i class="fa fa-user {{ $mission->farm_id ? 'w3-text-red' : 'w3-text-green' }} w3-large"></i></td>
+            <td>{{ $mission->farm_id ? $mission->farm_id : '---' }}</td>                        
+            <td>{{ $mission->status->name }}</td>            
+            <td>{{ $mission->success ? 'Yes' : 'No' }}</td>
+         </tr>
+      @endforeach
    </table>
 </div>
 @endsection                        

@@ -27,8 +27,11 @@ Route::get('/stats', function () {
     return view('stats', [ 'active_mi' => 'stats']);
 });
 
-Route::get('/missions', function () {
-    return view('missions', [ 'active_mi' => 'missions']);
+Route::get('/missions/{savegame_id}', function ($savegame_id) {
+    return view('missions', [
+    	'active_mi' => 'missions',
+    	'savegame' => Savegame::with(['missions.status'])->find($savegame_id)
+    ]);
 });
 
 Route::get('/test', function () {

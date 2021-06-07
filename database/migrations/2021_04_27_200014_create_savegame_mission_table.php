@@ -21,7 +21,7 @@ class CreateSavegameMissionTable extends Migration
             // end of indexes
             $table->string('type', 50);
             $table->double('reward', 16, 6);
-            $table->unsignedTinyInteger('status');                                                          // 1 - free, 2 - contracted
+            $table->unsignedSmallInteger('status_id');                                                      // 1 - free, 2 - contracted
             $table->boolean('success');
             $table->unsignedTinyInteger('field_id')->nullable();                                            // not field missions, don't have field
             $table->double('rental', 16, 6)->nullable();                                                    // some missions don't have rental option
@@ -44,6 +44,7 @@ class CreateSavegameMissionTable extends Migration
             // define indexes
             $table->index('farm_id');
             $table->foreign('save_id')->references('id')->on('fs_savegame')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('status_id')->references('id')->on('fs_mission_status')->onDelete('restrict')->onUpdate('restrict');
         });
 
         DB::statement("ALTER TABLE `$tableName` comment 'Information about missions of each savegame from savegame folder and missions.xml file'");

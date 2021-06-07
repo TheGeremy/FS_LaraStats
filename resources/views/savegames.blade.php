@@ -4,11 +4,17 @@
 
 @section('header_text','Stored savegames')
 
+@section('header_icon','fa-database')
+
+
 @section('stylesheet')
 <style type="text/css">
   td.format, th.format {
     text-align: right;
   }
+  td.center, th.center {
+    text-align: center;
+  }  
 </style>
 @endsection
 
@@ -24,6 +30,7 @@
             <th class="format">Game day</th>
             <th class="format">Game time</th>
             <th class="format">Saved</th>
+            <th class="center">Missions</th>
           </tr>
         @foreach($savegames as $savegame)
           <tr>
@@ -34,7 +41,8 @@
             <td class="format">{{ round($savegame->play_time, 0, PHP_ROUND_HALF_UP) }}</td>
             <td class="format">{{ $savegame->game_day }}</td>
             <td class="format">{{ (strlen($savegame->day_hour) == 1 ? '0' . $savegame->day_hour : $savegame->day_hour) . ':' . (strlen($savegame->day_min) == 1 ? '0' . $savegame->day_min : $savegame->day_min) }}</td>
-            <td class="format">{{ date_format(date_create($savegame->save_date),"d-m-Y") }}</td>
+            <td class="format">{{ date_format(date_create($savegame->save_date),"d.m.Y") }}</td>
+            <td class="center"><a href="missions/{{ $savegame->id }}"><i class="fa fa-star w3-text-blue w3-large"></i></a></td>
           </tr>
         @endforeach
         </table>
