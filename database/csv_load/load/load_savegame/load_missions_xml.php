@@ -18,12 +18,29 @@ $mapping = array (
     "field_id" => "field_id",
     "field_vehicleUseCost" => "rental",
     "field_fruitTypeName" => "fruit_type",              // only those missions that are able to specify fruit type
+    "activeId" => "active_id",                          // when is mission contracted by any farm, else missiog, it looks like it is a farm_id
+    "farmId" => "farm_id",                              // when is missoin contracted by any farm, else missing
+    "stealingCost" => "stealing_cost"                   // when is missoin contracted by any farm, else missing
 );
 
 $data = array();
 $row = 1;
 foreach ($missions as $mission) {
     $data[$row]['save_id'] = $save_id;
+    
+    /*** only when mission is contracted by any farm ***/
+    if ($mission->attributes()->farmId) {
+        $data[$row]['farm_id'] = find_farm_id((int)$mission->attributes()->farmId, $farm_map); // if mission not contracted this key not exist so NULL
+    }
+    if ($mission->attributes()->activeId) {
+        $data[$row]['active_id'] = (string)$mission->attributes()->activeId;        
+    }
+    if ($mission->attributes()->stealingCost) {
+        $data[$row]['stealing_cost'] = (string)$mission->attributes()->stealingCost;
+    }
+    /*** only when mission is contracted by any farm ***/
+
+
     foreach ($mission->attributes() as $key => $value) {
         //just_print($mission->getName() . "_" . (string)$key . ": " . (string)$value);
         $key = $mission->getName() . "_" . (string)$key;
@@ -84,6 +101,13 @@ unset($mapping);
     <mission type="harvest" reward="3797" status="0" success="false">
         <field id="4" sprayFactor="0.000000" spraySet="false" plowFactor="1.000000" state="2" vehicleGroup="1" vehicleUseCost="421.899994" spawnedVehicles="false" growthState="5" limeFactor="0.000000" weedFactor="1.000000" fruitTypeName="CANOLA"/>
         <harvest sellPoint="134" expectedLiters="16517.384766" depositedLiters="0.000000"/>
+    </mission>
+    <mission type="harvest" activeId="1" reward="17105" status="1" success="false" farmId="1">
+        <field id="5" sprayFactor="0.000000" spraySet="false" plowFactor="0.000000" state="2" vehicleGroup="1" vehicleUseCost="2695.335449" spawnedVehicles="true" growthState="6" limeFactor="1.000000" weedFactor="1.000000" fruitTypeName="CANOLA"/>
+        <harvest sellPoint="17" expectedLiters="81171.062500" depositedLiters="0.000000"/>
+    </mission>
+    <mission type="fertilize" activeId="1" reward="15119" status="2" success="true" farmId="1" stealingCost="0.000000">
+        <field id="31" sprayFactor="0.333333" spraySet="false" plowFactor="1.000000" state="2" vehicleGroup="5" vehicleUseCost="2159.872070" spawnedVehicles="false" growthState="7" limeFactor="0.000000" weedFactor="0.500000" fruitTypeName="SUGARBEET"/>
     </mission>
     <mission type="transport" reward="3653" status="0" success="false" timeLeft="99073154" config="OLD METAL" pickupTrigger="TRANSPORT09" dropoffTrigger="TRANSPORT03" objectFilename="$moddir$FS19_SlovakVillage/objects/pallets/missions/transportPalletOldMetalParts.i3d" numObjects="2"/>
     <mission type="snow" reward="28481" status="0" success="false" config="snowContract01"/>
